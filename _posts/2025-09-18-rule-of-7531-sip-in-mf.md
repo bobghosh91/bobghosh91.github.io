@@ -54,7 +54,7 @@ featured_order:
 <p class="text-slate-600 dark:text-slate-300">Here’s a visual comparison: a flat <strong>₹10,000/month</strong> SIP vs a <strong>10% yearly step-up</strong> SIP over 20 years. The step-up corpus grows significantly larger because compounding acts on increasing contributions.</p>
 
 <figure class="mt-6 bg-white dark:bg-slate-800 p-4 rounded-lg border shadow-sm dark:border-slate-700">
-  <img src="{{ site.baseurl }}/assets/images/step-up-sip-chart.png" alt="Step-up SIP vs Flat SIP chart" class="w-full h-auto rounded-lg" />
+  <img src="/assets/images/step-up-sip-chart.png" alt="Step-up SIP vs Flat SIP chart" class="w-full h-auto rounded-lg" />
   <figcaption class="mt-3 text-sm text-slate-500 dark:text-slate-400">Figure: Flat SIP vs Step-up SIP (₹10,000 starting SIP, 10% annual step-up, assumed Nifty-50 returns for illustration).</figcaption>
 </figure>
 
