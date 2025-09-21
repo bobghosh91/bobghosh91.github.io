@@ -5,7 +5,7 @@
       <div class="flex items-center">
         <div class="flex-shrink-0 flex items-center">
 <!--          <span class="ml-2 text-xl font-bold text-gray-900">Earthen Capital</span>-->
-          <a href="{{ '/'' | relative_url }}" class="flex justify-between items-center h-20">
+          <a href="{{ '/' | relative_url }}" class="flex justify-between items-center h-20">
             <img src="{{ '/assets/og-logo.png' | relative_url }}" alt="Brand Logo" class="h-16 w-auto">
           </a>
         </div>
@@ -22,21 +22,21 @@
 
         <a href="{{ '/about/' | relative_url }}"
            class="inline-flex items-center px-1 pt-1 text-base font-medium
-           {% if page.url == '/about.html' %} text-gray-900 border-b-2 border-blue-500
+           {% if page.url == '/about/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           About Us
         </a>
 
         <a href="{{ '/process/' | relative_url }}"
            class="inline-flex items-center px-1 pt-1 text-base font-medium
-           {% if page.url == '/process.html' %} text-gray-900 border-b-2 border-blue-500
+           {% if page.url == '/process/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Investment Process
         </a>
 
         <a href="{{ '/blog/' | relative_url }}"
            class="inline-flex items-center px-1 pt-1 text-base font-medium
-           {% if page.url == '/blog.html' %} text-gray-900 border-b-2 border-blue-500
+           {% if page.url == '/blog/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Investor Education
         </a>
@@ -72,21 +72,21 @@
 
       <a href="{{ '/about/' | relative_url }}"
          class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium
-         {% if page.url == '/about.html' %} bg-blue-50 border-blue-500 text-blue-700
+         {% if page.url == '/about/' %} bg-blue-50 border-blue-500 text-blue-700
          {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
         About Us
       </a>
 
       <a href="{{ '/process/' | relative_url }}"
          class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium
-         {% if page.url == '/process.html' %} bg-blue-50 border-blue-500 text-blue-700
+         {% if page.url == '/process/' %} bg-blue-50 border-blue-500 text-blue-700
          {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
         Investment Process
       </a>
 
       <a href="{{ '/blog/' | relative_url }}"
          class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium
-         {% if page.url == '/blog.html' %} bg-blue-50 border-blue-500 text-blue-700
+         {% if page.url == '/blog/' %} bg-blue-50 border-blue-500 text-blue-700
          {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
         Investor Education
       </a>
