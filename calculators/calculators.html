@@ -1,0 +1,81 @@
+---
+layout: default
+title: "Financial Calculators"
+permalink: /calculators/
+---
+
+<header class="bg-gradient-to-r from-teal-500 to-blue-800">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <h1 class="text-4xl md:text-5xl text-white mb-4" data-aos="fade-down">Financial Calculators</h1>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- SIP Calculator Card -->
+    <div class="calculator-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+      <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="trending-up" class="text-blue-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">SIP Calculator</h3>
+      <p class="text-gray-600 mb-4">Calculate returns on your Systematic Investment Plan and plan your wealth creation journey.</p>
+      <a href="/calculators/sip-calculator/" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors">
+        Calculate Now
+        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+      </a>
+    </div>
+
+    <!-- EMI Calculator Card -->
+    <!-- <div class="calculator-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="credit-card" class="text-green-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">EMI Calculator</h3>
+      <p class="text-gray-600 mb-4">Determine your Equated Monthly Installments for loans and manage your debt effectively.</p>
+      <a href="/calculators/emi-calculator/" class="inline-flex items-center text-green-600 font-medium hover:text-green-700 transition-colors">
+        Calculate Now
+        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+      </a>
+    </div> -->
+
+    <!-- Retirement Calculator Card -->
+    <div class="calculator-card bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="350">
+      <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="sunset" class="text-purple-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Retirement Calculator</h3>
+      <p class="text-gray-600 mb-4">Plan your retirement corpus and ensure financial security for your golden years.</p>
+      <a href="/calculators/retirement-calculator/" class="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors">
+        Calculate Now
+        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+      </a>
+    </div>
+  </div>     
+</main>
+<!-- CTA Section -->
+<section class="bg-[#008080] w-full">
+    <div class="max-w-7xl mx-auto py-4 px-4 sm:py-8 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Ready to start your investment journey?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
+        Our financial calculators are designed to help you make informed decisions about your money.
+      </p>
+      <div class="mt-10" data-aos="fade-up" data-aos-delay="200">
+        <a href="/#contact" 
+           class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50">
+          Get Started
+          <i data-feather="arrow-right" class="ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+  feather.replace();
+</script>

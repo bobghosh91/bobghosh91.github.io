@@ -1,0 +1,185 @@
+---
+layout: default
+---
+
+<!-- Dark mode styles and toggle for blog posts only -->
+<style>
+  .blog-post-container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .blog-post-container.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+
+  .blog-post-container.dark-mode h1 {
+    color: #ffffff;
+  }
+
+  .blog-post-container.dark-mode .author-name {
+    color: #ffffff;
+  }
+
+  .blog-post-container.dark-mode .meta-text {
+    color: #9ca3af;
+  }
+
+  .blog-post-container.dark-mode .prose {
+    color: #e5e7eb;
+  }
+
+  .blog-post-container.dark-mode .prose h1,
+  .blog-post-container.dark-mode .prose h2,
+  .blog-post-container.dark-mode .prose h3,
+  .blog-post-container.dark-mode .prose h4,
+  .blog-post-container.dark-mode .prose h5,
+  .blog-post-container.dark-mode .prose h6 {
+    color: #ffffff;
+  }
+
+  .blog-post-container.dark-mode .prose strong {
+    color: #ffffff;
+  }
+
+  .blog-post-container.dark-mode .prose a {
+    color: #60a5fa;
+  }
+
+  .blog-post-container.dark-mode .prose a:hover {
+    color: #93c5fd;
+  }
+
+  .blog-post-container.dark-mode .prose code {
+    background-color: #374151;
+    color: #e5e7eb;
+  }
+
+  .blog-post-container.dark-mode .prose pre {
+    background-color: #1f2937;
+  }
+
+  .blog-post-container.dark-mode .prose blockquote {
+    color: #d1d5db;
+    border-left-color: #4b5563;
+  }
+
+  /* Toggle button styles */
+  .theme-toggle {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+
+  .theme-toggle:hover {
+    background: #e5e7eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .blog-post-container.dark-mode .theme-toggle {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f9fafb;
+  }
+
+  .blog-post-container.dark-mode .theme-toggle:hover {
+    background: #4b5563;
+  }
+
+  /* Icon styles */
+  .theme-icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+
+  .sun-icon { display: none; }
+  .moon-icon { display: inline-block; }
+
+  .blog-post-container.dark-mode .sun-icon { display: inline-block; }
+  .blog-post-container.dark-mode .moon-icon { display: none; }
+
+
+</style>
+
+<div class="blog-post-container dark-mode" id="blogContainer">
+  <article class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Theme toggle button at the start of the blog -->
+    <button class="theme-toggle" id="themeToggle">
+      <svg class="theme-icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+      </svg>
+      <svg class="theme-icon moon-icon" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+      </svg>
+      <span class="sun-icon">Light</span>
+      <span class="moon-icon">Dark</span>
+    </button>
+    {% if page.image %}
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-64 object-cover rounded-lg mb-6">
+    {% endif %}
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+
+    <div class="flex items-center mb-6">
+      <img class="h-12 w-12 rounded-full" src="{{ page.author_image | default: '/assets/default-author.png' }}" alt="{{ page.author }}">
+      <div class="ml-3">
+        <p class="text-sm font-medium text-gray-900 author-name">{{ page.author | default: "Admin" }}</p>
+        <p class="text-sm text-gray-500 meta-text">{{ page.date | date: "%B %d, %Y" }} · {{ page.read_time | default: "5 min read" }}</p>
+      </div>
+    </div>
+
+    <div class="prose max-w-none">
+      {{ content }}
+    </div>
+  </article>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const blogContainer = document.getElementById('blogContainer');
+  const themeToggle = document.getElementById('themeToggle');
+  const storageKey = 'blog-theme-preference';
+
+  // Check for saved theme preference or default to light mode
+  const savedTheme = localStorage.getItem(storageKey);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // Apply initial theme - starts dark by default
+  if (savedTheme === 'light') {
+    blogContainer.classList.remove('dark-mode');
+  }
+  // If no saved preference, stay with the default dark mode
+
+  // Toggle theme function
+  function toggleTheme() {
+    blogContainer.classList.toggle('dark-mode');
+    const isDark = blogContainer.classList.contains('dark-mode');
+    localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
+  }
+
+  // Add click event listener
+  themeToggle.addEventListener('click', toggleTheme);
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem(storageKey)) {
+      if (e.matches) {
+        blogContainer.classList.add('dark-mode');
+      } else {
+        blogContainer.classList.remove('dark-mode');
+      }
+    }
+  });
+});
+</script>

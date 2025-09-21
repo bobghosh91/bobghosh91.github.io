@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ page.title }} | {{ site.title }}</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body >
+
+  <!-- Navbar -->
+  {% include navbar.html %}
+
+  <!-- Page content -->
+  <main>
+    {{ content }}
+  </main>
+
+  <!-- Footer -->
+  {% include footer.html %}
+
+  <!-- JS for Mobile Menu Toggle -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuButton = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      if (menuButton && menu) {
+        menuButton.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
+          menuButton.setAttribute("aria-expanded", !expanded);
+        });
+      }
+
+      // Activate feather icons
+      if (typeof feather !== "undefined") {
+        feather.replace();
+      }
+
+      // Initialize animations and icons
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    });
+    document.getElementById("queryForm").addEventListener("submit", function (e) {
+			e.preventDefault();
+
+			const email = this.email.value.trim();
+			const phone = this.phone.value.trim();
+
+			if (!email && !phone) {
+			  alert("Please provide either an Email or a Phone Number.");
+			  return;
+			}
+
+			// Hide modal
+			document.getElementById("queryModal").classList.add("hidden");
+
+			// Show toast
+			const toast = document.getElementById("toast");
+			toast.classList.remove("hidden");
+
+			// Auto-hide toast after 3 seconds
+			setTimeout(() => {
+			  toast.classList.add("hidden");
+			  this.reset();
+			}, 3000);
+		});
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+# Jekyll build folder
+_site/
+
+# Jekyll cache
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata/
+
+# Node modules (if using Tailwind, Webpack, etc.)
+node_modules/
+
+# Logs
+*.log
+
+# OS / Editor specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Bundler (if using Ruby gems)
+.bundle/
+vendor/
+Gemfile.lock

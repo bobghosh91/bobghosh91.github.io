@@ -1,0 +1,399 @@
+---
+layout: default
+title: SIP Calculator
+permalink: /calculators/sip-calculator/
+---
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #00d09c;
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px #00d09c;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #00d09c;
+        cursor: pointer;
+        border: 2px solid white;
+        box-shadow: 0 0 0 2px #00d09c;
+    }
+    
+    .result-card {
+        background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        border-left: 4px solid #00d09c;
+    }
+    
+    .animated-number {
+        transition: all 0.3s ease;
+    }
+    
+    .chart-container {
+        position: relative;
+        height: 300px;
+        width: 100%;
+    }
+</style>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-8" data-aos="fade-up">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">SIP Calculator</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Calculate how your investment can grow over time with Systematic Investment Plan (SIP)
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Calculator Form -->
+                <div class="bg-white rounded-xl shadow-lg p-6" data-aos="fade-right">
+                    <div class="space-y-6">
+                        <!-- Monthly Investment -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Monthly Investment (₹)
+                            </label>
+                            <input type="range" min="500" max="100000" step="500" value="5000" 
+                                    class="w-full mb-2" id="investmentSlider">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">500</span>
+                                <input type="number" min="500" max="100000" step="500" value="5000"
+                                        class="w-32 px-3 py-2 border border-gray-300 rounded-lg text-center font-semibold"
+                                        id="investmentInput">
+                                <span class="text-sm text-gray-500">1,00,000</span>
+                            </div>
+                        </div>
+
+                        <!-- Investment Period -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Investment Period (years)
+                            </label>
+                            <input type="range" min="1" max="30" step="1" value="10" 
+                                    class="w-full mb-2" id="periodSlider">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">1</span>
+                                <input type="number" min="1" max="30" step="1" value="10"
+                                        class="w-32 px-3 py-2 border border-gray-300 rounded-lg text-center font-semibold"
+                                        id="periodInput">
+                                <span class="text-sm text-gray-500">30</span>
+                            </div>
+                        </div>
+
+                        <!-- Expected Return -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Expected Annual Returns (%)
+                            </label>
+                            <input type="range" min="1" max="30" step="0.1" value="12" 
+                                    class="w-full mb-2" id="returnSlider">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500">1%</span>
+                                <input type="number" min="1" max="30" step="0.1" value="12"
+                                        class="w-32 px-3 py-2 border border-gray-300 rounded-lg text-center font-semibold"
+                                        id="returnInput">
+                                <span class="text-sm text-gray-500">30%</span>
+                            </div>
+                        </div>
+
+                        <button onclick="calculateSIP()" 
+                                class="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results -->
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="result-card rounded-xl p-6">
+                        <div class="text-center">
+                            <p class="text-gray-600 mb-2">Invested Amount</p>
+                            <h2 class="text-2xl font-bold text-gray-800" id="investedAmount">₹6,00,000</h2>
+                        </div>
+                    </div>
+
+                    <div class="result-card rounded-xl p-6">
+                        <div class="text-center">
+                            <p class="text-gray-600 mb-2">Estimated Returns</p>
+                            <h2 class="text-2xl font-bold text-gray-800" id="estimatedReturns">₹4,92,932</h2>
+                        </div>
+                    </div>
+
+                    <div class="result-card rounded-xl p-6">
+                        <div class="text-center">
+                            <p class="text-gray-600 mb-2">Total Value</p>
+                            <h2 class="text-2xl font-bold text-gray-800" id="totalValue">₹10,92,932</h2>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="font-semibold text-gray-800 mb-4">Summary</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Monthly Investment</span>
+                                <span class="font-semibold" id="summaryMonthly">₹5,000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Total Investment</span>
+                                <span class="font-semibold" id="summaryTotal">₹6,00,000</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Investment Period</span>
+                                <span class="font-semibold" id="summaryPeriod">10 years</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Expected Returns</span>
+                                <span class="font-semibold" id="summaryReturn">12% p.a.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="mt-12 bg-white rounded-xl shadow-lg p-6" data-aos="fade-up">
+                <h3 class="font-semibold text-gray-800 mb-6 text-center">Investment Growth Over Time</h3>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Initialize Chart
+        let growthChart;
+        const ctx = document.getElementById('growthChart').getContext('2d');
+        
+        function initializeChart() {
+            growthChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Invested Amount',
+                            data: [],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.3
+                        },
+                        {
+                            label: 'Total Value',
+                            data: [],
+                            borderColor: '#00d09c',
+                            backgroundColor: 'rgba(0, 208, 156, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ₹' + context.parsed.y.toLocaleString('en-IN');
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '₹' + value.toLocaleString('en-IN');
+                                }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Years'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Format currency with commas
+        function formatCurrency(amount) {
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+
+        // Sync sliders and inputs
+        const investmentSlider = document.getElementById('investmentSlider');
+        const investmentInput = document.getElementById('investmentInput');
+        const periodSlider = document.getElementById('periodSlider');
+        const periodInput = document.getElementById('periodInput');
+        const returnSlider = document.getElementById('returnSlider');
+        const returnInput = document.getElementById('returnInput');
+
+        investmentSlider.addEventListener('input', () => {
+            investmentInput.value = investmentSlider.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        investmentInput.addEventListener('input', () => {
+            investmentSlider.value = investmentInput.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        periodSlider.addEventListener('input', () => {
+            periodInput.value = periodSlider.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        periodInput.addEventListener('input', () => {
+            periodSlider.value = periodInput.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        returnSlider.addEventListener('input', () => {
+            returnInput.value = returnSlider.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        returnInput.addEventListener('input', () => {
+            returnSlider.value = returnInput.value;
+            updateSummary();
+            calculateSIP();
+        });
+
+        function updateSummary() {
+            document.getElementById('summaryMonthly').textContent = formatCurrency(parseInt(investmentInput.value));
+            document.getElementById('summaryPeriod').textContent = periodInput.value + ' years';
+            document.getElementById('summaryReturn').textContent = returnInput.value + '% p.a.';
+            document.getElementById('summaryTotal').textContent = formatCurrency(parseInt(investmentInput.value) * 12 * parseInt(periodInput.value));
+        }
+
+        // Calculate yearly growth data
+        function calculateYearlyGrowth(monthlyInvestment, investmentPeriod, expectedReturn) {
+            const yearlyData = [];
+            const investedData = [];
+            let currentValue = 0;
+            const monthlyRate = expectedReturn / 12;
+            
+            for (let year = 1; year <= investmentPeriod; year++) {
+                for (let month = 1; month <= 12; month++) {
+                    currentValue = (currentValue + monthlyInvestment) * (1 + monthlyRate);
+                }
+                const totalInvested = monthlyInvestment * 12 * year;
+                yearlyData.push(Math.round(currentValue));
+                investedData.push(totalInvested);
+            }
+            
+            return { yearlyData, investedData };
+        }
+
+        // SIP Calculation Function
+        function calculateSIP() {
+            const monthlyInvestment = parseInt(investmentInput.value);
+            const investmentPeriod = parseInt(periodInput.value);
+            const expectedReturn = parseFloat(returnInput.value) / 100;
+            
+            const totalMonths = investmentPeriod * 12;
+            const monthlyRate = expectedReturn / 12;
+            
+            // Future Value of SIP formula: FV = P * ((1 + r)^n - 1) / r * (1 + r)
+            const futureValue = monthlyInvestment * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate) * (1 + monthlyRate);
+            
+            const totalInvestment = monthlyInvestment * totalMonths;
+            const estimatedReturns = futureValue - totalInvestment;
+            
+            // Calculate yearly growth data
+            const { yearlyData, investedData } = calculateYearlyGrowth(monthlyInvestment, investmentPeriod, expectedReturn);
+            
+            // Update chart
+            updateChart(yearlyData, investedData, investmentPeriod);
+            
+            // Animate numbers
+            animateNumber('investedAmount', totalInvestment, formatCurrency);
+            animateNumber('estimatedReturns', estimatedReturns, formatCurrency);
+            animateNumber('totalValue', futureValue, formatCurrency);
+            
+            updateSummary();
+        }
+
+        function updateChart(yearlyData, investedData, investmentPeriod) {
+            const years = Array.from({length: investmentPeriod}, (_, i) => `Year ${i + 1}`);
+            
+            growthChart.data.labels = years;
+            growthChart.data.datasets[0].data = investedData;
+            growthChart.data.datasets[1].data = yearlyData;
+            growthChart.update();
+        }
+
+        function animateNumber(elementId, targetValue, formatter) {
+            const element = document.getElementById(elementId);
+            const currentValue = parseFloat(element.textContent.replace(/[^0-9.]/g, ''));
+            const duration = 1000;
+            const steps = 60;
+            const stepValue = (targetValue - currentValue) / steps;
+            let currentStep = 0;
+            
+            const interval = setInterval(() => {
+                if (currentStep >= steps) {
+                    element.textContent = formatter(targetValue);
+                    clearInterval(interval);
+                    return;
+                }
+                
+                const value = currentValue + (stepValue * currentStep);
+                element.textContent = formatter(value);
+                currentStep++;
+            }, duration / steps);
+        }
+
+        // Initialize chart and perform initial calculation
+        initializeChart();
+        calculateSIP();
+    </script>
+</body>
