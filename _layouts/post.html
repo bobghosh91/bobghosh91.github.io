@@ -132,10 +132,10 @@ layout: default
     <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
 
     <div class="flex items-center mb-6">
-      <img class="h-12 w-12 rounded-full" src="{{ page.author_image | default: '/assets/default-author.png' }}" alt="{{ page.author }}">
+      <img class="h-12 w-12 rounded-full" src="{{ page.author_image }}" alt="{{ page.author }}">
       <div class="ml-3">
-        <p class="text-sm font-medium text-gray-900 author-name">{{ page.author | default: "Admin" }}</p>
-        <p class="text-sm text-gray-500 meta-text">{{ page.date | date: "%B %d, %Y" }} · {{ page.read_time | default: "5 min read" }}</p>
+        <p class="text-sm font-medium text-gray-900 author-name">{{ page.author }}</p>
+        <p class="text-sm text-gray-500 meta-text">{{ page.date | date: "%B %d, %Y" }} · {{ page.read_time }}</p>
       </div>
     </div>
 

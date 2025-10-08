@@ -38,6 +38,7 @@ defaults:
       layout: "post"
       author: "Bob Ghosh"
       author_image: "https://static.photos/people/200x200/122"
+      read_time: "5 min read" 
       featured: false
       featured_order: 
 
@@ -46,6 +47,8 @@ plugins:
   - jekyll-feed
 include:
   - _pages
+
+permalink: /posts/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default.
