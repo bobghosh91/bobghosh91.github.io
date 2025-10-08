@@ -5,9 +5,7 @@ permalink: /about/
 ---
 
 <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+        body {font-family: 'Inter', sans-serif;}
         .about-hero {
             background: linear-gradient(rgba(6, 190, 182, 0.9) 0%, rgba(23, 42, 69, 0.9) 100%), url('http://static.photos/finance/1200x630/1');
             background-size: cover;
@@ -227,12 +225,23 @@ permalink: /about/
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
-                <a href="{{ '/#contact' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
-                    Contact Our Team
-                    <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
-                </a>
-            </div>
+            <section class="mt-16 bg-gray-50 dark:bg-gray-900 py-10">
+                <div class="max-w-4xl mx-auto text-center">
+                  <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+                    Our Office
+                  </h2>
+                  <p class="text-gray-600 dark:text-gray-300 mb-2">
+                    We’re always here to connect with you.
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-400">
+                    I2801 Park Infinia, Hadapsar, Pune, India
+                  </p>
+                  <p class="text-gray-700 dark:text-gray-400">
+                    Email: earthencapital@gmail.com | Phone: +91-94763 10780
+                  </p>
+                </div>
+              </section>
+              
         </div>
     </div>
 
@@ -271,5 +280,6 @@ permalink: /about/
     -->
 
     <!-- Footer -->
+     {% include cta.html %}
 
 </body>

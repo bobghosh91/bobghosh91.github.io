@@ -54,7 +54,7 @@ permalink: /
     <div class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:text-center" data-aos="fade-up">
-                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Why Choose Us</h2>
+                <h2 class="text-xl text-blue-600 font-semibold tracking-wide uppercase">Why Choose Us</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     A Better Approach to Wealth Creation
                 </p>
@@ -64,7 +64,7 @@ permalink: /
             </div>
 
             <div class="mt-10">
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="feature-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
                             <i data-feather="award"></i>
@@ -73,6 +73,17 @@ permalink: /
                             <h3 class="text-lg leading-6 font-medium text-gray-900">Expert Guidance</h3>
                             <p class="mt-2 text-base text-gray-500">
                                 Our certified professionals provide unbiased advice tailored to your financial goals and risk tolerance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="feature-card bg-white rounded-lg shadow-md p-6 transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <div class="mt-5">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">Trust & Long-Lasting Relationship</h3>
+                            <p class="mt-2 text-base text-gray-500">
+                                Trust is at the heart of everything we do. We're here to support you today and for the years ahead.
                             </p>
                         </div>
                     </div>
@@ -352,53 +363,236 @@ permalink: /
                     </a>
                 </div>
 				<div class="ml-3 inline-flex rounded-md shadow">
-					<button onclick="document.getElementById('queryModal').classList.remove('hidden')" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70">
-						<i data-feather="message-circle" class="mr-2 h-4 w-4"></i>
-						Submit Query
-					</button>
+                    <button onclick="openModal()" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 bg-opacity-60 hover:bg-opacity-70">
+                        <i data-feather="message-circle" class="mr-2 h-4 w-4"></i>
+                        Submit Query
+                    </button>
 				</div>
             </div>
         </div>
     </div>
 	
 	<!-- Modal -->
-	<div id="queryModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden">
-	  <div class="bg-white rounded-lg shadow-lg p-6 w-96">
-		<h2 class="text-xl font-semibold mb-4">Submit Your Query</h2>
-		<form id="queryForm">
-		  <div class="mb-3">
-			<label class="block text-sm font-medium text-gray-700">Name</label>
-			<input type="text" name="name" placeholder="Full Name" class="mt-1 block w-full border rounded-md p-2" required>
-		  </div>
-		  <div class="mb-3">
-			<label class="block text-sm font-medium text-gray-700">Email</label>
-			<input type="email" name="email" placeholder="you@example.com" class="mt-1 block w-full border rounded-md p-2">
-		  </div>
-		  <div class="mb-3">
-			<label class="block text-sm font-medium text-gray-700">Phone Number</label>
-			<input type="tel" name="phone" pattern="^[6-9]\d{9}$" maxlength="10" placeholder="Enter phone number" class="mt-1 block w-full border rounded-md p-2">
-		  </div>
-		  <div class="mb-3">
-			<label class="block text-sm font-medium text-gray-700">Message</label>
-			<textarea name="message" class="mt-1 block w-full border rounded-md p-2" rows="3" required></textarea>
-		  </div>
-		  <div class="flex justify-end space-x-2">
-			<button type="button" onclick="document.getElementById('queryModal').classList.add('hidden')" 
-					class="px-4 py-2 rounded-md bg-gray-300 hover:bg-gray-400">
-			  Cancel
-			</button>
-			<button type="submit" class="px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-600">
-			  Submit
-			</button>
-		  </div>
-		</form>
-	  </div>
-	</div>
-
-	<!-- Toast Confirmation -->
-	<div id="toast" class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg hidden">
-	  ✅ Query submitted successfully!
-	</div>
+    <div id="queryModal" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 hidden z-50">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-96 max-w-full mx-4">
+          <h2 class="text-xl font-semibold mb-4">Submit Your Query</h2>
+          
+          <!-- Success Message -->
+          <div id="successMessage" class="hidden mb-4 p-3 bg-green-100 border border-green-400 text-green-700 rounded">
+            Query submitted successfully!
+          </div>
+          
+          <!-- Error Message -->
+          <div id="errorMessage" class="hidden mb-4 p-3 bg-red-100 border border-red-400 text-red-700 rounded">
+            Failed to submit. Please try again.
+          </div>
+          
+          <form id="queryForm">
+            <div class="mb-3">
+              <label class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" name="Name" id="nameInput" placeholder="Full Name" class="mt-1 block w-full border rounded-md p-2" required>
+            </div>
+            
+            <div class="mb-3">
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" name="Email" id="emailInput" placeholder="you@example.com" class="mt-1 block w-full border rounded-md p-2">
+              <p class="text-xs text-gray-500 mt-1">* Either email or phone is required</p>
+            </div>
+            
+            <div class="mb-3">
+              <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input type="tel" name="Phone" id="phoneInput" pattern="^[6-9]\d{9}$" maxlength="10" placeholder="Enter phone number" class="mt-1 block w-full border rounded-md p-2">
+              <p class="text-xs text-gray-500 mt-1">* Either email or phone is required</p>
+            </div>
+            
+            <div class="mb-3">
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea name="Message" id="messageInput" class="mt-1 block w-full border rounded-md p-2" rows="3" required></textarea>
+            </div>
+            
+            <div class="flex justify-end space-x-2">
+              <button type="button" onclick="closeModal()" 
+                      class="px-4 py-2 rounded-md bg-gray-300 hover:bg-gray-400">
+                Cancel
+              </button>
+              <button type="submit" id="submitBtn" class="px-4 py-2 rounded-md bg-green-500 text-white hover:bg-green-600">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+    </div>
 
     <!-- Footer -->
+    <script>
+        (function() {
+          const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzhSSaxJ1DXsfR036Q2liBo60wqlE0zkUey9Y842CxYkv6S0N-iLJ39PXlPX_cK5az0/exec';
+          
+          let lastSubmitTime = 0;
+          const RATE_LIMIT_MS = 5000; // 5 seconds between submissions
+      
+          window.openModal = function() {
+            document.getElementById('queryModal').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('errorMessage').classList.add('hidden');
+          };
+      
+          window.closeModal = function() {
+            document.getElementById('queryModal').classList.add('hidden');
+            document.getElementById('queryForm').reset();
+          };
+      
+          // Close modal when clicking outside
+          document.getElementById('queryModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+              closeModal();
+            }
+          });
+      
+          // Input sanitization
+          function sanitizeInput(input) {
+            const div = document.createElement('div');
+            div.textContent = input;
+            return div.innerHTML;
+          }
+      
+          // Validate form data
+          function validateFormData(formData) {
+            const name = formData.get('Name');
+            const email = formData.get('Email');
+            const phone = formData.get('Phone');
+            const message = formData.get('Message');
+            const honeypot = formData.get('website');
+      
+            // Honeypot check - if filled, it's a bot
+            if (honeypot) {
+              console.log('Bot detected');
+              return false;
+            }
+      
+            // Check for empty required fields
+            if (!name || !message) {
+              alert('Name and message are required');
+              return false;
+            }
+      
+            // Validate name length
+            if (name.length < 2 || name.length > 100) {
+              alert('Name must be between 2 and 100 characters');
+              return false;
+            }
+      
+            // IMPORTANT: Either email OR phone is required
+            if (!email && !phone) {
+              alert('Please provide either an email address or phone number');
+              return false;
+            }
+      
+            // Validate email format if provided
+            if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              alert('Please enter a valid email address');
+              return false;
+            }
+      
+            // Validate phone if provided
+            if (phone && !/^[6-9]\d{9}$/.test(phone)) {
+              alert('Please enter a valid 10-digit phone number');
+              return false;
+            }
+      
+            // Validate message length
+            if (message.length < 10 || message.length > 500) {
+              alert('Message must be between 10 and 500 characters');
+              return false;
+            }
+      
+            return true;
+          }
+      
+          // Handle form submission
+          document.getElementById('queryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const successMsg = document.getElementById('successMessage');
+            const errorMsg = document.getElementById('errorMessage');
+            
+            // Rate limiting check
+            const now = Date.now();
+            if (now - lastSubmitTime < RATE_LIMIT_MS) {
+              errorMsg.textContent = 'Please wait a few seconds before submitting again.';
+              errorMsg.classList.remove('hidden');
+              return;
+            }
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Validate form data
+            if (!validateFormData(formData)) {
+              errorMsg.textContent = 'Please check your input and try again.';
+              errorMsg.classList.remove('hidden');
+              return;
+            }
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Hide previous messages
+            successMsg.classList.add('hidden');
+            errorMsg.classList.add('hidden');
+            
+            // Update last submit time
+            lastSubmitTime = now;
+            
+            // Sanitize inputs before sending
+            const sanitizedData = new FormData();
+            for (let [key, value] of formData.entries()) {
+              if (key !== 'website') { // Don't send honeypot
+                sanitizedData.append(key, sanitizeInput(value.toString()));
+              }
+            }
+            
+            // Add timestamp
+            sanitizedData.append('Timestamp', new Date().toISOString());
+            
+            // Submit to Google Sheets
+            fetch(GOOGLE_SCRIPT_URL, {
+              method: 'POST',
+              body: sanitizedData,
+              mode: 'no-cors'
+            })
+            .then(response => {
+              console.log('Submitted successfully');
+              successMsg.classList.remove('hidden');
+              
+              // Reset form after successful submission
+              document.getElementById('queryForm').reset();
+              
+              // Close modal after 2 seconds
+              setTimeout(() => {
+                closeModal();
+              }, 2000);
+            })
+            .catch(error => {
+              console.error('Error:', error);
+              errorMsg.textContent = 'Failed to submit. Please try again.';
+              errorMsg.classList.remove('hidden');
+            })
+            .finally(() => {
+              // Re-enable submit button
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Submit';
+            });
+          });
+      
+          // Prevent multiple rapid clicks
+          document.getElementById('submitBtn').addEventListener('click', function(e) {
+            if (this.disabled) {
+              e.preventDefault();
+            }
+          });
+        })();
+    </script>
 </body>

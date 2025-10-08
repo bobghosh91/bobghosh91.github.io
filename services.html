@@ -1,0 +1,86 @@
+---
+layout: default
+title: "Our Services"
+permalink: /services/
+---
+
+<style>
+    body {
+        font-family: 'Inter', sans-serif;
+    }
+    .services-hero {
+        background: linear-gradient(rgba(6, 190, 182, 0.9) 0%, rgba(23, 42, 69, 0.9) 100%), url('http://static.photos/bokeh/1200x630/28');
+        background-size: cover;
+        background-position: center;
+    }
+    .team-member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<!-- Hero Section -->
+<header class="services-hero bg-gradient-to-r from-teal-500 to-blue-900 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
+    <p class="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
+      We offer a wide range of investment solutions designed to help you plan, grow, and secure your future.
+    </p>
+  </div>
+</header>
+
+<!-- Services Grid -->
+<main class="max-w-6xl mx-auto px-6 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Service 1 -->
+    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="trending-up" class="text-indigo-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Mutual Funds</h3>
+      <p class="text-gray-600">
+        Structured guidance to help you maximize returns while minimizing risks through diversified investment strategies.
+      </p>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="sunset" class="text-purple-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Retirement Planning</h3>
+      <p class="text-gray-600">
+        Personalized retirement planning so you can enjoy financial freedom in your golden years.
+      </p>
+    </div>
+
+    <!-- Service 2 -->
+    <!-- <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="dollar-sign" class="text-green-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Wealth Management</h3>
+      <p class="text-gray-600">
+        End-to-end wealth management services tailored to achieve long-term financial stability and growth.
+      </p>
+    </div> -->
+
+    <!-- Service 3 -->
+    <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition">
+      <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
+        <i data-feather="shield" class="text-teal-600"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Insurance Solutions</h3>
+      <p class="text-gray-600">
+        Comprehensive life and health insurance solutions to safeguard your family and secure your future.
+      </p>
+    </div>
+  </div>
+</main>
+  <!-- CTA Section -->
+  {% include cta.html %}
+
+<script>
+  feather.replace();
+</script>
