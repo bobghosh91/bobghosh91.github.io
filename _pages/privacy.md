@@ -63,10 +63,5 @@ permalink: /privacy-policy/
   </p>
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Contact Us</h2>
-  <p class="text-gray-700">
-    If you have any questions or concerns regarding this Privacy Policy, please contact us at:
-  </p>
-  <p class="text-gray-900 font-semibold mt-2">
-    [Insert your company’s official contact email/phone/address]
-  </p>
+  {% include cta.html %}
 </div>
