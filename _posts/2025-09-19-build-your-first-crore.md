@@ -23,81 +23,10 @@ featured_order: 1
         </div>
     </div>
     <!-- Calculator Section -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div class="calculator-card bg-white rounded-2xl shadow-xl p-8" style="transition: transform 0.3s ease, box-shadow 0.3s ease;">
-            <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">
-                SIP Calculator: Your Path to ₹1 Crore
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Input Section -->
-                <div>
-                    <div class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Monthly SIP Amount (₹)</label>
-                            <input type="range" id="sip-amount" min="5000" max="50000" step="5000" value="15000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                            <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>5,000</span>
-                                <span id="sip-amount-value">15,000</span>
-                                <span>50,000</span>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Expected Annual Return (%)</label>
-                            <input type="range" id="return-rate" min="8" max="15" step="1" value="12" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                            <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>8%</span>
-                                <span id="return-rate-value">12%</span>
-                                <span>15%</span>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Investment Period (Years)</label>
-                            <input type="range" id="investment-period" min="5" max="30" step="1" value="15" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                            <div class="flex justify-between text-xs text-gray-500 mt-1">
-                                <span>5</span>
-                                <span id="investment-period-value">15</span>
-                                <span>30</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8 p-4 sip-highlight rounded-lg text-white" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                        <h3 class="font-semibold mb-2">Key Insights:</h3>
-                        <ul class="text-sm space-y-1">
-                            <li>• Start early to benefit from compounding</li>
-                            <li>• Increase SIP amount with salary hikes</li>
-                            <li>• Stay invested for long-term growth</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Results Section -->
-                <div>
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <div class="text-center mb-6">
-                            <div class="text-2xl font-bold text-gray-900">₹<span id="final-amount">0</span></div>
-                            <p class="text-sm text-gray-600">Estimated Corpus</p>
-                        </div>
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-center">
-                                <span class="text-gray-600">Total Investment:</span>
-                                <span class="font-semibold">₹<span id="total-investment">0</span></span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-gray-600">Wealth Gained:</span>
-                                <span class="font-semibold text-green-600">₹<span id="wealth-gained">0</span></span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-gray-600">Time to ₹1 Crore:</span>
-                                <span class="font-semibold"><span id="time-to-crore">-</span> years</span>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <canvas id="corpus-chart" height="200"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <figure class="mt-6 bg-white dark:bg-slate-800 p-4 rounded-lg border shadow-sm dark:border-slate-700">
+        <img src="/assets/images/one-cr-target.png" alt="Step-up SIP vs Flat SIP chart" class="w-full h-auto rounded-lg" />
+        <figcaption class="mt-3 text-sm text-slate-500 dark:text-slate-400">A visual guide: How consistent SIPs can turn into ₹1 Crore in just 12 years.</figcaption>
+    </figure>
     <!-- Strategies Section -->
     <div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
