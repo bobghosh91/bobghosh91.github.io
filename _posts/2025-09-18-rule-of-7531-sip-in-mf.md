@@ -1,6 +1,6 @@
 ---
 title: "The 7-5-3-1 Rule of SIP Investing in Mutual Funds"
-date: 2025-09-18
+date: 2025-08-18
 categories: [Long-Term Investing]
 image: "https://static.photos/finance/640x360/134"
 description: "Discover the 7-5-3-1 rule in mutual funds — a proven SIP investment strategy for long-term wealth creation."
