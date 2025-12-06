@@ -153,8 +153,7 @@ permalink: /about/
             </div>
         </div>
     </div>
-
-    <!-- Team -->
+    <!-- Team Section -->
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -167,78 +166,85 @@ permalink: /about/
             </div>
 
             <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-2 justify-items-center">
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <img class="w-full h-56 object-cover" src="{{ '/assets/images/team/bob-ghosh1.png' | relative_url }}" alt="Team member">
+                {% for member in site.data.team %}
+                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="{{ forloop.index | times: 100 | plus: 100 }}">
+                    <img class="w-full h-56 object-cover" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
                     <div class="p-6">
-                        <h3 class="text-lg font-medium text-gray-900">Bob Ghosh</h3>
-                        <p class="mt-1 text-sm text-blue-600">Founder & CEO</p>
-                        <p class="mt-2 text-gray-500">
-                            10+ years in Equities and mutual Funds. An Engineer in Communications & NISM Certified Mutual Funds advisor.
-                        </p>
+                        <h3 class="text-lg font-medium text-gray-900">{{ member.name }}</h3>
+                        <p class="mt-1 text-sm text-blue-600">{{ member.title }}</p>
+                        <p class="mt-2 text-gray-500">{{ member.bio }}</p>
                         <div class="mt-4 flex space-x-4">
-                            <a href="https://www.linkedin.com/in/bobghosh91" target="_blank" class="text-gray-400 hover:text-blue-600">
+                            {% if member.linkedin %}
+                            <a href="{{ member.linkedin }}" target="_blank" class="text-gray-400 hover:text-blue-600">
                                 <i data-feather="linkedin" class="h-5 w-5"></i>
                             </a>
-                            <!-- <a href="#" class="text-gray-400 hover:text-blue-600">
+                            {% endif %}
+                            {% if member.email %}
+                            <a href="{{ member.email }}" class="text-gray-400 hover:text-blue-600">
                                 <i data-feather="mail" class="h-5 w-5"></i>
-                            </a> -->
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
-
-                <div class="team-member bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <img class="w-full h-56 object-cover" src="{{ '/assets/images/team/bishal-ghosh1.png' | relative_url }}" alt="Team member">
-                    <div class="p-6">
-                        <h3 class="text-lg font-medium text-gray-900">Bishal Ghosh</h3>
-                        <p class="mt-1 text-sm text-blue-600">Co-Founder & COO</p>
-                        <p class="mt-2 text-gray-500">
-                            Applying 8 years of financial markets mastery in equity and derivatives with a tech-driven analytical edge.
-                        </p>
-                        <div class="mt-4 flex space-x-4">
-                            <a href="#" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="linkedin" class="h-5 w-5"></i>
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="mail" class="h-5 w-5"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
-
-            <section class="mt-16 bg-gray-50 dark:bg-gray-900 py-10">
-                <div class="max-w-4xl mx-auto text-center">
-                  <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-                    Our Office
-                  </h2>
-                  <p class="text-gray-600 dark:text-gray-300 mb-2">
-                    We’re always here to connect with you.
-                  </p>
-                  <p class="text-gray-700 dark:text-gray-400">
-                    I2801 Park Infinia, Hadapsar, Pune, India
-                  </p>
-                  <p class="text-gray-700 dark:text-gray-400">
-                    Email: earthencapital@gmail.com | Phone: +91-94763 10780
-                  </p>
-                </div>
-                <br/>
-                <div class="max-w-4xl mx-auto text-center">
-                    <p class="text-gray-700 dark:text-gray-400">
-                      338/481 Dhekia, Malancha, Kharagpur (W.B.), India
-                    </p>
-                    <p class="text-gray-700 dark:text-gray-400">
-                      Email: earthencapital@gmail.com | Phone: +91-91450 35129
-                    </p>
-                  </div>
-              </section>
-              
         </div>
     </div>
 
+    <!-- Partners Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Partners</h2>
+                <p class="text-lg text-gray-600">Trusted mutual fund partners we work with</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 items-center">
+                {% for partner in site.data.partners %}
+                <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-2" title="{{ partner.name }}">
+                    <a href="{{ partner.website }}" target="_blank" rel="noopener" class="block">
+                        <img src="{{ partner.logo | relative_url }}" alt="{{ partner.name }}" class="h-10 w-auto mx-auto object-contain">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Offices Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Our Offices</h2>
+                <p class="text-lg text-gray-600">We're always here to connect with you</p>
+            </div>
+            
+            <div class="grid gap-8 md:grid-cols-2">
+                {% for office in site.data.offices %}
+                <div class="relative bg-gradient-to-br from-blue-50 to-gray-50 p-8 rounded-xl border border-gray-200 hover:border-blue-300 transition-all hover:shadow-lg">
+                    <div class="absolute top-4 right-4">
+                        <i data-feather="map-pin" class="h-6 w-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4 pr-8">{{ office.location }}</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-gray-600">
+                            <i data-feather="mail" class="h-4 w-4 mr-2 text-blue-600"></i>
+                            <span class="text-sm">{{ office.email }}</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <i data-feather="phone" class="h-4 w-4 mr-2 text-blue-600"></i>
+                            <span class="text-sm">{{ office.phone }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
     <!-- Accreditation -->
-    <!--
-    <div class="bg-blue-50 py-16">
+    <!-- <div class="bg-blue-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
@@ -267,8 +273,7 @@ permalink: /about/
                 </div>
             </div>
         </div>
-    </div>
-    -->
+    </div> -->
 
     <!-- Footer -->
      {% include cta.html %}

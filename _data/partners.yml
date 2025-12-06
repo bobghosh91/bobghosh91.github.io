@@ -1,0 +1,39 @@
+- name: HDFC Mutual Fund
+  logo: /assets/images/partners/hdfc-mf.png
+  website: https://www.hdfcfund.com
+  
+- name: ICICI Prudential Mutual Fund
+  logo: /assets/images/partners/icici-pru-mf.png
+  website: https://www.icicipruamc.com
+
+- name: UTI Mutual Fund
+  logo: /assets/images/partners/uti-mf.svg
+  website: https://www.utimf.com/
+
+- name: Nippon India Mutual Fund
+  logo: /assets/images/partners/nippon-mf.png
+  website: https://mf.nipponindiaim.com/
+
+- name: Parag Parikh Mutual Fund
+  logo: /assets/images/partners/ppfas-mf.png
+  website: https://amc.ppfas.com/
+
+- name: Invesco India Mutual Fund
+  logo: /assets/images/partners/invesco-mf.png
+  website: https://www.invescomutualfund.com/
+
+- name: JM Financial Mutual Fund
+  logo: /assets/images/partners/jmfin-mf.png
+  website: https://www.jmfinancialmf.com/
+
+- name: SBI Mutual Fund
+  logo: /assets/images/partners/sbi-mf.png
+  website: https://www.sbimf.com/
+
+- name: AXIS Mutual Fund
+  logo: /assets/images/partners/axis-mf.png
+  website: https://www.axismf.com/
+
+- name: Helios Mutual Fund
+  logo: /assets/images/partners/helios-mf.png
+  website: https://www.heliosmf.in/
