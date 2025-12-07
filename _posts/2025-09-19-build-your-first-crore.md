@@ -12,14 +12,16 @@ featured_order: 1
 
 <body class="bg-gray-50">
     <!-- Hero Section with inline styles -->
-    <div class="crore-hero rounded-lg" style="background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(37, 99, 235, 0.9)), url('https://static.photos/finance/200x200/15.webp'); background-size: cover; background-position: center;">
+    <div class="crore-hero rounded-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
                 My First ₹1 Crore
             </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
-                Discover how our personalised mutual funds portfolio can help you build your First Crore, within a specified time period.
-            </p>
+            <div class="mb-8 mt-4">
+                <p class="text-lg md:text-xl leading-relaxed text-gray-300 font-medium">
+                    They say the <span class="text-blue-400 font-bold">first crore</span> is the hardest to make, but it is also the most important step in your financial journey. You don’t need to win the lottery or pick a lucky stock; you just need discipline, time, and the right plan. By using the power of compounding and a <span class="text-white font-semibold">balanced asset allocation</span>, that 8-figure target changes from a distant dream into a <span class="text-white font-semibold">mathematical certainty</span>. Whether you are starting with ₹10,000 or ₹20,000, the roadmap is the same: start early, automate your investments, and let the magic of compounding take over.
+                </p>
+            </div>
         </div>
     </div>
     <!-- Calculator Section -->
@@ -65,7 +67,7 @@ featured_order: 1
                     <div class="mt-4 p-3 bg-white rounded">
                         <div class="text-sm font-semibold text-green-600">Example:</div>
                         <div class="text-xs text-gray-600 mt-1">
-                            Starting ₹15,000 SIP with 10% annual increase @12% = ₹1 crore in ~12 years
+                            ₹10,000/month SIP shrinks the journey to ₹1 Crore to just 17 years at 12% return.
                         </div>
                     </div>
                 </div>
@@ -76,12 +78,12 @@ featured_order: 1
                     </div>
                     <h3 class="font-bold text-xl text-gray-800 dark:text-slate-200 mb-3">Diversified Portfolio</h3>
                     <p class="text-gray-600 dark:text-slate-400">
-                        Invest across different asset classes - equity, debt, and hybrid funds. This balances risk and optimizes returns.
+                        Invest across different asset classes - equity, debt, and Metals (Gold/Silver) funds. This balances risk and optimizes returns.
                     </p>
                     <div class="mt-4 p-3 bg-white rounded">
                         <div class="text-sm font-semibold text-purple-600">Recommended:</div>
                         <div class="text-xs text-gray-600 mt-1">
-                            60% Equity Funds, 30% Debt Funds, 10% Hybrid Funds
+                            60% Equity Funds, 30% Debt Funds, 10% Commodities
                         </div>
                     </div>
                 </div>
@@ -119,6 +121,11 @@ featured_order: 1
                     Set a target and tag existing investments to your plan to personalise your recommendations.
                 </p>
             </div>
+        </div>
+        <div class="mt-1 pt-1">
+            <p class="text-lg leading-relaxed text-gray-300">
+                Building substantial wealth is a function of patience and prudence, not speculation. By adhering to a <span class="text-white font-semibold">structured asset allocation</span> and maintaining SIP discipline, you transform the complex challenge of wealth creation into a predictable, manageable process.
+            </p>
         </div>
     </div>
 
