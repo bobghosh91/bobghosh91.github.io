@@ -1,0 +1,508 @@
+---
+layout: default
+title: Financial Health Checklist
+permalink: /calculators/financial-health-checklist/
+---
+
+
+<style>
+    @media print {
+        .no-print { display: none; }
+        .print-section { page-break-inside: avoid; }
+    }
+</style>
+
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
+              
+              <div class="flex items-center mb-5">
+                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                  <i data-feather="compass" class="text-indigo-600 w-5 h-5"></i>
+                </div>
+                <h2 class="text-xl md:text-2xl font-bold text-gray-800">
+                    Financial Health Checklist
+                </h2>
+              </div>
+          
+              <div class="text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  Are you moving in the right direction with your money? Here is a quick way to check.
+                  Just answer <span class="font-bold text-gray-900">Yes</span> or <span class="font-bold text-gray-900">No</span> to the following points. The more "Yeses" you have, the stronger your financial foundation.
+                </p>
+              </div>
+          
+              <div class="mt-2 bg-emerald-50 rounded-lg p-2 border-l-4 border-emerald-500">
+                <div class="flex items-start">
+                  <i data-feather="smile" class="text-emerald-600 w-5 h-5 mt-0.5 mr-3 flex-shrink-0"></i>
+                  <div>
+                    <p class="text-emerald-900 font-medium mb-1">Important Note</p>
+                    <p class="text-emerald-800 text-sm">
+                      Even if you can’t answer "Yes" right now, working towards it counts. Progress is just as important as perfection.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        <!-- Checklist Form -->
+        <div id="checklistForm" class="bg-white rounded-lg shadow-lg p-8 mb-6">
+            <form id="financialChecklist">
+
+                <!-- Question 1 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q1" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q1" class="text-gray-800 font-medium cursor-pointer">
+                                Do you have life insurance for at least 15-25 times your annual income?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> If you purchased term life insurance a few years ago and your annual income has increased, there is no need to buy additional coverage unless your dependents' needs or the number of dependents have changed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q2" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q2" class="text-gray-800 font-medium cursor-pointer">
+                                Do you have private health insurance for at least ten lakhs? The higher, the better; you can also opt for a super top cover.
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Medical costs are rising rapidly. ₹10 lakhs is a minimum baseline. Consider super top-up plans for additional coverage at lower premiums.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q3" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q3" class="text-gray-800 font-medium cursor-pointer">
+                                Do you have an emergency cover equal to at least your annual expenses? The more, the better!
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Emergency funds should be kept in liquid investments like savings accounts, liquid funds, or short-term FDs. This is your safety net for job loss, medical emergencies, or unexpected expenses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q4" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q4" class="text-gray-800 font-medium cursor-pointer">
+                                Have you planned to reduce all other debt within the next few years except for a home loan?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> High-interest debts like credit cards, personal loans, and car loans should be prioritized for early repayment. Home loans can continue as they typically have lower interest rates and tax benefits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q5" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q5" class="text-gray-800 font-medium cursor-pointer">
+                                Have you listed your financial goals and categorised them as long-term (> ten years) and short-term (< ten years)?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Examples - Long-term: retirement, child's higher education. Short-term: vacation, car purchase, child's school admission. Writing them down makes them concrete and actionable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q6" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q6" class="text-gray-800 font-medium cursor-pointer">
+                                Have you determined how much you need to invest for each of them, considering realistic inflation estimates on their current cost?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Use SIP calculators and factor in inflation. Education inflates at ~10%, healthcare at ~12%, general expenses at ~6-7%. Don't underestimate future costs!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q7" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q7" class="text-gray-800 font-medium cursor-pointer">
+                                Are all your investments tagged to goals?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Every investment should have a purpose. This prevents you from redeeming investments prematurely and keeps you focused on what matters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q8" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q8" class="text-gray-800 font-medium cursor-pointer">
+                                Can you invest at least 20% of your take-home pay towards these goals? Here again, the higher, the better, but even with EMIs, you should be close to 20% or more.
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> The 20% rule is a thumb rule. If you're starting late or have ambitious goals, you may need to save more. If you have EMIs, try to maintain at least 15-20% savings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q9" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q9" class="text-gray-800 font-medium cursor-pointer">
+                                Are you disciplined in investing? Even if you cannot invest for a few months, do you do your best to try to catch up later?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Consistency is key. Automate your investments through SIPs. Life happens, but catching up shows commitment to your financial goals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q10" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q10" class="text-gray-800 font-medium cursor-pointer">
+                                Are you tracking the amount you invest each month? Are you trying to increase the amount you invest each year by at least 10%?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> As your income grows, your investments should too. A 10% annual increase in SIP amounts helps you reach goals faster and counters inflation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q11" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q11" class="text-gray-800 font-medium cursor-pointer">
+                                Do you think twice before upgrading your lifestyle? Ideally, such upgrades should not affect the amount you invest and the increase in investments each year.
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Lifestyle inflation is real. Enjoy your income growth, but ensure your savings grow proportionately. Upgrade after increasing investments, not before.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q12" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q12" class="text-gray-800 font-medium cursor-pointer">
+                                Are you investing as per a set asset allocation plan?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Asset allocation means dividing investments between equity, debt, and other assets based on your goals, time horizon, and risk appetite. Long-term goals can have more equity; short-term goals need more debt.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q13" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q13" class="text-gray-800 font-medium cursor-pointer">
+                                If your portfolio has less equity than is required for a goal, have you planned to increase this?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> For long-term goals (10+ years), equity should form 60-80% of the portfolio. Review your asset allocation annually and adjust if needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q14" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q14" class="text-gray-800 font-medium cursor-pointer">
+                                Are you rebalancing your portfolio from time to time?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Rebalancing means bringing your portfolio back to target allocation. Do this annually or when any asset class deviates by more than 10% from its target.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q15" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q15" class="text-gray-800 font-medium cursor-pointer">
+                                Do you have the plan to reduce equity exposure in future?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> As goals approach (within 3-5 years), gradually shift from equity to debt to protect your corpus from market volatility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q16" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q16" class="text-gray-800 font-medium cursor-pointer">
+                                Have you stopped worrying about saving tax and integrated all tax saving with goal-based investing?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> Don't invest just to save tax. Choose tax-saving instruments (ELSS, PPF, NPS) that align with your goals. Tax saving should be a byproduct, not the primary objective.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="mb-6">
+                    <div class="flex items-start gap-4">
+                        <input type="checkbox" id="q17" class="mt-1 w-5 h-5 text-blue-600 rounded focus:ring-2 focus:ring-blue-500">
+                        <div class="flex-1">
+                            <label for="q17" class="text-gray-800 font-medium cursor-pointer">
+                                Is your "fear of missing out" under control?
+                            </label>
+                            <p class="text-sm text-gray-600 mt-2">
+                                💡 <strong>Note:</strong> FOMO leads to impulsive investments in trending stocks, cryptocurrencies, or schemes promising quick returns. Stick to your plan and avoid chasing hot tips.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <button type="button" onclick="calculateScore()" class="flex-1 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition no-print">
+                        Calculate My Score
+                    </button>
+                    <button type="button" onclick="resetChecklist()" class="px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition no-print">
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+            <!-- Score Display -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 print-section">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Your Financial Health Score</h2>
+                <div class="flex flex-col items-center">
+                    <div class="relative w-48 h-48 mb-4">
+                        <svg class="transform -rotate-90 w-48 h-48">
+                            <circle cx="96" cy="96" r="80" stroke="#e5e7eb" stroke-width="16" fill="none"/>
+                            <circle id="scoreCircle" cx="96" cy="96" r="80" stroke="#3b82f6" stroke-width="16" fill="none" stroke-dasharray="502.4" stroke-dashoffset="502.4" stroke-linecap="round"/>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center flex-col">
+                            <span id="scorePercentage" class="text-5xl font-bold text-gray-800">0%</span>
+                            <span id="scoreCount" class="text-gray-600 text-sm mt-1">0 of 17</span>
+                        </div>
+                    </div>
+                    <div id="scoreInterpretation" class="text-center text-lg font-semibold"></div>
+                    <p class="text-gray-600 mt-2 text-center">Even if you can't answer yes to all questions today, as long as you are en route to saying yes soon, you are on the right track.</p>
+                </div>
+            </div>
+
+            <!-- Action Items -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-6 print-section">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Areas to Focus On</h2>
+                <div id="actionItems"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="text-center no-print">
+                <button onclick="showChecklist()" class="bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition">
+                    Back to Checklist
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            { id: 'q1', text: 'Life insurance for at least 15-25 times your annual income', category: 'Protection' },
+            { id: 'q2', text: 'Health insurance for at least ₹10 lakhs', category: 'Protection' },
+            { id: 'q3', text: 'Emergency fund equal to at least annual expenses', category: 'Protection' },
+            { id: 'q4', text: 'Plan to reduce all debt except home loan', category: 'Debt Management' },
+            { id: 'q5', text: 'Listed and categorized financial goals (long-term and short-term)', category: 'Goal Planning' },
+            { id: 'q6', text: 'Calculated investment amounts needed for each goal with inflation', category: 'Goal Planning' },
+            { id: 'q7', text: 'All investments tagged to specific goals', category: 'Goal Planning' },
+            { id: 'q8', text: 'Investing at least 20% of take-home pay', category: 'Investment Discipline' },
+            { id: 'q9', text: 'Disciplined in investing regularly', category: 'Investment Discipline' },
+            { id: 'q10', text: 'Tracking investments and increasing by 10% annually', category: 'Investment Discipline' },
+            { id: 'q11', text: 'Lifestyle upgrades don\'t affect investment amounts', category: 'Behavioral Finance' },
+            { id: 'q12', text: 'Following a set asset allocation plan', category: 'Portfolio Management' },
+            { id: 'q13', text: 'Planned to increase equity if portfolio needs it', category: 'Portfolio Management' },
+            { id: 'q14', text: 'Rebalancing portfolio periodically', category: 'Portfolio Management' },
+            { id: 'q15', text: 'Plan to reduce equity exposure as goals approach', category: 'Portfolio Management' },
+            { id: 'q16', text: 'Integrated tax saving with goal-based investing', category: 'Tax Planning' },
+            { id: 'q17', text: 'FOMO (Fear of Missing Out) is under control', category: 'Behavioral Finance' }
+        ];
+
+        function calculateScore() {
+            let checkedCount = 0;
+            const uncheckedItems = [];
+
+            questions.forEach(q => {
+                const checkbox = document.getElementById(q.id);
+                if (checkbox.checked) {
+                    checkedCount++;
+                } else {
+                    uncheckedItems.push(q);
+                }
+            });
+
+            const percentage = Math.round((checkedCount / questions.length) * 100);
+
+            // Show results section
+            document.getElementById('checklistForm').classList.add('hidden');
+            document.getElementById('resultsSection').classList.remove('hidden');
+
+            // Update score display
+            document.getElementById('scorePercentage').textContent = percentage + '%';
+            document.getElementById('scoreCount').textContent = `${checkedCount} of ${questions.length}`;
+
+            // Animate circle
+            const circle = document.getElementById('scoreCircle');
+            const circumference = 502.4;
+            const offset = circumference - (percentage / 100) * circumference;
+            circle.style.strokeDashoffset = offset;
+
+            // Score interpretation
+            let interpretation = '';
+            let color = '';
+            if (percentage >= 90) {
+                interpretation = '🎉 Excellent! You\'re on a very strong financial path.';
+                color = 'text-green-600';
+                circle.setAttribute('stroke', '#10b981');
+            } else if (percentage >= 75) {
+                interpretation = '👍 Great job! You\'re doing well with minor improvements needed.';
+                color = 'text-blue-600';
+                circle.setAttribute('stroke', '#3b82f6');
+            } else if (percentage >= 60) {
+                interpretation = '✅ Good progress! Focus on the unchecked areas.';
+                color = 'text-yellow-600';
+                circle.setAttribute('stroke', '#f59e0b');
+            } else if (percentage >= 40) {
+                interpretation = '⚠️ Fair start. Significant improvements needed.';
+                color = 'text-orange-600';
+                circle.setAttribute('stroke', '#f97316');
+            } else {
+                interpretation = '🚨 Needs attention. Let\'s build a solid foundation.';
+                color = 'text-red-600';
+                circle.setAttribute('stroke', '#ef4444');
+            }
+
+            document.getElementById('scoreInterpretation').innerHTML = `<span class="${color}">${interpretation}</span>`;
+
+            // Display action items
+            displayActionItems(uncheckedItems);
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function displayActionItems(uncheckedItems) {
+            const actionItemsDiv = document.getElementById('actionItems');
+
+            if (uncheckedItems.length === 0) {
+                actionItemsDiv.innerHTML = `
+                    <div class="text-center py-8">
+                        <p class="text-2xl mb-4">🎊</p>
+                        <p class="text-green-600 font-semibold text-lg">Congratulations! You've checked all the boxes.</p>
+                        <p class="text-gray-600 mt-2">Keep maintaining your excellent financial discipline!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Group by category
+            const grouped = {};
+            uncheckedItems.forEach(item => {
+                if (!grouped[item.category]) {
+                    grouped[item.category] = [];
+                }
+                grouped[item.category].push(item);
+            });
+
+            let html = '<div class="space-y-6">';
+
+            Object.keys(grouped).forEach(category => {
+                html += `
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3 text-lg border-b pb-2">${category}</h3>
+                        <ul class="space-y-2">
+                `;
+
+                grouped[category].forEach(item => {
+                    html += `
+                        <li class="flex items-start gap-3 text-gray-700">
+                            <span class="text-red-500 mt-1">✗</span>
+                            <span>${item.text}</span>
+                        </li>
+                    `;
+                });
+
+                html += `
+                        </ul>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            actionItemsDiv.innerHTML = html;
+        }
+
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset all checkboxes?')) {
+                questions.forEach(q => {
+                    document.getElementById(q.id).checked = false;
+                });
+                document.getElementById('resultsSection').classList.add('hidden');
+                document.getElementById('checklistForm').classList.remove('hidden');
+            }
+        }
+
+        function showChecklist() {
+            document.getElementById('resultsSection').classList.add('hidden');
+            document.getElementById('checklistForm').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>

@@ -22,25 +22,29 @@ permalink: /privacy-policy/
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">How We Use Your Information</h2>
   <ul class="list-disc list-inside text-gray-700 space-y-2">
+    <li>Risk Profiling.</li>
     <li>Providing and improving our services.</li>
     <li>Responding to inquiries and requests.</li>
     <li>Sharing updates, educational content, or relevant resources.</li>
     <li>Ensuring compliance with regulatory and legal obligations.</li>
+    <li>Security and fraud prevention.</li>
   </ul>
+    <p class="text-gray-700 py-2">
+    We <strong>do not sell</strong> your data to thrid parties.
+    </p>
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Sharing of Information</h2>
-  <p class="text-gray-700 mb-6">
+  <p class="text-gray-700 mb-3">
     We do not sell or rent personal information. Information may be shared only with:
   </p>
   <ul class="list-disc list-inside text-gray-700 space-y-2">
-    <li><strong>Regulatory or legal authorities</strong> when required by law.</li>
-    <li><strong>Service providers or partners</strong> who assist us in delivering our services, under strict confidentiality obligations.</li>
+    <li><strong>Regulatory or legal authorities</strong><i>(SEBI/AMFI/IRDAI)</i> when required by law.</li>
+    <li><strong>Service providers or partners</strong><i>(CAMS, MFU, BSE StarMF)</i> who assist us in delivering our services, under strict confidentiality obligations.</li>
   </ul>
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Data Security</h2>
   <p class="text-gray-700 mb-6">
-    We implement reasonable administrative, technical, and physical safeguards to protect your 
-    personal information against unauthorized access, alteration, or disclosure.
+    We implement reasonable administrative, technical, and physical safeguards like limited access controls, secure cloud services to protect your personal information against unauthorized access, alteration, or disclosure.
   </p>
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Cookies and Tracking Technologies</h2>
@@ -50,6 +54,9 @@ permalink: /privacy-policy/
   </p>
 
   <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Your Rights</h2>
+  <p class="text-gray-700 mb-3">
+    Under the DPDP Act, you have rights to:
+  </p>
   <ul class="list-disc list-inside text-gray-700 space-y-2">
     <li>Access and correct your personal information.</li>
     <li>Request deletion of your data, subject to legal and regulatory requirements.</li>
