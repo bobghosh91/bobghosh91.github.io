@@ -12,44 +12,54 @@
       </div>
 
       <!-- Desktop Menu -->
-      <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+      <div class="hidden md:flex md:items-center md:flex-1 md:justify-center md:space-x-2">
         <a href="{{ '/' | relative_url }}"
-           class="inline-flex items-center px-1 pt-1 text-base font-medium
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Home
         </a>
 
         <a href="{{ '/about/' | relative_url }}"
-           class="inline-flex items-center px-1 pt-1 text-base font-medium
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/about/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           About Us
         </a>
 
         <a href="{{ '/services/' | relative_url }}"
-           class="inline-flex items-center px-1 pt-1 text-base font-medium
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/services/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Our services
         </a>
 
+        <a href="{{ '/financial-planning/' | relative_url }}"
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
+           {% if page.url == '/financial-planning/' %} text-gray-900 border-b-2 border-blue-500
+           {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
+          Financial Planning
+        </a>
+
         <a href="{{ '/process/' | relative_url }}"
-           class="inline-flex items-center px-1 pt-1 text-base font-medium
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/process/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Investment Process
         </a>
 
         <a href="{{ '/blog/' | relative_url }}"
-           class="inline-flex items-center px-1 pt-1 text-base font-medium
+           class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/blog/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
           Investor Education
         </a>
+      </div>
 
+      <!-- Contact Button (Desktop) -->
+      <div class="hidden md:flex md:items-center">
         <a href="{{ '/#contact' | relative_url }}"
-          class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors">
+          class="inline-flex items-center px-3 py-1.5 text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors">
           CONTACT US
         </a>
       </div>
@@ -87,6 +97,13 @@
          {% if page.url == '/services/' %} bg-blue-50 border-blue-500 text-blue-700
          {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
          Our services
+      </a>
+
+      <a href="{{ '/financial-planning/' | relative_url }}"
+         class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium
+         {% if page.url == '/financial-planning/' %} bg-blue-50 border-blue-500 text-blue-700
+         {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
+        Financial Planning
       </a>
 
       <a href="{{ '/process/' | relative_url }}"

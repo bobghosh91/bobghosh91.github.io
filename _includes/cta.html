@@ -12,6 +12,10 @@
             <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
                 Our financial calculators are designed to help you make informed decisions about your money.
             </p>
+        {% elsif page.title contains "Financial Planning" %}
+        <p class="mt-6 max-w-3xl mx-auto text-2xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
+            Get personalised financial plan today.
+        </p>
         {% elsif page.title contains "Privacy Policy" %}
             <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
                 If you have any questions or concerns regarding this Privacy Policy, please contact us at:
@@ -26,6 +30,10 @@
                 Get Started
                 <i data-feather="arrow-right" class="ml-2"></i>
             </a>
+            <p class="mt-3 text-white text-sm flex items-center justify-center gap-1">
+                Completely 
+                <img src="{{ '/assets/images/free.png' | relative_url }}" alt="Free" class="h-4 inline-block">
+            </p>
         </div>
     </div>
 </div>

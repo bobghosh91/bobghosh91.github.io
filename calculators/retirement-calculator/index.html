@@ -5,198 +5,108 @@ permalink: /calculators/retirement-calculator/
 ---
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<style>
-  :root{
-    --bg1:#e6f7ff; 
-    --bg2:#e8fdf5; 
-    --card:#ffffff; 
-    --accent:#0ea5a4; 
-    --accent-2:#2563eb; 
-    --muted:#6b7280
-  }
-  *{
-    box-sizing:border-box
-  }
-  body{
-    margin:0;
-    /* font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; */
-    background:linear-gradient(135deg,var(--bg1),var(--bg2));
-    color:#0f172a
-  }
-  .wrapper{
-    max-width:1100px;
-    margin:36px auto;
-    padding:20px
-  }
-  .card{
-    background:var(--card);
-    border-radius:14px;
-    padding:22px;
-    box-shadow:0 10px 30px rgba(2,6,23,0.08)
-  }
-  h1{
-    margin:0;
-    font-size:22px;
-    background:linear-gradient(90deg,var(--accent-2),var(--accent));
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent
-  }
-  p.lead{
-    margin:8px 0 20px;
-    color:var(--muted)
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:16px
-  }
-  label{
-    display:block;
-    font-weight:500;
-    margin-bottom:6px
-  }
-  input[type=number]{
-    width:100%;
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #e6eef6;
-    font-size:14px
-  }
-  .controls{
-    display:flex;
-    gap:10px;margin-top:18px;
-    align-items:center
-  }
-  .btn{
-    padding:10px 14px;
-    border-radius:10px;
-    border:0;
-    font-weight:700;
-    cursor:pointer
-  }
-  .btn.primary{
-    background:linear-gradient(90deg,var(--accent-2),var(--accent));
-    color:#fff
-  }
-  .btn.ghost{
-    background:#fff;
-    border:1px solid #e6eef6
-  }
-  .results{
-    margin-top:18px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:12px
-  }
-  .result{
-    padding:12px;
-    border-radius:10px;
-    background:linear-gradient(180deg,#fbfdff,#ffffff);
-    box-shadow:0 6px 18px rgba(6,78,59,0.02)
-  }
-  .muted{
-    color:var(--muted);
-    font-size:13px
-  }
-  .value{
-    font-weight:800;
-    font-size:18px;
-    margin-top:6px
-  }
-  .charts{
-    margin-top:18px;
-    display:grid;
-    grid-template-columns:1fr;
-    gap:16px
-  }
-  @media(min-width:900px){
-    .charts{grid-template-columns:2fr 1fr}
-    }
-</style>
-
-<body>
-  <div class="wrapper">
-    <div class="card">
-      <h1 class="p-4">Retirement Calculator(₹)</h1>
+<body class="bg-gray-200 m-0 p-0">
+  <div class="max-w-6xl mx-auto my-9 px-5">
+    <div class="bg-white rounded-2xl p-6 shadow-xl">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent mb-2">
+        Retirement Calculator (₹)
+      </h1>
+      <p class="text-gray-500 text-sm mb-5">Plan your retirement with confidence</p>
       
-      <div class="grid">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div>
-          <label>Present age</label>
-          <input id="presentAge" type="number" min="18" value="35" />
+          <label class="block font-medium mb-1.5 text-sm">Present age</label>
+          <input id="presentAge" type="number" min="18" value="35" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Retirement age</label>
-          <input id="retireAge" type="number" min="40" value="60" />
+          <label class="block font-medium mb-1.5 text-sm">Retirement age</label>
+          <input id="retireAge" type="number" min="40" value="60" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Life expectancy</label>
-          <input id="lifeExpectancy" type="number" min="60" value="85" />
+          <label class="block font-medium mb-1.5 text-sm">Life expectancy</label>
+          <input id="lifeExpectancy" type="number" min="60" value="85" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Long‑term inflation (% p.a.)</label>
-          <input id="inflation" type="number" step="0.1" value="6" />
+          <label class="block font-medium mb-1.5 text-sm">Long‑term inflation (% p.a.)</label>
+          <input id="inflation" type="number" step="0.1" value="6" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Present monthly living expenses (₹)</label>
-          <input id="monthlyExpenses" type="number" value="50000" />
+          <label class="block font-medium mb-1.5 text-sm">Present monthly living expenses (₹)</label>
+          <input id="monthlyExpenses" type="number" value="50000" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Reduction in expenses after retirement (%)</label>
-          <input id="expenseReduction" type="number" step="0.1" value="20" />
+          <label class="block font-medium mb-1.5 text-sm">Reduction in expenses after retirement (%)</label>
+          <input id="expenseReduction" type="number" step="0.1" value="20" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Expected return during working years (% p.a.)</label>
-          <input id="workingReturn" type="number" step="0.1" value="10" />
+          <label class="block font-medium mb-1.5 text-sm">Expected return during working years (% p.a.)</label>
+          <input id="workingReturn" type="number" step="0.1" value="10" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Expected return during retired life (% p.a.)</label>
-          <input id="retirementReturn" type="number" step="0.1" value="6" />
+          <label class="block font-medium mb-1.5 text-sm">Expected return during retired life (% p.a.)</label>
+          <input id="retirementReturn" type="number" step="0.1" value="6" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Current savings for retirement (₹)</label>
-          <input id="currentSavings" type="number" value="2000000" />
+          <label class="block font-medium mb-1.5 text-sm">Current savings for retirement (₹)</label>
+          <input id="currentSavings" type="number" value="2000000" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
         <div>
-          <label>Retirement benefits at retirement time (₹)</label>
-          <input id="retirementBenefits" type="number" value="500000" />
+          <label class="block font-medium mb-1.5 text-sm">Retirement benefits at retirement time (₹)</label>
+          <input id="retirementBenefits" type="number" value="500000" class="w-full px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500" />
         </div>
       </div>
 
-      <div class="controls">
-        <button class="btn primary" id="calcBtn">Calculate</button>
-        <button class="btn ghost" id="resetBtn">Reset to defaults</button>
+      <div class="flex gap-2.5 mt-5 items-center">
+        <button class="px-4 py-2.5 rounded-lg bg-blue-600 text-white font-bold cursor-pointer hover:opacity-90 transition-opacity" id="calcBtn">Calculate</button>
+        <button class="px-4 py-2.5 rounded-lg bg-white border border-gray-200 font-bold cursor-pointer hover:bg-gray-50 transition-colors" id="resetBtn">Reset to defaults</button>
       </div>
 
-      <div class="results" id="results" style="display:none;margin-top:18px">
-        <div class="result"><div class="muted">Years until retirement</div><div id="yearsToRetire" class="value">--</div></div>
-        <div class="result"><div class="muted">Monthly need at retirement (inflation adjusted)</div><div id="monthlyNeed" class="value">--</div></div>
-        <div class="result"><div class="muted">Corpus required at retirement</div><div id="requiredCorpus" class="value">--</div></div>
-        <div class="result"><div class="muted">Projected corpus at retirement</div><div id="projectedCorpus" class="value">--</div></div>
-        <div class="result"><div class="muted">Monthly investment required</div><div id="monthlyInvestment" class="value">--</div></div>
-        <div class="result"><div class="muted">Surplus / Shortfall</div><div id="shortfallText" class="value">--</div></div>
+      <div class="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 hidden" id="results">
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Years until retirement</div>
+          <div id="yearsToRetire" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Monthly need at retirement (inflation adjusted)</div>
+          <div id="monthlyNeed" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Corpus required at retirement</div>
+          <div id="requiredCorpus" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Projected corpus at retirement</div>
+          <div id="projectedCorpus" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Monthly investment required</div>
+          <div id="monthlyInvestment" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
+        <div class="p-3 rounded-lg bg-gradient-to-b from-blue-50 to-white shadow-sm">
+          <div class="text-gray-500 text-xs">Surplus / Shortfall</div>
+          <div id="shortfallText" class="font-extrabold text-lg mt-1.5">--</div>
+        </div>
       </div>
 
-      <div class="charts grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        <!-- Corpus Chart -->
-        <div class="bg-gradient-to-b from-white to-[#fcffff] p-4 rounded-xl shadow-md">
+      <div class="mt-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="lg:col-span-2 bg-gradient-to-b from-white to-blue-50 p-4 rounded-xl shadow-md">
           <h3 class="text-sm font-medium text-gray-700 mb-2">Corpus (Total Value)</h3>
-          <div class="relative w-full aspect-[4/3]">
-            <!-- NO height attribute on canvas -->
+          <div class="relative w-full h-64">
             <canvas id="corpusChart" class="absolute inset-0 w-full h-full"></canvas>
           </div>
         </div>
       
-        <!-- Investment Chart -->
-        <div class="bg-gradient-to-b from-white to-[#fcffff] p-4 rounded-xl shadow-md">
+        <div class="bg-gradient-to-b from-white to-blue-50 p-4 rounded-xl shadow-md">
           <h3 class="text-sm font-medium text-gray-700 mb-2">Invested Amount</h3>
-          <div class="relative w-full aspect-[4/3]">
+          <div class="relative w-full h-64">
             <canvas id="investmentChart" class="absolute inset-0 w-full h-full"></canvas>
           </div>
         </div>
       </div>
       
-      <p class="muted" style="margin-top:12px">Notes: retirement benefits are treated as the amount available <strong>at retirement</strong>. Monthly contributions computed assume end‑of‑month contributions. This tool is indicative — consult a certified financial planner for personal advice.</p>
+      <p class="text-gray-500 text-xs mt-3">
+        Notes: retirement benefits are treated as the amount available <strong>at retirement</strong>. Monthly contributions computed assume end‑of‑month contributions. This tool is indicative — consult a certified financial planner for personal advice.
+      </p>
     </div>
   </div>
 
@@ -226,18 +136,15 @@ permalink: /calculators/retirement-calculator/
     const yearsToRetire = Math.max(0, v.retireAge - v.presentAge);
     const yearsRetired = Math.max(0, v.lifeExpectancy - v.retireAge);
 
-    // Step 1: Adjusted monthly expenses
     const adjMonthlyExpenses = v.monthlyExpenses * (1 - v.expenseReduction);
     const monthlyNeedAtRetirement = adjMonthlyExpenses * Math.pow(1 + v.inflation / 12, yearsToRetire * 12);
 
-    // Step 2: Real return during retirement
     const a = 1 + v.retirementReturn;
     const b = 1 + v.inflation;
     const s = a / b - 1;
     const s_monthly = s / 12;
     const nMonthsRetired = Math.max(0, Math.round(yearsRetired * 12));
 
-    // Step 3: Corpus required (PV of annuity)
     let requiredCorpus;
     if (nMonthsRetired === 0){
       requiredCorpus = 0;
@@ -247,14 +154,10 @@ permalink: /calculators/retirement-calculator/
       requiredCorpus = monthlyNeedAtRetirement * (1 - Math.pow(1 + s_monthly, -nMonthsRetired)) / s_monthly;
     }
 
-    // Step 4: Projected corpus
     const fvCurrentSavings = v.currentSavings * Math.pow(1 + v.workingReturn / 12, yearsToRetire * 12);
     const projectedCorpus = fvCurrentSavings + v.retirementBenefits;
-
-    // Step 5: Shortfall
     const shortfall = requiredCorpus - projectedCorpus;
 
-    // Step 6: Monthly investment required
     let monthlyInvestment = 0;
     const monthsToRetire = Math.max(0, Math.round(yearsToRetire * 12));
     const rWork_monthly = v.workingReturn / 12;
@@ -270,7 +173,6 @@ permalink: /calculators/retirement-calculator/
     return { yearsToRetire, yearsRetired, monthlyNeedAtRetirement, requiredCorpus, projectedCorpus, shortfall, monthlyInvestment, monthsToRetire, rWork_monthly };
   }
 
-  // --- Chart setup ---
   const corpusCtx = document.getElementById('corpusChart').getContext('2d');
   const investmentCtx = document.getElementById('investmentChart').getContext('2d');
 
@@ -289,11 +191,11 @@ permalink: /calculators/retirement-calculator/
     options: { responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}} }
   });
 
-  // --- rendering ---
   function renderAll(){
     const r = performCalculation();
 
-    document.getElementById('results').style.display = 'grid';
+    document.getElementById('results').classList.remove('hidden');
+    document.getElementById('results').classList.add('grid');
     document.getElementById('yearsToRetire').textContent = r.yearsToRetire + ' years';
     document.getElementById('monthlyNeed').textContent = fmtINR(r.monthlyNeedAtRetirement);
     document.getElementById('requiredCorpus').textContent = fmtINR(r.requiredCorpus);
@@ -307,7 +209,6 @@ permalink: /calculators/retirement-calculator/
       shortfallTextEl.textContent = 'Surplus ' + fmtINR(Math.abs(r.shortfall));
     }
 
-    // Build year labels and corpus arrays
     const inputs = getInputs();
     const years = Math.max(0, inputs.retireAge - inputs.presentAge);
     const labels = Array.from({length: years + 1}, (_, i) => inputs.presentAge + i);
@@ -336,7 +237,6 @@ permalink: /calculators/retirement-calculator/
     investmentChart.update();
   }
 
-  // Wire inputs for realtime update
   document.querySelectorAll('input[type=number]').forEach(inp => {
     inp.addEventListener('input', () => {
       if (window._calcTimer) clearTimeout(window._calcTimer);
@@ -362,4 +262,3 @@ permalink: /calculators/retirement-calculator/
   renderAll();
 </script>
 </body>
-</html>

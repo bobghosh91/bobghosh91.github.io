@@ -4,103 +4,73 @@ title: Step-Up SIP Calculator
 permalink: /calculators/stepup-sip-calculator/
 ---
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<style>
-    :root {
-        --primary-color: #2C5AA0;
-        --secondary-color: #FF6B6B;
-        --accent-color: #4ECDC4;
-        --dark-color: #1E293B;
-        --light-color: #F8FAFC;
-    }
-    .bg-primary {
-        background-color: var(--primary-color);
-    }
-    .text-primary {
-        color: var(--primary-color);
-    }
-    .bg-secondary {
-        background-color: var(--secondary-color);
-    }
-    .text-secondary {
-        color: var(--secondary-color);
-    }
-    .bg-accent {
-        background-color: var(--accent-color);
-    }
-    .text-accent {
-        color: var(--accent-color);
-    }
-    .gradient-bg {
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
-    }
-</style>
-<body class="bg-gray-50 text-gray-800">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+<body class="bg-gray-200 text-gray-800">
 
     <!-- Calculator Section -->
-    <section id="calculator" class="py-16 bg-gray-100">
+    <section id="calculator" class="py-16 bg-gray-300">
         <div class="container mx-auto px-4">
-            <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">SIP vs Step Up SIP: Which is Better?</h2>
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-blue-800">SIP vs Step Up SIP: Which is Better?</h2>
                 <p class="text-xl text-gray-600 mb-8">Understand the difference between regular SIP and Step Up SIP investments and see how they impact your wealth creation journey.</p>
             </div>            
             <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 <!-- Input Form -->
-                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-right">
-                    <h3 class="text-2xl font-semibold mb-6 text-dark">Enter Your Details</h3>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-900">Enter Your Details</h3>
                     
                     <div class="space-y-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Monthly SIP Amount (₹)</label>
-                            <input type="number" id="sipAmount" value="5000" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="number" id="sipAmount" value="5000" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent focus:outline-none">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Annual Step Up (%)</label>
-                            <input type="number" id="stepUpRate" value="10" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="number" id="stepUpRate" value="10" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent focus:outline-none">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Investment Period (Years)</label>
-                            <input type="number" id="investmentPeriod" value="15" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="number" id="investmentPeriod" value="15" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent focus:outline-none">
                         </div>
                         
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Expected Annual Return (%)</label>
-                            <input type="number" id="expectedReturn" value="12" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <input type="number" id="expectedReturn" value="12" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent focus:outline-none">
                         </div>
                         
-                        <button id="calculateBtn" class="w-full bg-primary hover:bg-blue-800 text-white py-3 rounded-lg font-medium transition-colors">Calculate</button>
+                        <button id="calculateBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition-colors">Calculate</button>
                     </div>
                 </div>
                 
                 <!-- Results -->
-                <div class="bg-white p-8 rounded-xl shadow-lg" data-aos="fade-left">
-                    <h3 class="text-2xl font-semibold mb-6 text-dark">Investment Results</h3>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-900">Investment Results</h3>
                     
                     <div class="space-y-4">
-                        <div class="flex justify-between items-center py-3 border-b">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="text-gray-600">Total Investment</span>
-                            <span class="font-semibold text-primary" id="totalInvestment">₹0</span>
+                            <span class="font-semibold text-blue-800" id="totalInvestment">₹0</span>
                         </div>
                         
-                        <div class="flex justify-between items-center py-3 border-b">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="text-gray-600">Regular SIP Value</span>
-                            <span class="font-semibold text-secondary" id="regularSipValue">₹0</span>
+                            <span class="font-semibold text-red-500" id="regularSipValue">₹0</span>
                         </div>
                         
-                        <div class="flex justify-between items-center py-3 border-b">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="text-gray-600">Step Up SIP Value</span>
-                            <span class="font-semibold text-accent" id="stepUpSipValue">₹0</span>
+                            <span class="font-semibold text-teal-500" id="stepUpSipValue">₹0</span>
                         </div>
                         
-                        <div class="flex justify-between items-center py-3 border-b">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
                             <span class="text-gray-600">Difference</span>
                             <span class="font-semibold text-green-600" id="differenceValue">₹0</span>
                         </div>
                         
                         <div class="bg-blue-50 p-4 rounded-lg mt-6">
-                            <h4 class="font-semibold text-primary mb-2">Key Insight</h4>
+                            <h4 class="font-semibold text-blue-800 mb-2">Key Insight</h4>
                             <p class="text-sm text-gray-600" id="insightText">Step Up SIP can help you build significantly more wealth over time by increasing your investment amount annually.</p>
                         </div>
                     </div>
@@ -112,54 +82,54 @@ permalink: /calculators/stepup-sip-calculator/
     <!-- Comparison Section -->
     <section id="comparison" class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-aos="fade-up">SIP vs Step Up SIP Comparison</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">SIP vs Step Up SIP Comparison</h2>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <div class="bg-blue-50 p-8 rounded-xl" data-aos="fade-right">
+                <div class="bg-blue-50 p-8 rounded-xl">
                     <div class="text-center mb-6">
-                        <i data-feather="trending-up" class="w-12 h-12 text-primary mx-auto"></i>
+                        <i data-feather="trending-up" class="w-12 h-12 text-blue-800 mx-auto"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-primary">Regular SIP</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Regular SIP</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Fixed monthly investment amount</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Simple and predictable</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="x" class="w-5 h-5 text-red-600 mr-3 mt-1"></i>
+                            <i data-feather="x" class="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Doesn't account for income growth</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="x" class="w-5 h-5 text-red-600 mr-3 mt-1"></i>
+                            <i data-feather="x" class="w-5 h-5 text-red-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Lower potential returns over long term</span>
                         </li>
                     </ul>
                 </div>
                 
-                <div class="bg-green-50 p-8 rounded-xl" data-aos="fade-left">
+                <div class="bg-green-50 p-8 rounded-xl">
                     <div class="text-center mb-6">
-                        <i data-feather="bar-chart-2" class="w-12 h-12 text-accent mx-auto"></i>
+                        <i data-feather="bar-chart-2" class="w-12 h-12 text-teal-500 mx-auto"></i>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-accent">Step Up SIP</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-500">Step Up SIP</h3>
                     <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Investment amount increases annually</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Matches your income growth</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Higher potential returns</span>
                         </li>
                         <li class="flex items-start">
-                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <i data-feather="check" class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0"></i>
                             <span>Better wealth creation over time</span>
                         </li>
                     </ul>
@@ -169,27 +139,17 @@ permalink: /calculators/stepup-sip-calculator/
     </section>
 
     <!-- Chart Section -->
-    <section class="py-16 bg-gray-100">
+    <section class="py-16 bg-gray-300">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-primary" data-aos="fade-up">Investment Growth Visualization</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Investment Growth Visualization</h2>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg max-w-6xl mx-auto" data-aos="fade-up">
-                <div class="h-96">
-                    <canvas id="investmentChart"></canvas>
-                </div>
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-6xl mx-auto">
+                <canvas id="investmentChart" width="800" height="400"></canvas>
             </div>
         </div>
     </section>
 
     <script>
-        // Initialize AOS and Feather Icons
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        feather.replace();
-
         // Investment Calculator Logic
         function calculateSIP(monthlyInvestment, annualReturn, years) {
             const monthlyRate = annualReturn / 100 / 12;
@@ -215,34 +175,9 @@ permalink: /calculators/stepup-sip-calculator/
             return Math.round(total);
         }
 
-        function updateResults() {
-            const sipAmount = parseFloat(document.getElementById('sipAmount').value);
-            const stepUpRate = parseFloat(document.getElementById('stepUpRate').value);
-            const investmentPeriod = parseFloat(document.getElementById('investmentPeriod').value);
-            const expectedReturn = parseFloat(document.getElementById('expectedReturn').value);
-
-            const regularSipValue = calculateSIP(sipAmount, expectedReturn, investmentPeriod);
-            const stepUpSipValue = calculateStepUpSIP(sipAmount, stepUpRate, expectedReturn, investmentPeriod);
-            const totalInvestment = sipAmount * 12 * investmentPeriod;
-            const difference = stepUpSipValue - regularSipValue;
-
-            document.getElementById('totalInvestment').textContent = '₹' + totalInvestment.toLocaleString();
-            document.getElementById('regularSipValue').textContent = '₹' + regularSipValue.toLocaleString();
-            document.getElementById('stepUpSipValue').textContent = '₹' + stepUpSipValue.toLocaleString();
-            document.getElementById('differenceValue').textContent = '₹' + difference.toLocaleString();
-
-            const insightText = difference > 0 ? 
-                `Step Up SIP generates ₹${difference.toLocaleString()} more than regular SIP over ${investmentPeriod} years. That's ${((difference / regularSipValue) * 100).toFixed(1)}% higher returns!` :
-                'Consider increasing your step-up rate to maximize returns.';
-            
-            document.getElementById('insightText').textContent = insightText;
-
-            updateChart(sipAmount, stepUpRate, expectedReturn, investmentPeriod);
-        }
+        let myChart = null;
 
         function updateChart(sipAmount, stepUpRate, expectedReturn, years) {
-            const ctx = document.getElementById('investmentChart');
-            
             // Generate yearly data
             const yearlyData = [];
             for (let year = 1; year <= years; year++) {
@@ -251,11 +186,15 @@ permalink: /calculators/stepup-sip-calculator/
                 yearlyData.push({ year, regularValue, stepUpValue });
             }
 
-            if (window.investmentChart) {
-                window.investmentChart.destroy();
+            const ctx = document.getElementById('investmentChart').getContext('2d');
+
+            // Destroy existing chart if it exists
+            if (myChart) {
+                myChart.destroy();
             }
 
-            window.investmentChart = new Chart(ctx, {
+            // Create new chart
+            myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: yearlyData.map(d => `Year ${d.year}`),
@@ -263,59 +202,88 @@ permalink: /calculators/stepup-sip-calculator/
                         {
                             label: 'Regular SIP',
                             data: yearlyData.map(d => d.regularValue),
-                            borderColor: '#FF6B6B',
-                            backgroundColor: 'rgba(255, 107, 107, 0.1)',
-                            borderWidth: 3,
-                            tension: 0.1,
-                            fill: true
+                            borderColor: '#EF4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
                         },
                         {
                             label: 'Step Up SIP',
                             data: yearlyData.map(d => d.stepUpValue),
-                            borderColor: '#4ECDC4',
-                            backgroundColor: 'rgba(78, 205, 196, 0.1)',
-                            borderWidth: 3,
-                            tension: 0.1,
-                            fill: true
+                            borderColor: '#14B8A6',
+                            backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                            borderWidth: 2,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 4,
+                            pointHoverRadius: 6
                         }
                     ]
                 },
                 options: {
                     responsive: true,
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
                     scales: {
                         y: {
                             beginAtZero: true,
                             ticks: {
                                 callback: function(value) {
-                                    if (value >= 1000000) {
-                                        return '₹' + (value / 1000000).toFixed(1) + 'M';
+                                    if (value >= 10000000) {
+                                        return '₹' + (value / 10000000).toFixed(1) + 'Cr';
+                                    } else if (value >= 100000) {
+                                        return '₹' + (value / 100000).toFixed(1) + 'L';
                                     } else if (value >= 1000) {
-                                        return '₹' + (value / 1000).toFixed(1) + 'K';
+                                        return '₹' + (value / 1000).toFixed(0) + 'K';
                                     }
                                     return '₹' + value;
                                 }
                             },
-                            title: {
-                                display: true,
-                                text: 'Investment Value'
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
                             }
                         },
                         x: {
-                            title: {
-                                display: true,
-                                text: 'Years'
+                            grid: {
+                                display: false
                             }
                         }
                     },
                     plugins: {
                         legend: {
                             position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 15,
+                                font: {
+                                    size: 13,
+                                    weight: '500'
+                                }
+                            }
                         },
                         tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 12,
+                            titleFont: {
+                                size: 14
+                            },
+                            bodyFont: {
+                                size: 13
+                            },
                             callbacks: {
                                 label: function(context) {
-                                    return context.dataset.label + ': ₹' + context.parsed.y.toLocaleString();
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += '₹' + context.parsed.y.toLocaleString('en-IN');
+                                    return label;
                                 }
                             }
                         }
@@ -324,17 +292,56 @@ permalink: /calculators/stepup-sip-calculator/
             });
         }
 
+        function updateResults() {
+            const sipAmount = parseFloat(document.getElementById('sipAmount').value) || 0;
+            const stepUpRate = parseFloat(document.getElementById('stepUpRate').value) || 0;
+            const investmentPeriod = parseFloat(document.getElementById('investmentPeriod').value) || 0;
+            const expectedReturn = parseFloat(document.getElementById('expectedReturn').value) || 0;
+
+            if (sipAmount <= 0 || investmentPeriod <= 0 || expectedReturn <= 0) {
+                return;
+            }
+
+            const regularSipValue = calculateSIP(sipAmount, expectedReturn, investmentPeriod);
+            const stepUpSipValue = calculateStepUpSIP(sipAmount, stepUpRate, expectedReturn, investmentPeriod);
+            const totalInvestment = sipAmount * 12 * investmentPeriod;
+            const difference = stepUpSipValue - regularSipValue;
+
+            document.getElementById('totalInvestment').textContent = '₹' + totalInvestment.toLocaleString('en-IN');
+            document.getElementById('regularSipValue').textContent = '₹' + regularSipValue.toLocaleString('en-IN');
+            document.getElementById('stepUpSipValue').textContent = '₹' + stepUpSipValue.toLocaleString('en-IN');
+            document.getElementById('differenceValue').textContent = '₹' + difference.toLocaleString('en-IN');
+
+            const insightText = difference > 0 ? 
+                `Step Up SIP generates ₹${difference.toLocaleString('en-IN')} more than regular SIP over ${investmentPeriod} years. That's ${((difference / regularSipValue) * 100).toFixed(1)}% higher returns!` :
+                'Consider increasing your step-up rate to maximize returns.';
+            
+            document.getElementById('insightText').textContent = insightText;
+
+            updateChart(sipAmount, stepUpRate, expectedReturn, investmentPeriod);
+        }
+
         // Event Listeners
         document.getElementById('calculateBtn').addEventListener('click', updateResults);
         
         // Input change listeners for real-time updates
         const inputs = ['sipAmount', 'stepUpRate', 'investmentPeriod', 'expectedReturn'];
         inputs.forEach(id => {
-            document.getElementById(id).addEventListener('input', updateResults);
+            document.getElementById(id).addEventListener('input', function() {
+                // Debounce the updates
+                clearTimeout(window.updateTimeout);
+                window.updateTimeout = setTimeout(updateResults, 300);
+            });
         });
 
-        // Initialize chart with default values
-        window.addEventListener('load', function() {
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Initialize feather icons
+            if (typeof feather !== 'undefined') {
+                feather.replace();
+            }
+            
+            // Initialize chart with default values
             updateResults();
         });
     </script>
