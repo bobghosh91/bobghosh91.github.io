@@ -15,7 +15,7 @@ read_time: "4 min read"
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
   <div class="p-5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border dark:border-slate-700">
     <h3 class="text-lg font-semibold">7 — Stay Invested for 7 Years</h3>
-    <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Equity markets can be unpredictable in the short run. Staying invested via SIPs for at least 7 years improves the chnaces of earning positive returns and allows compounding to take effect.</p>
+    <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Equity markets can be unpredictable in the short run. Staying invested via SIPs for at least 7 years improves the chances of earning positive returns and allows compounding to take effect.</p>
   </div>
 
   <div class="p-5 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border dark:border-slate-700">
