@@ -5,6 +5,8 @@ categories: [Long-Term Investing]
 image: "http://static.photos/finance/640x360/252"
 description: "Build your first ₹1 crore with simple investment strategies, smart money habits, and financial discipline."
 read_time: "5 min read"
+author: "Bishal Ghosh"
+author_image: "https://static.photos/monochrome/200x200/210.webp"
 featured: true
 featured_order: 1
 ---
