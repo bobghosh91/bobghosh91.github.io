@@ -3,228 +3,423 @@ layout: default
 title: Process
 permalink: /process/
 ---
+
 <style>
-    body {
-        font-family: 'Inter', sans-serif;
-    }
-    .process-hero {
-        background: linear-gradient(rgba(6, 190, 182, 0.9) 0%, rgba(23, 42, 69, 0.9) 100%), url('http://static.photos/finance/1200x630/2');
-        background-size: cover;
-        background-position: center;
-    }
-    .process-step:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    }
+  .process-hero {
+    background: linear-gradient(rgba(6, 190, 182, 0.9) 0%, rgba(23, 42, 69, 0.9) 100%), url('https://static.photos/finance/1200x630/2');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .process-step {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .trust-card {
+    border-left: 4px solid #06beb6;
+  }
+
+  .step-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .why-it-matters {
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 16px;
+    font-size: 0.95rem;
+    color: #374151;
+    font-style: italic;
+  }
+
+  .service-icon-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .service-icon-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px -4px rgba(0,0,0,0.1);
+  }
+
+  .life-event-tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 4px;
+  }
 </style>
-<body class="bg-gray-50">
-    <!-- Navigation -->
 
-    <!-- Hero Section -->
-    <div class="process-hero">
-        <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" data-aos="fade-up">
-                Our Investment Process
-            </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
-                A disciplined, research-driven approach to mutual fund selection and portfolio construction
+<!-- Hero Section -->
+<div class="process-hero">
+  <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" data-aos="fade-up">
+      Our Wealth Management Process
+    </h1>
+    <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
+      We help Indian families build, protect, and pass on wealth — with a plan that goes far beyond which funds to pick
+    </p>
+  </div>
+</div>
+
+<!-- Trust Bar -->
+<div class="bg-white border-t border-b border-gray-100 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+
+      <div class="trust-card bg-gray-50 rounded-lg p-5">
+        <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Registered With</p>
+        <p class="mt-1 text-lg font-bold text-gray-900">SEBI — AMFI</p>
+        <p class="mt-1 text-sm text-gray-500">Regulated, accountable, and fully transparent</p>
+      </div>
+
+      <div class="trust-card bg-gray-50 rounded-lg p-5">
+        <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Who We Serve</p>
+        <p class="mt-1 text-lg font-bold text-gray-900">Families at every stage</p>
+        <p class="mt-1 text-sm text-gray-500">First-time investors to multi-goal households</p>
+      </div>
+
+      <div class="trust-card bg-gray-50 rounded-lg p-5">
+        <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Our Commitment</p>
+        <p class="mt-1 text-lg font-bold text-gray-900">24-hour response</p>
+        <p class="mt-1 text-sm text-gray-500">Every query answered within one business day — always</p>
+      </div>
+
+      <div class="trust-card bg-gray-50 rounded-lg p-5">
+        <p class="text-sm text-gray-500 uppercase tracking-wide font-medium">Your First Step</p>
+        <p class="mt-1 text-lg font-bold text-gray-900">Free discovery call</p>
+        <p class="mt-1 text-sm text-gray-500">No obligation, no jargon — just an honest conversation</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Scope of Services -->
+<div class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Most advisors sell you a product. We build you a plan.
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+        We think across every dimension of your financial life — not just your portfolio
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-10 w-10 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+          <i data-feather="target" class="h-5 w-5 text-blue-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Goal-Based Financial Planning</h4>
+        <p class="mt-2 text-sm text-gray-500">Retirement, education, home purchase — each goal gets its own dedicated strategy and timeline.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="150">
+        <div class="h-10 w-10 rounded-lg bg-teal-50 flex items-center justify-center mb-4">
+          <i data-feather="trending-up" class="h-5 w-5 text-teal-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Investment Portfolio Construction</h4>
+        <p class="mt-2 text-sm text-gray-500">Diversified portfolios built around your risk profile, not around what is trending.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-10 w-10 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+          <i data-feather="percent" class="h-5 w-5 text-green-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Tax-Efficient Investing</h4>
+        <p class="mt-2 text-sm text-gray-500">ELSS, capital gains planning, old vs new regime — we factor tax into every recommendation.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="250">
+        <div class="h-10 w-10 rounded-lg bg-orange-50 flex items-center justify-center mb-4">
+          <i data-feather="shield" class="h-5 w-5 text-orange-500"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Insurance Need Analysis</h4>
+        <p class="mt-2 text-sm text-gray-500">We identify protection gaps in your financial plan — life, health, and income coverage.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-10 w-10 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+          <i data-feather="sun" class="h-5 w-5 text-purple-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Retirement Planning</h4>
+        <p class="mt-2 text-sm text-gray-500">Building a corpus that funds the retirement you want — not just the one you can afford.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="150">
+        <div class="h-10 w-10 rounded-lg bg-pink-50 flex items-center justify-center mb-4">
+          <i data-feather="book-open" class="h-5 w-5 text-pink-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Children's Education Planning</h4>
+        <p class="mt-2 text-sm text-gray-500">The cost of education doubles every 7 years. We help you stay ahead of it.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-10 w-10 rounded-lg bg-yellow-50 flex items-center justify-center mb-4">
+          <i data-feather="home" class="h-5 w-5 text-yellow-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Major Purchase Planning</h4>
+        <p class="mt-2 text-sm text-gray-500">Home, car, or business investment — we help you plan for big financial decisions without derailing long-term goals.</p>
+      </div>
+
+      <div class="service-icon-card bg-white rounded-xl p-6 shadow-sm" data-aos="fade-up" data-aos-delay="250">
+        <div class="h-10 w-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4">
+          <i data-feather="users" class="h-5 w-5 text-gray-600"></i>
+        </div>
+        <h4 class="font-semibold text-gray-900">Estate & Succession Guidance</h4>
+        <p class="mt-2 text-sm text-gray-500">Nominations, wills, and wealth transfer — making sure what you build reaches the people it is meant for.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Process Steps -->
+<div class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
+        How We Work With You
+      </h2>
+      <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500" data-aos="fade-up" data-aos-delay="100">
+        Five steps. A written plan. And an ongoing relationship that evolves as your life does.
+      </p>
+    </div>
+
+    <div class="mt-12 space-y-12">
+
+      <!-- Step 1 -->
+      <div class="process-step bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div class="lg:col-span-7">
+            <h3 class="text-2xl font-bold text-gray-900">
+              <span class="text-blue-600">Step 1:</span> Understanding Your Life & Goals
+            </h3>
+            <p class="step-meta">
+              <i data-feather="clock" class="h-4 w-4"></i> ~45 minutes &nbsp;·&nbsp;
+              <i data-feather="video" class="h-4 w-4"></i> Video or in-person
             </p>
-        </div>
-    </div>
-
-    <!-- Process Overview -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
-                    How We Build Your Portfolio
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500" data-aos="fade-up" data-aos-delay="100">
-                    Our 5-step process ensures your investments align with your goals and risk tolerance
-                </p>
+            <p class="mt-3 text-lg text-gray-500">
+              Before we talk about any investment, we listen. We want to understand your complete financial picture — your income, your family, your obligations, and the future you are working towards:
+            </p>
+            <ul class="mt-4 space-y-2 text-gray-500">
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Complete financial life assessment — income, expenses, existing assets</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Short, medium, and long-term goal mapping</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Honest risk tolerance evaluation</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Identification of insurance gaps and liquidity needs</span>
+              </li>
+            </ul>
+            <div class="why-it-matters">
+              A product chosen without understanding your life is just a guess. We refuse to guess with your future.
             </div>
-
-            <div class="mt-12 space-y-12">
-                <!-- Step 1 -->
-                <div class="process-step bg-white p-6 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                        <div class="lg:col-span-7">
-                            <h3 class="text-2xl font-bold text-gray-900">
-                                <span class="text-blue-600">Step 1:</span> Discovery & Goal Setting
-                            </h3>
-                            <p class="mt-3 text-lg text-gray-500">
-                                We begin by thoroughly understanding your financial situation, investment objectives, time horizon, and risk tolerance. This includes:
-                            </p>
-                            <ul class="mt-4 space-y-2 text-gray-500">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Comprehensive financial assessment</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Identification of short, medium, and long-term goals</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Risk tolerance evaluation</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Liquidity needs assessment</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:col-span-5">
-                            <img class="w-full rounded-lg shadow-xl" src="http://static.photos/finance/640x360/4" alt="Discovery meeting">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="process-step bg-white p-6 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                        <div class="lg:col-span-7 lg:order-last">
-                            <h3 class="text-2xl font-bold text-gray-900">
-                                <span class="text-blue-600">Step 2:</span> Research & Analysis
-                            </h3>
-                            <p class="mt-3 text-lg text-gray-500">
-                                Our investment team conducts rigorous research to identify the best mutual funds for your portfolio. Our analysis includes:
-                            </p>
-                            <ul class="mt-4 space-y-2 text-gray-500">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Performance analysis across market cycles</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Fund manager evaluation and track record</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Expense ratio and fee structure review</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Portfolio holdings and diversification analysis</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:col-span-5 lg:order-first">
-                            <img class="w-full rounded-lg shadow-xl" src="http://static.photos/finance/640x360/5" alt="Research analysis">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="process-step bg-white p-6 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                        <div class="lg:col-span-7">
-                            <h3 class="text-2xl font-bold text-gray-900">
-                                <span class="text-blue-600">Step 3:</span> Portfolio Construction
-                            </h3>
-                            <p class="mt-3 text-lg text-gray-500">
-                                Based on our research and your goals, we construct a diversified mutual fund portfolio designed to optimize returns while managing risk:
-                            </p>
-                            <ul class="mt-4 space-y-2 text-gray-500">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Asset allocation tailored to your risk profile</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Strategic diversification across asset classes</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Selection of top-performing funds with consistent track records</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Tax-efficient investment strategies</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:col-span-5">
-                            <img class="w-full rounded-lg shadow-xl" src="http://static.photos/finance/640x360/6" alt="Portfolio construction">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="process-step bg-white p-6 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="500">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                        <div class="lg:col-span-7 lg:order-last">
-                            <h3 class="text-2xl font-bold text-gray-900">
-                                <span class="text-blue-600">Step 4:</span> Implementation
-                            </h3>
-                            <p class="mt-3 text-lg text-gray-500">
-                                We handle all the paperwork and logistics to get your investments started smoothly:
-                            </p>
-                            <ul class="mt-4 space-y-2 text-gray-500">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Account opening assistance</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Systematic Investment Plan (SIP) setup</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">One-time investment execution</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Nomination and beneficiary setup</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:col-span-5 lg:order-first">
-                            <img class="w-full rounded-lg shadow-xl" src="http://static.photos/finance/640x360/7" alt="Implementation">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="process-step bg-white p-6 rounded-lg shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="600">
-                    <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
-                        <div class="lg:col-span-7">
-                            <h3 class="text-2xl font-bold text-gray-900">
-                                <span class="text-blue-600">Step 5:</span> Ongoing Monitoring & Review
-                            </h3>
-                            <p class="mt-3 text-lg text-gray-500">
-                                Our service continues with regular portfolio reviews and proactive management:
-                            </p>
-                            <ul class="mt-4 space-y-2 text-gray-500">
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Quarterly performance reviews</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Rebalancing when market conditions change</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Regular communication and updates</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
-                                    <span class="ml-2">Adjustments as your life circumstances evolve</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mt-8 lg:mt-0 lg:col-span-5">
-                            <img class="w-full rounded-lg shadow-xl" src="http://static.photos/finance/640x360/8" alt="Ongoing monitoring">
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="mt-8 lg:mt-0 lg:col-span-5">
+            <img class="w-full rounded-lg shadow-xl" src="https://static.photos/finance/640x360/4" alt="Discovery meeting">
+          </div>
         </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="150">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div class="lg:col-span-7 lg:order-last">
+            <h3 class="text-2xl font-bold text-gray-900">
+              <span class="text-blue-600">Step 2:</span> Building Your Financial Plan
+            </h3>
+            <p class="step-meta">
+              <i data-feather="clock" class="h-4 w-4"></i> Delivered within 5 business days &nbsp;·&nbsp;
+              <i data-feather="file-text" class="h-4 w-4"></i> Written plan document
+            </p>
+            <p class="mt-3 text-lg text-gray-500">
+              Every client receives a personalised written financial plan before a single rupee is invested. This is not a fund shortlist — it is a comprehensive strategy document that covers:
+            </p>
+            <ul class="mt-4 space-y-2 text-gray-500">
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Goal-wise corpus targets and timelines</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Recommended asset allocation with clear rationale</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Tax optimisation strategy — ELSS, capital gains, regime selection</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Insurance coverage assessment and gaps</span>
+              </li>
+            </ul>
+            <div class="why-it-matters">
+              Most advisors skip straight to product recommendations. We think that is backwards. The plan comes first — always.
+            </div>
+          </div>
+          <div class="mt-8 lg:mt-0 lg:col-span-5 lg:order-first">
+            <img class="w-full rounded-lg shadow-xl" src="https://static.photos/finance/640x360/5" alt="Financial plan">
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div class="lg:col-span-7">
+            <h3 class="text-2xl font-bold text-gray-900">
+              <span class="text-blue-600">Step 3:</span> Portfolio Construction & Fund Selection
+            </h3>
+            <p class="step-meta">
+              <i data-feather="clock" class="h-4 w-4"></i> Presented for your review before anything is actioned
+            </p>
+            <p class="mt-3 text-lg text-gray-500">
+              With the financial plan as our foundation, we select the specific instruments to bring it to life. Our research goes well beyond star ratings:
+            </p>
+            <ul class="mt-4 space-y-2 text-gray-500">
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">7-year rolling returns and full market cycle performance</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Fund manager tenure, philosophy, and consistency</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Downside capture and behaviour during 2008, 2013, 2020 crashes</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Expense ratio, portfolio overlap, and tax efficiency</span>
+              </li>
+            </ul>
+            <div class="why-it-matters">
+              You will never receive a recommendation you do not understand. We explain every choice in plain language — what it is, why it fits your plan, and what to realistically expect from it.
+            </div>
+          </div>
+          <div class="mt-8 lg:mt-0 lg:col-span-5">
+            <img class="w-full rounded-lg shadow-xl" src="https://static.photos/finance/640x360/6" alt="Portfolio construction">
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="250">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div class="lg:col-span-7 lg:order-last">
+            <h3 class="text-2xl font-bold text-gray-900">
+              <span class="text-blue-600">Step 4:</span> Implementation
+            </h3>
+            <p class="step-meta">
+              <i data-feather="clock" class="h-4 w-4"></i> Up and running within a few days &nbsp;·&nbsp;
+              <i data-feather="file-text" class="h-4 w-4"></i> We handle the paperwork
+            </p>
+            <p class="mt-3 text-lg text-gray-500">
+              Once you are comfortable with the plan, we take care of every detail to get things moving:
+            </p>
+            <ul class="mt-4 space-y-2 text-gray-500">
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">KYC and account opening assistance</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">SIP and lump sum investment setup</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Nomination, beneficiary, and succession documentation</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Coordination with your CA or tax advisor where needed</span>
+              </li>
+            </ul>
+            <div class="why-it-matters">
+              For many clients, this is their first time investing formally. We make sure the experience feels guided and simple — not like navigating a government office alone.
+            </div>
+          </div>
+          <div class="mt-8 lg:mt-0 lg:col-span-5 lg:order-first">
+            <img class="w-full rounded-lg shadow-xl" src="https://static.photos/finance/640x360/7" alt="Implementation">
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="process-step bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="300">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8 lg:items-center">
+          <div class="lg:col-span-7">
+            <h3 class="text-2xl font-bold text-gray-900">
+              <span class="text-blue-600">Step 5:</span> Ongoing Monitoring & Review
+            </h3>
+            <p class="step-meta">
+              <i data-feather="refresh-cw" class="h-4 w-4"></i> Quarterly reviews &nbsp;·&nbsp;
+              <i data-feather="bell" class="h-4 w-4"></i> Proactive guidance at every life stage
+            </p>
+            <p class="mt-3 text-lg text-gray-500">
+              A financial plan is not a document you file away. Life changes — and your strategy must change with it. We stay actively involved through every milestone:
+            </p>
+            <ul class="mt-4 space-y-2 text-gray-500">
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Quarterly portfolio reviews with plain-language summaries</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Rebalancing when markets shift your allocation off-target</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Annual financial plan review — goals, insurance, tax strategy</span>
+              </li>
+              <li class="flex items-start">
+                <i data-feather="check" class="flex-shrink-0 h-5 w-5 text-green-500"></i>
+                <span class="ml-2">Proactive outreach at key life events — not just at review time</span>
+              </li>
+            </ul>
+            <div class="why-it-matters">
+              When the Sensex drops 1,500 points and your phone is full of WhatsApp forwards, you will hear from us first — with context, calm, and a clear recommendation. That is what a wealth manager actually does.
+            </div>
+          </div>
+          <div class="mt-8 lg:mt-0 lg:col-span-5">
+            <img class="w-full rounded-lg shadow-xl" src="https://static.photos/finance/640x360/8" alt="Ongoing wealth management">
+          </div>
+        </div>
+      </div>
+
     </div>
+  </div>
+</div>
 
-    <!-- CTA Section -->
-    {% include cta.html %}
-
-    <!-- Footer -->
-</body>
+{% include cta.html %}

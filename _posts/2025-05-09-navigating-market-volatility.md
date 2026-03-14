@@ -3,209 +3,204 @@ title: "Navigating Market Volatility"
 date: 2025-05-09
 categories: [Market Insights]
 author: "Bob Ghosh"
-image: "http://static.photos/people/640x360/2"
+image: "https://static.photos/people/640x360/2"
 description: "Strategies to help your portfolio weather market ups and downs while staying focused on long-term goals."
 read_time: "7 min read"
 ---
 
+<article class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+      When the Sensex Falls, Should You? Staying Calm and Invested Through Market Volatility
+    </h1>
+  <!-- Introduction -->
+  <div class="prose prose-invert max-w-none">
 
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <article class="max-w-4xl mx-auto px-6 py-12">
-        <!-- Header -->
-        <header class="mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Navigating Market Volatility: Strategies to Help Your Portfolio Weather Market Ups and Downs While Staying Focused on Long-Term Goals
-            </h1>
-        </header>
+    <p class="text-lg leading-relaxed mb-6">
+      It usually starts with a WhatsApp forward. Someone in your family group shares a news headline — "Sensex Crashes 1,500 Points" or "Nifty Hits 52-Week Low" — and suddenly everyone has an opinion. Your uncle calls to say he sold everything. Your colleague at work is refreshing Zerodha every ten minutes. And you? You are staring at your portfolio with a sinking feeling in your stomach.
+    </p>
 
-        <!-- Introduction -->
-        <div class="prose prose-invert max-w-none">
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                It starts with a notification on your phone or a headline on the evening news: "Markets Tumble," "Volatility Spikes," or "Investors on Edge." You check your portfolio, and the numbers are down. Your stomach drops.
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      If this sounds familiar, you are in good company. For most Indian investors — whether you are a salaried professional in Pune who started a SIP last year, or a business owner in Surat who has been in the market for decades — watching your hard-earned money lose value on screen is genuinely unsettling. We work too hard for our money to watch it shrink.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                If you have felt this specific brand of anxiety, you are not alone. Watching hard-earned savings fluctuate in value is one of the most psychologically difficult aspects of investing. Whether you are saving for a retirement that is decades away or one that is just around the corner, market volatility can feel like a direct threat to your future security.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      But here is the thing: the discomfort you feel is completely natural. What is <em>not</em> inevitable, however, is making a bad financial decision because of it. In fact, how you respond during these rough patches often matters far more to your long-term wealth than which stocks or funds you picked in the first place.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                However, while the emotional reaction to volatility is unavoidable, your financial reaction is entirely within your control. In fact, how you behave during these turbulent periods is often more important to your long-term wealth than the investments you pick.
-            </p>
+    <!-- Section: Understanding the Nature of the Beast -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      First, Let's Understand What's Actually Happening
+    </h2>
 
-            <!-- Section: Understanding the Nature of the Beast -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                Understanding the Nature of the Beast
-            </h2>
+    <p class="text-lg leading-relaxed mb-6">
+      Before we talk strategy, let us take a breath and demystify the noise. <span class="font-semibold text-blue-400">Market volatility</span> simply means that prices are moving — sometimes sharply — up or down. It is not a sign that the economy is collapsing or that your investments are worthless. It is just the market doing what markets have always done.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Before we dive into strategies, we must demystify what is happening. <span class="font-semibold text-blue-400">Market volatility</span> simply refers to the frequency and magnitude of price movements—up or down.
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      Think of investing like a long train journey from Mumbai to Delhi. Your destination is your financial goal — your child's education, your retirement, that dream home. Volatility is the rough track, the unscheduled halts, the occasional jolts along the way. The train is still moving. You are still heading in the right direction. A bumpy ride does not mean you should jump off.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Think of the stock market like a long road trip. The destination is your financial goal (retirement, a home purchase, wealth building). Volatility is the traffic, the potholes, and the sudden storms you encounter along the way. While unpleasant, these conditions are a normal part of the journey, not a sign that the car is broken or that the road is closed.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      Indian markets have seen their share of brutal corrections — the dot-com bust, the 2008 global financial crisis, demonetisation jitters, COVID-19, and more recently, FII outflows and global rate hike fears. And yet, the Sensex has gone from under 1,000 in the early 1990s to crossing 80,000. Every single correction, in hindsight, was a blip. Volatility is simply the entry fee for the long-term returns that equities offer — returns that no FD or savings account can match over time.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                Historically, markets have always moved in cycles. There have been bull markets (periods of growth) and bear markets (periods of decline). The key takeaway from history is that volatility is the "price of admission" for the potential returns that stocks offer over bonds or cash savings.
-            </p>
+    <!-- Section: Core Strategies -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      Strategies to Keep You Steady When Markets Are Not
+    </h2>
 
-            <!-- Section: Core Strategies -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                Core Strategies to Weather the Storm
-            </h2>
+    <p class="text-lg leading-relaxed mb-8">
+      You cannot control RBI policy, global oil prices, or what the US Fed decides to do next. But you can absolutely control how your portfolio is built and how you behave within it. Here is what actually works.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-8">
-                You cannot control inflation, interest rates, or geopolitical events. However, you can construct a portfolio designed to withstand them. Here are the core strategies to keep you grounded.
-            </p>
+    <!-- Strategy 1: Diversification -->
+    <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
+      1. Diversification — The Wisdom Your Grandmother Already Knew
+    </h3>
 
-            <!-- Strategy 1: Diversification -->
-            <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
-                1. The Power of Diversification
-            </h3>
+    <p class="text-lg leading-relaxed mb-6">
+      There is a reason our grandparents never put all their savings in one place. Some money in the post office, some in gold, some in land — that was their version of diversification. The principle has not changed, only the instruments have.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                The oldest adage in investing remains the most relevant: <span class="font-semibold text-blue-400">Don't put all your eggs in one basket.</span>
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      Spreading your investments across asset classes — equities, debt mutual funds, gold, REITs, and even a small international allocation — means that when one category takes a hit, the others can cushion the fall. When the Nifty is bleeding, sovereign gold bonds might be holding steady. When small-cap funds are volatile, a good debt fund keeps things stable.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Diversification involves spreading your investments across different asset classes (stocks, bonds, cash, real estate) and sectors (technology, healthcare, energy). The logic is simple: different assets react differently to economic events. When stocks are zigging, bonds might be zagging.
-            </p>
+    <p class="text-lg leading-relaxed mb-10">
+      A well-diversified portfolio will never be the one that doubles overnight — but it also will not be the one that keeps you awake at 2 AM. Think of it as financial dal-chawal: not flashy, but deeply reliable.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-10">
-                By holding a mix of non-correlated assets, you lower the risk of your entire portfolio taking a catastrophic hit simultaneously. A well-diversified portfolio is like an all-terrain vehicle; it may not be the fastest on a straight track, but it is built to handle rough ground without breaking down.
-            </p>
+    <!-- Strategy 2: SIP / Dollar-Cost Averaging -->
+    <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
+      2. Your SIP Is Smarter Than You Think
+    </h3>
 
-            <!-- Strategy 2: Dollar-Cost Averaging -->
-            <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
-                2. Dollar-Cost Averaging: The Antidote to Timing
-            </h3>
+    <p class="text-lg leading-relaxed mb-6">
+      Every time markets fall, someone asks: "Should I pause my SIP?" It is one of the most common — and most costly — questions in Indian personal finance.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                One of the biggest questions investors ask during volatility is, "Is now the right time to buy?" or "Should I wait until things settle down?"
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      A Systematic Investment Plan (SIP) is essentially <span class="font-semibold text-blue-400">Rupee-Cost Averaging</span> in action. You invest a fixed amount every month, regardless of whether the market is up or down. The magic is in the math:
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Attempting to time the market is a nearly impossible feat, even for professionals. A better approach is <span class="font-semibold text-blue-400">Dollar-Cost Averaging (DCA)</span>. This strategy involves investing a fixed amount of money at regular intervals (e.g., monthly or bi-weekly), regardless of share price.
-            </p>
+    <ul class="list-none space-y-3 mb-6 ml-4">
+      <li class="text-lg leading-relaxed">
+        <span class="font-semibold text-blue-400">When markets fall:</span> Your ₹5,000 SIP buys <em class="text-green-400">more</em> units at a lower NAV.
+      </li>
+      <li class="text-lg leading-relaxed">
+        <span class="font-semibold text-blue-400">When markets rise:</span> Your ₹5,000 SIP buys <em class="text-yellow-400">fewer</em> units, but the ones you already hold are worth more.
+      </li>
+    </ul>
 
-            <ul class="list-none space-y-3 mb-6 ml-4">
-                <li class="text-lg text-gray-300 leading-relaxed">
-                    <span class="font-semibold text-blue-400">When the market is down:</span> Your fixed amount buys <em class="text-green-400">more</em> shares.
-                </li>
-                <li class="text-lg text-gray-300 leading-relaxed">
-                    <span class="font-semibold text-blue-400">When the market is up:</span> Your fixed amount buys <em class="text-yellow-400">fewer</em> shares.
-                </li>
-            </ul>
+    <p class="text-lg leading-relaxed mb-10">
+      A market correction is not a reason to stop your SIP — it is actually when your SIP works hardest for you. The investors who paused SIPs during the March 2020 COVID crash and restarted months later missed some of the cheapest buying prices in a decade. Don't be that investor. Let the process do its job.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-10">
-                DCA removes the guesswork and the emotional burden of trying to pick the "perfect" entry point. Over time, this lowers your average cost per share and turns market dips into buying opportunities rather than panic points.
-            </p>
+    <!-- Strategy 3: Asset Allocation -->
+    <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
+      3. Know Your Risk Appetite — Honestly
+    </h3>
 
-            <!-- Strategy 3: Asset Allocation -->
-            <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
-                3. Asset Allocation and Risk Tolerance
-            </h3>
+    <p class="text-lg leading-relaxed mb-6">
+      Your <span class="font-semibold text-blue-400">asset allocation</span> — how much of your money is in equities versus debt versus gold — should reflect two very honest answers: how long can you stay invested, and how much pain can you actually handle?
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Your <span class="font-semibold text-blue-400">Asset Allocation</span>—the percentage of stocks versus bonds in your portfolio—should be a reflection of two things: your time horizon and your risk tolerance.
-            </p>
+    <ul class="list-none space-y-4 mb-6 ml-4">
+      <li class="text-lg leading-relaxed">
+        <span class="font-semibold text-blue-400">Time Horizon:</span> A 28-year-old in Bengaluru saving for retirement has 30+ years to ride out any storm. An FD-like stability is unnecessary — and actually harmful to long-term growth. But someone retiring in two years in Nagpur needs capital preservation first, growth second.
+      </li>
+      <li class="text-lg leading-relaxed">
+        <span class="font-semibold text-blue-400">Risk Tolerance:</span> This is not just a number on a form. Ask yourself honestly — if your portfolio dropped 30% tomorrow, would you stay calm, or would you lose sleep and sell everything? Your true answer should shape your allocation.
+      </li>
+    </ul>
 
-            <ul class="list-none space-y-4 mb-6 ml-4">
-                <li class="text-lg text-gray-300 leading-relaxed">
-                    <span class="font-semibold text-blue-400">Time Horizon:</span> If you are 30 years from retirement, you likely have time to recover from a market drop, allowing you to take more risk for higher potential growth. If you are retiring next year, capital preservation becomes more critical.
-                </li>
-                <li class="text-lg text-gray-300 leading-relaxed">
-                    <span class="font-semibold text-blue-400">Risk Tolerance:</span> This is your ability to sleep at night when the market drops 10% or 20%.
-                </li>
-            </ul>
+    <p class="text-lg leading-relaxed mb-10">
+      A market correction is a good reality check. If you found yourself panicking more than you expected, your equity allocation may simply be higher than your gut can handle. That is not a character flaw — it is just useful data. Use it to recalibrate once the storm passes, not in the middle of it.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-10">
-                During volatile times, review your allocation. If a market dip causes you panic, your portfolio might be too aggressive for your true risk tolerance. However, do not change it <em>during</em> the panic; use this insight to adjust your strategy once the dust settles.
-            </p>
+    <!-- Strategy 4: Emergency Fund -->
+    <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
+      4. The Emergency Fund: Your Financial Airbag
+    </h3>
 
-            <!-- Strategy 4: Emergency Fund -->
-            <h3 class="text-2xl font-bold text-blue-400 mt-10 mb-4">
-                4. The Emergency Fund Buffer
-            </h3>
+    <p class="text-lg leading-relaxed mb-6">
+      Here is a scenario that plays out far too often in Indian households: the market is down 20%, but the washing machine breaks down or there is a sudden medical bill. With no liquid cash available, the investor is forced to redeem mutual fund units at a loss — locking in damage that did not need to happen.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Nothing forces a bad investment decision quite like a cash crunch. The worst time to sell stocks is when the market is down, but if you need cash for a medical emergency or a car repair, you might be forced to lock in those losses.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      An <span class="font-semibold text-blue-400">emergency fund</span> — ideally 4 to 6 months of your monthly expenses, parked in a liquid fund or a high-interest savings account — is what separates disciplined investors from reactive ones. It means your long-term investments never have to be touched for short-term needs. Keep this money separate, accessible, and mentally off-limits for anything except genuine emergencies.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                An <span class="font-semibold text-blue-400">emergency fund</span> (typically 3 to 6 months of living expenses held in liquid cash) acts as a buffer. It ensures that your long-term investments can remain untouched, giving them the time they need to recover.
-            </p>
+    <!-- Section: Emotional Decision-Making -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      The Real Enemy Is Not the Market — It Is the WhatsApp Group
+    </h2>
 
-            <!-- Section: Emotional Decision-Making -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                The Danger of Emotional Decision-Making
-            </h2>
+    <p class="text-lg leading-relaxed mb-6">
+      Behavioral economists have a term for it: the <strong>"Behavioural Gap"</strong> — the difference between what a fund actually returns and what the average investor in that fund actually earns. In India, this gap is wide, and the reason is painfully simple: <span class="font-semibold text-red-400">we buy when euphoria peaks and sell when fear takes over.</span>
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Behavioral economists often speak of the "Behavioral Gap"—the difference between the return of an investment fund and the return of the average investor in that fund. The investor's return is almost always lower. Why? <span class="font-semibold text-red-400">Because of emotional buying and selling.</span>
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      In January 2008, Everyone was piling into equities because "the market only goes up." Then came the crash, and the same people sold at the bottom in panic. Or think about 2020 — when Nifty fell 38% in weeks, lakhs of retail investors redeemed their holdings. The ones who held on — or better yet, invested more — saw their portfolios multiply within 18 months.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                We are hardwired to flee from danger (sell when markets drop) and chase comfort (buy when markets are soaring). This leads to the cardinal sin of investing: buying high and selling low.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      Our brains are wired to flee danger. In the wild, that instinct kept us alive. In investing, it quietly destroys wealth. So mute the noise — the news channel breaking alerts, the "expert" tips in your family chat, the colleague who "saw this coming." Check your portfolio monthly, not daily. A paper loss is only a real loss the moment you sell. If your investment thesis hasn't changed, a falling price is not a crisis — it is a discount.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                To combat this, try to disconnect your emotions from your portfolio. Stop checking your balance daily. Remember that a "paper loss" only becomes a real loss if you sell. If your fundamental reasons for investing haven't changed, a drop in price is just noise.
-            </p>
+    <!-- Section: Rebalancing -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      Rebalancing: Turning Chaos Into Opportunity
+    </h2>
 
-            <!-- Section: Rebalancing -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                Rebalancing: The Opportunity in Chaos
-            </h2>
+    <p class="text-lg leading-relaxed mb-6">
+      When markets fall sharply, your portfolio's composition shifts. If equities drop 25%, their share of your overall portfolio shrinks — even if you did not sell a single unit. You are now automatically holding more debt and less equity than you planned.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Volatility often throws your target asset allocation out of whack. For example, if stocks drop significantly, they may now represent a smaller percentage of your portfolio than you intended.
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      This is precisely when <span class="font-semibold text-blue-400">rebalancing</span> becomes powerful. By moving some money from debt back into equities — essentially buying more when prices are low — you are doing mechanically what most investors fail to do emotionally. You are buying the dip, systematically and without panic.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                This is where <span class="font-semibold text-blue-400">Rebalancing</span> comes in. It requires you to do something counterintuitive: sell some of the assets that have performed well (selling high) and buy more of the assets that are struggling (buying low) to get back to your target percentages.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      Set a simple rule: review your allocation every six months or whenever any asset class drifts more than 10% from your target. Rebalancing is one of those rare financial actions that forces good behaviour by design. It takes the emotion out entirely — and that is exactly the point.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                Systematic rebalancing forces you to adhere to the discipline of "buy low, sell high" without emotional interference. It is a risk management tool that naturally positions you to capture growth when the market eventually turns around.
-            </p>
+    <!-- Section: Long-Term Perspective -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      Zoom Out — The Long View Always Looks Different
+    </h2>
 
-            <!-- Section: Long-Term Perspective -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                The Long-Term Perspective
-            </h2>
+    <p class="text-lg leading-relaxed mb-6">
+      Pull up a 20-year chart of the Sensex. Every crash that felt catastrophic in the moment — 2001, 2008, 2013, 2016, 2020 — is barely visible on the long-term curve. What you see instead is a line that, despite every setback, trends stubbornly upward.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                It is helpful to zoom out. In the moment, a market correction feels like the end of the world. But looking back at 20, 30, or 50 years of market history, those same corrections look like small blips on an upward trajectory.
-            </p>
+    <p class="text-lg leading-relaxed mb-12">
+      India's economic story is still being written. A growing middle class, rising financial literacy, increasing formalisation, and a demographic dividend that most of the world envies — these are not just talking points, they are structural tailwinds for Indian equities over the next two to three decades. Every investor who panicked and exited during a downturn missed out on the recovery. Every investor who stayed the course — and kept investing — was eventually rewarded. History has been consistent on this point, even when the present feels anything but.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-12">
-                Every major market decline in history—from the Great Depression to the 2008 Financial Crisis and the 2020 Pandemic crash—has eventually been followed by a recovery and new highs. The investors who lost money were the ones who exited the market. The ones who stayed the course (and continued to invest) were eventually rewarded.
-            </p>
+    <!-- Conclusion -->
+    <h2 class="text-3xl font-bold mt-12 mb-6">
+      Stay the Course — Your Future Self Will Thank You
+    </h2>
 
-            <!-- Conclusion -->
-            <h2 class="text-3xl font-bold text-white mt-12 mb-6">
-                Conclusion
-            </h2>
+    <p class="text-lg leading-relaxed mb-6">
+      Market volatility is not something that happens <em>to</em> you. It is something that happens <em>around</em> you — and your job is simply not to react impulsively to it. The investors who build lasting wealth in India are not the ones with the sharpest stock-picking skills. They are the ones who kept their SIPs running through bad news cycles, who did not panic-sell in March 2020, who stayed boring and stayed invested.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Volatility is uncomfortable, but it is not the enemy. The real enemy is the impulse to abandon a well-thought-out plan in a moment of fear.
-            </p>
+    <p class="text-lg leading-relaxed mb-6">
+      Diversify thoughtfully. Let your SIP run. Keep an emergency fund that is genuinely separate. Review your allocation with a clear head. And the next time a WhatsApp forward tells you the sky is falling — take a deep breath, put your phone down, and trust the process.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                Successful investing is rarely about outsmarting the market; it is about mastering your own behavior. By diversifying, automating your investments through dollar-cost averaging, maintaining an emergency fund, and keeping your eyes on the long-term horizon, you can navigate these choppy waters with confidence.
-            </p>
+    <p class="text-lg leading-relaxed mb-16">
+      You are not just investing money. You are investing in your own future — your retirement, your children's opportunities, your financial freedom. That deserves patience, not panic.
+    </p>
 
-            <p class="text-lg text-gray-300 leading-relaxed mb-16">
-                Remember: You are investing for your future self. The best thing you can do for them today is to stay the course.
-            </p>
+    <!-- Disclaimer -->
+    <div class="border-t border-gray-700 pt-8 mt-16">
+      <p class="text-sm leading-relaxed italic">
+        <span class="font-semibold">Disclaimer:</span> This article is for educational purposes only and does not constitute financial advice. Please consult with a SEBI-registered investment advisor before making significant financial decisions.
+      </p>
+    </div>
 
-            <!-- Disclaimer -->
-            <div class="border-t border-gray-700 pt-8 mt-16">
-                <p class="text-sm text-gray-500 leading-relaxed italic">
-                    <span class="font-semibold">Disclaimer:</span> Disclaimer: This article is for educational purposes only and does not constitute financial advice. Please consult with a SEBI-registered investment advisor before making significant financial decisions.
-                </p>
-            </div>
-        </div>
-    </article>
-</body>
+  </div>
+</article>
