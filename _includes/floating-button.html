@@ -89,38 +89,40 @@
       const fabMenu = document.getElementById("fab-menu");
       const fabIcon = document.getElementById("fab-icon");
   
-      mainFab.addEventListener("click", () => {
-        const isHidden = fabMenu.classList.contains("hidden");
+      if (mainFab) {
+        mainFab.addEventListener("click", () => {
+          const isHidden = fabMenu.classList.contains("hidden");
+          
+          fabMenu.classList.toggle("hidden");
+          fabMenu.classList.toggle("flex");
+          fabIcon.classList.toggle("rotate-45");
+          
+          // Update ARIA attribute
+          mainFab.setAttribute("aria-expanded", isHidden ? "true" : "false");
+          
+          // Re-render feather icons after menu items appear
+          if (isHidden) {
+            setTimeout(() => feather.replace(), 10);
+          }
+        });
+    
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+          if (!mainFab.contains(event.target) && !fabMenu.contains(event.target)) {
+            fabMenu.classList.add("hidden");
+            fabMenu.classList.remove("flex");
+            fabIcon.classList.remove("rotate-45");
+            mainFab.setAttribute("aria-expanded", "false");
+          }
+        });
         
-        fabMenu.classList.toggle("hidden");
-        fabMenu.classList.toggle("flex");
-        fabIcon.classList.toggle("rotate-45");
-        
-        // Update ARIA attribute
-        mainFab.setAttribute("aria-expanded", isHidden ? "true" : "false");
-        
-        // Re-render feather icons after menu items appear
-        if (isHidden) {
-          setTimeout(() => feather.replace(), 10);
-        }
-      });
-  
-      // Close menu when clicking outside
-      document.addEventListener("click", (event) => {
-        if (!mainFab.contains(event.target) && !fabMenu.contains(event.target)) {
+        // Close menu when clicking on menu items
+        fabMenu.addEventListener("click", () => {
           fabMenu.classList.add("hidden");
           fabMenu.classList.remove("flex");
           fabIcon.classList.remove("rotate-45");
           mainFab.setAttribute("aria-expanded", "false");
-        }
-      });
-      
-      // Close menu when clicking on menu items
-      fabMenu.addEventListener("click", () => {
-        fabMenu.classList.add("hidden");
-        fabMenu.classList.remove("flex");
-        fabIcon.classList.remove("rotate-45");
-        mainFab.setAttribute("aria-expanded", "false");
-      });
+        });
+      }
     });
   </script>

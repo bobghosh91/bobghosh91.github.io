@@ -1,0 +1,317 @@
+---
+title: "A Beginner’s Guide to Investing in International Mutual Funds"
+date: 2026-03-26
+categories: [Long-Term Investing]
+image: "https://static.photos/aerial/640x360/98"
+description: "Understand global growth, diversify your portfolio beyond Indian borders, and learn how to invest in the world's most innovative companies—right from India."
+read_time: "6 min read"
+---
+
+<section class="mb-12">
+    <p class="text-lg leading-relaxed mb-4">
+        Take a second and look around you. That smartphone you're holding? Powered by software from Google or Apple. Your laptop probably runs Windows, or it's crunching away on chips designed by Nvidia or Intel. Movie night means Netflix, Prime, or Disney+. And somewhere in your week, there's a Starbucks coffee or a pair of Nikes ordered from your couch.
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+        You're already a global consumer without even thinking about it. So here's the thing — when it comes to investing, is your money still stuck in just one country?
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+        For most Indian investors, honestly, yes. This is what people call <strong>"home country bias"</strong> — the very human tendency to invest only in what's familiar and close to home. And look, India's economy is genuinely exciting. It's one of the fastest-growing in the world, and there's no shortage of good domestic opportunities. But staying entirely local means you're sitting out some of the biggest wealth-creation stories happening right now, globally.
+    </p>
+    <p class="text-lg leading-relaxed">
+        If you're in your 20s, 30s, or early 40s, you've got something most investors wish they had more of: time. That makes right now a genuinely good moment to explore what global diversification can do for you. This guide walks you through international mutual funds in plain language — what they are, what to watch out for, and how to actually get started from India.
+    </p>
+</section>
+
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+        What Are International Mutual Funds?
+    </h2>
+    <p class="text-lg leading-relaxed mb-4">
+        Before we cross any borders, let's quickly get the basics down. Think of a mutual fund as a giant shared financial basket. Thousands of investors chip in their money, a professional fund manager takes the wheel, and that pooled money gets invested across a bunch of companies. Simple enough, right?
+    </p>
+    <p class="text-lg leading-relaxed mb-4">
+        An <strong>international mutual fund</strong> (you'll also hear it called an overseas or global fund) works exactly the same way — except instead of buying shares in Indian companies like Reliance or HDFC, the fund manager is shopping on global markets.
+    </p>
+    <div class="bg-gray-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg shadow-sm">
+        <h3 class="text-xl font-semibold !text-gray-800 mb-2">How do they work in India?</h3>
+        <p class="text-gray-700 leading-relaxed">
+          You don't need dollars to invest in them! When you invest from India, you invest in Indian Rupees (INR) through a standard Indian mutual fund house. The fund house collects your Rupees, converts them into foreign currency (like US Dollars), and invests in global markets. When you withdraw, the current value is converted back into Rupees and deposited into your Indian bank account.
+        </p>
+    </div>
+</section>
+
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+        Why Should Indian Investors Consider Going Global?
+    </h2>
+    <p class="text-lg leading-relaxed mb-6">
+        Going global isn't just about chasing higher returns — though that's a nice bonus. At its core, it's about building a portfolio that's resilient and well-rounded. Here's why adding some international exposure actually makes a lot of sense:
+    </p>
+    <div class="space-y-6">
+        <div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2">1. Geographic Diversification (Asset Allocation)</h3>
+            <p class="text-lg leading-relaxed">
+            You've probably heard "don't put all your eggs in one basket" — that's asset allocation in a nutshell. If the Indian stock market hits a rough patch because of domestic inflation, a policy change, or political noise, your entire portfolio takes the hit. International funds tend to move differently from Indian markets. So when things are rough here, markets in the US or Europe might be holding steady — or even climbing — which helps cushion the blow.
+            </p>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2">2. Access to Global Innovation and Monopolies</h3>
+            <p class="text-lg leading-relaxed">
+            India punches well above its weight in IT services and banking. But if you want exposure to companies leading the charge in AI, cloud computing, semiconductors, or global e-commerce? You won't find deep public markets for those here. International funds let you own a sliver of companies that genuinely dominate the world — the kind of businesses with real moats and global scale.
+            </p>
+        </div>
+        <div>
+            <h3 class="text-xl font-bold text-blue-800 mb-2">3. The Rupee Depreciation Edge</h3>
+            <p class="text-lg leading-relaxed">
+            Here's something most people don't factor in: the Rupee has historically weakened against the US Dollar by about 3% to 4% every year over the long run. When you invest in a US-focused fund, your money is tied to the Dollar. So if a US market gives you an 8% return and the Dollar strengthens by 4% against the Rupee, your actual return in Rupee terms could be closer to 12%. <em>(Note: This works both ways, which we'll get into in the risks section).</em>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+        Types of International Mutual Funds
+    </h2>
+    <p class="text-lg leading-relaxed mb-6">
+        Not all global funds are built the same. They generally fall into a few categories depending on where and how they invest — and picking the right type matters:
+    </p>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <li class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold !text-gray-900 mb-2">🌍 Global / World Funds</h3>
+            <p class="text-gray-600 leading-relaxed">
+            These funds spread their bets across multiple countries — the US, Europe, Japan, and sometimes emerging markets too. If you want the widest possible geographic spread, this is it.
+            </p>
+        </li>
+        <li class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold !text-gray-900 mb-2">US Country-Specific Funds</h3>
+            <p class="text-gray-600 leading-relaxed">
+            These zero in on a single country. The most popular in India are US-focused funds tracking the S&P 500 or NASDAQ 100. Others might focus on China, Japan, or Brazil specifically.
+            </p>
+        </li>
+        <li class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold !text-gray-900 mb-2">💻 Thematic / Sectoral Funds</h3>
+            <p class="text-gray-600 leading-relaxed">
+            These funds chase a specific global theme, regardless of which country the companies are in. Think Global Technology, Global Healthcare, or clean energy — a way to bet on trends rather than geographies.
+            </p>
+        </li>
+        <li class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <h3 class="text-xl font-bold !text-gray-900 mb-2">📈 Emerging vs. Developed Markets</h3>
+            <p class="text-gray-600 leading-relaxed">
+            Developed market funds stick to stable, advanced economies like the US, UK, and Germany. Emerging market funds go after faster-growing — but more volatile — economies like Taiwan, South Korea, and South Africa.
+            </p>
+        </li>
+    </ul>
+</section>
+
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+    The Yin and Yang: Benefits vs. Risks
+    </h2>
+    <p class="text-lg leading-relaxed mb-6">
+    No investment is a free lunch — and international funds are no exception. Here's an honest look at both sides of the coin:
+    </p>
+    <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-1 bg-green-50 p-6 rounded-xl border border-green-100">
+            <h3 class="text-2xl font-bold !text-green-800 mb-4 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                The Benefits
+            </h3>
+            <ul class="space-y-3 text-green-900">
+            <li class="flex items-start"><span class="mr-2">•</span> Reduces dependency on the Indian economy alone.</li>
+            <li class="flex items-start"><span class="mr-2">•</span> Acts as a hedge against Rupee depreciation.</li>
+            <li class="flex items-start"><span class="mr-2">•</span> Offers exposure to diverse business cycles globally.</li>
+            <li class="flex items-start"><span class="mr-2">•</span> Provides a straightforward, regulated way to invest globally without needing a foreign broker.</li>
+            </ul>
+        </div>
+        <div class="flex-1 bg-red-50 p-6 rounded-xl border border-red-100">
+            <h3 class="text-2xl font-bold !text-red-800 mb-4 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                The Risks
+            </h3>
+            <ul class="space-y-3 text-red-900">
+            <li class="flex items-start">
+                <span class="mr-2">•</span> <strong>Currency Risk:</strong> If the Rupee actually strengthens against the Dollar, it chips away at your returns — even if the foreign market itself did well.
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">•</span> <strong>Geopolitical Risk:</strong> Global events, foreign elections, trade wars, or a hawkish US Federal Reserve can trigger sudden swings you weren't expecting.
+            </li>
+            <li class="flex items-start">
+                <span class="mr-2">•</span> <strong>Regulatory Limits:</strong> The RBI occasionally pauses fresh investments into international funds when the industry hits its macro investment ceiling ($7 billion currently). It's happened before, so worth knowing.
+            </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="mb-12">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-blue-100 pb-2">
+    Step-by-Step Guide: How to Invest from India
+    </h2>
+    <p class="text-lg leading-relaxed mb-8">
+    Good news — investing in international mutual funds is genuinely not complicated. It's about as straightforward as buying a domestic fund. Here's the path:
+    </p>
+    <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+            <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-xl !text-gray-900 mb-2">Assess Your Core Portfolio</h3>
+                    <p class="text-gray-600">Make sure you've got a solid domestic foundation first. International funds work best as a "satellite" holding — think of them as a supporting player, not the star. A good rule of thumb is keeping them to around 10% to 20% of your total equity investments.</p>
+                </div>
+            </div>
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-xl !text-gray-900 mb-2">Ensure Your KYC is Complete</h3>
+                        <p class="text-gray-600">You'll need to be KYC (Know Your Customer) compliant to invest in any mutual fund in India. If you already invest in Indian mutual funds or have an active Demat account, you're almost certainly already sorted here.</p>
+                    </div>
+                </div>
+            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-xl !text-gray-900 mb-2">Log in to our Investment Portal</h3>
+                    <p class="text-gray-600"><a href="/#contact" class="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 px-2 py-1 rounded border border-blue-300 dark:border-blue-700 font-medium">open an online account with us</a>. Navigate to the "Mutual Funds" section and look for categories labeled "International Funds," "Global Equities," or "Fund of Funds."</p>
+                </div>
+            </div>
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+          <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
+          <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+            <h3 class="font-bold text-xl !text-gray-900 mb-2">Choose Broad Indices First</h3>
+            <p class="text-gray-600">If you're just starting out, keep it simple — look for passive index funds that track large, well-known global benchmarks like the S&P 500 or NASDAQ 100. They give you wide diversification without the higher costs of actively managed funds.</p>
+          </div>
+        </div>
+    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-blue-600 text-white font-bold shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">5</div>
+        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+        <h3 class="font-bold text-xl !text-gray-900 mb-2">Start a SIP</h3>
+        <p class="text-gray-600">Set up a Systematic Investment Plan (SIP) and let it run. A fixed monthly amount goes in automatically, which means you're buying at different price points over time — smoothing out the bumps from short-term global volatility without you having to think about it.</p>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="mb-12">
+    <div class="bg-gray-800 text-white rounded-2xl p-8 shadow-lg">
+    <h2 class="text-3xl font-bold mb-4 border-b border-gray-600 pb-2">
+        Taxation Basics: The Elephant in the Room
+    </h2>
+    <p class="text-lg leading-relaxed mb-4 text-gray-300">
+        Alright, let's talk about the part nobody loves but everyone needs to understand. Tax rules for mutual funds in India have shifted quite a bit recently, and international funds get treated differently than you might expect.
+    </p>
+    <p class="text-lg leading-relaxed mb-4 text-gray-300">
+        Here's the catch: in the eyes of Indian tax law, international equity mutual funds aren't treated the same as your regular domestic equity funds. Since they don't put at least 65% into <em>domestic</em> Indian equities, they fall into a different bucket entirely.
+    </p>
+    <ul class="list-disc pl-6 space-y-3 text-lg text-gray-300 mb-6">
+        <li><strong>Current Tax Treatment:</strong> As per recent tax amendments (applicable from April 1, 2023), capital gains from international mutual funds are typically treated similarly to debt funds.</li>
+        <li><strong>Taxed at Slab Rates:</strong> Whatever profit you make when you sell is added to your total taxable income for that year and taxed at your applicable income tax slab rate. No special equity tax treatment here.</li>
+        <li><strong>No Indexation Benefit:</strong> Under current rules, there's no indexation benefit (the inflation-adjusted purchase price adjustment) available for these funds — no matter how long you hold them.</li>
+    </ul>
+    <p class="text-sm italic text-gray-400">
+        *Tax laws are subject to change. Always verify current taxation rules or consult a chartered accountant to understand exactly how this affects your personal tax bracket.*
+    </p>
+    </div>
+</section>
+
+<section class="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-blue-100 pb-2">
+            Practical Tips for Beginners
+        </h2>
+        <ul class="space-y-4">
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-1 mr-3 font-bold">✓</div>
+            <p class="text-gray-400 text-lg"><strong>Start Small:</strong> Dip your toes in — allocate maybe 5% to 10% of your equity portfolio to international funds. See how it feels and how it moves before you go bigger.</p>
+            </li>
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-1 mr-3 font-bold">✓</div>
+            <p class="text-gray-400 text-lg"><strong>Think Long-Term:</strong> Global markets can be noisy. Only put in money you genuinely won't need for at least 5 to 7 years — don't invest next year's vacation budget here.</p>
+            </li>
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center mt-1 mr-3 font-bold">✓</div>
+            <p class="text-gray-400 text-lg"><strong>Look at Expense Ratios:</strong> International funds — especially "Feeder Funds" that invest into a larger foreign fund — can carry slightly higher costs. It's worth comparing expense ratios before you commit.</p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-4 border-b-2 border-red-100 pb-2">
+            Common Mistakes to Avoid
+        </h2>
+        <ul class="space-y-4">
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center mt-1 mr-3 font-bold">✗</div>
+            <p class="text-gray-400 text-lg"><strong>Over-Diversification:</strong> You really don't need five different US tech funds. One or two broad international funds is plenty to start — more isn't always better.</p>
+            </li>
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center mt-1 mr-3 font-bold">✗</div>
+            <p class="text-gray-400 text-lg"><strong>Ignoring the Indian Market:</strong> Global funds should work alongside your domestic investments, not replace them. India's still one of the most exciting growth stories out there.</p>
+            </li>
+            <li class="flex items-start">
+            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center mt-1 mr-3 font-bold">✗</div>
+            <p class="text-gray-400 text-lg"><strong>Panicking Over Late-Night News:</strong> US markets open while India sleeps, so you might wake up to scary-sounding headlines about global drops. Resist the urge to yank your SIPs — short-term panic is a portfolio's worst enemy.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="mb-12 bg-blue-50 p-8 rounded-xl text-center">
+    <h2 class="text-3xl font-bold !text-gray-900 mb-4">
+    The World is Your Oyster — So Use It
+    </h2>
+    <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    Investing internationally is one of those decisions that genuinely changes how you see your portfolio — and your role in the global economy. You stop being just a consumer of Apple, Google, and Amazon, and start being a part-owner. Yes, the tax treatment isn't as sweet as domestic equity funds, and there are currency and geopolitical risks worth respecting. But the case for currency diversification, access to world-class companies, and a more resilient portfolio is hard to argue with. Start small, keep your SIPs running, and give it time. The next decade of global growth doesn't have to happen without you.
+    </p>
+</section>
+
+<section class="mb-12 border-t pt-10">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+    Frequently Asked Questions
+    </h2>
+    <div class="space-y-6 max-w-3xl mx-auto">
+        <details class="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-semibold text-gray-800 hover:text-blue-700 transition-colors">
+            1. Do I need a foreign bank account to invest in these funds?
+            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+            Nope, not at all. When you invest through Indian AMCs (Asset Management Companies), you're putting in Indian Rupees from your regular Indian bank account. The AMC handles all the currency conversion and foreign market stuff on the backend — you don't have to touch any of it.
+            </div>
+        </details>
+        <details class="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-semibold text-gray-800 hover:text-blue-700 transition-colors">
+            2. What is the minimum amount required to start?
+            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+           Quite low, actually. Many international mutual funds in India let you start a SIP with as little as ₹500 or ₹1,000 per month — which makes it pretty accessible even if you're just getting started with investing.
+            </div>
+        </details>
+        <details class="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-semibold text-gray-800 hover:text-blue-700 transition-colors">
+            3. Does investing in these funds consume my $250,000 RBI LRS limit?
+            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                No, it doesn't. The LRS (Liberalised Remittance Scheme) limit kicks in when you personally wire money abroad to buy foreign stocks directly. Mutual funds managed by Indian AMCs operate under a separate industry-wide limit set by the RBI and SEBI — so your personal LRS quota stays untouched.
+            </div>
+        </details>
+        <details class="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+            <summary class="flex items-center justify-between px-6 py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden font-semibold text-gray-800 hover:text-blue-700 transition-colors">
+            4. Are international funds riskier than Indian equity funds?
+            <i data-feather="chevron-down" class="w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200 group-open:rotate-180"></i>
+            </summary>
+            <div class="px-6 pb-5 text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                They carry <em>different</em> risks — not necessarily more. Sure, you're adding currency risk and geopolitical exposure. But you're also investing in some of the most mature, stable economies in the world and into massive companies with genuine global scale. In many cases, that can actually reduce your overall portfolio's volatility rather than increase it.
+            </div>
+        </details>
+    </div>
+</section>
+<footer class="border-t border-stone-800 pt-8 flex flex-col items-center text-center gap-6 pb-8">
+    <a href="/#contact" class="inline-block">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:-translate-y-1">
+            Start Your Journey
+        </button>
+    </a>
+    <p class="text-stone-600 text-xs leading-relaxed max-w-4xl">
+        <strong class="text-stone-500">Disclaimer:</strong> Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. This article is for educational purposes only and should not be considered financial advice. Consult a qualified financial advisor before making any investment decisions.
+    </p>
+</footer>

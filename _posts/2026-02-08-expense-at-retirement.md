@@ -317,9 +317,8 @@ read_time: "5 min read"
 
 <!-- Disclaimer -->
 <footer class="border-t border-stone-800 pt-8">
-<p class="text-stone-600 text-xs leading-relaxed">
-    <strong class="text-stone-500">Disclaimer:</strong> This article is for educational purposes only and does not constitute financial advice. Please consult with a SEBI-registered investment advisor before making significant financial decisions.
-</p>
+    <p class="text-stone-600 text-xs leading-relaxed">
+        <strong class="text-stone-500">Disclaimer:</strong> Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing. This article is for educational purposes only and should not be considered financial advice. Consult a qualified financial advisor before making any investment decisions.
+    </p>
 </footer>
-
 </main>

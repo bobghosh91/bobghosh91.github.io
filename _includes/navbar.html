@@ -27,14 +27,70 @@
           About Us
         </a>
 
-        <a href="{{ '/services/' | relative_url }}"
-           class="inline-flex items-center px-2 pt-1 text-sm font-medium
-           {% if page.url == '/services/' %} text-gray-900 border-b-2 border-blue-500
-           {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
-          Our services
-        </a>
+        <div class="relative group inline-flex h-full">
+          <button type="button" 
+                  class="inline-flex items-center px-2 pt-1 text-sm font-medium focus:outline-none transition-colors
+                  {% if page.url == '/services/' %} text-gray-900 border-b-2 border-blue-500
+                  {% else %} text-gray-500 hover:text-gray-900 border-b-2 border-transparent {% endif %}">
+            <span>Our services</span>
+            <svg class="ml-1 h-4 w-4 text-gray-400 group-hover:text-gray-600 transition-transform duration-200 group-hover:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
 
-        <a href="{{ '/financial-planning/' | relative_url }}"
+          <div class="absolute left-0 top-full mt-0 w-80 shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 rounded-b-xl">
+            <div role="menu" aria-orientation="vertical" class="py-2">
+              
+              <a href="{{ '/services/wealth-management/' | relative_url }}" class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150" role="menuitem">
+                <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-green-100 transition-colors">
+                  <i data-feather="dollar-sign" class="w-4 h-4 text-green-600"></i>
+                </div>
+                <div>
+                  <span class="block font-semibold">Equity</span>
+                  <span class="block text-xs text-gray-500 mt-0.5">Direct Stocks & Growth</span>
+                </div>
+              </a>
+              <a href="{{ '/services/mutual-funds/' | relative_url }}" 
+                class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150" 
+                role="menuitem">
+                <div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-blue-100 transition-colors">
+                  <i data-feather="trending-up" class="w-4 h-4 text-blue-600"></i>
+                </div>
+                <div>
+                  <span class="block font-semibold">Mutual Funds</span>
+                  <span class="block text-xs text-gray-500 mt-0.5">Equity, Debt & Hybrid Funds</span>
+                </div>
+              </a>
+              <a href="{{ '/services/fixed-income/' | relative_url }}" 
+                class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150" 
+                role="menuitem">
+                <div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-blue-100 transition-colors">
+                  <i data-feather="shield" class="w-4 h-4 text-teal-600"></i>
+                </div>
+                <div>
+                  <span class="block font-semibold">Fixed Income</span>
+                  <span class="block text-xs text-gray-500 mt-0.5">Bonds, FDs, & Corporate Deposits</span>
+                </div>
+              </a>
+              <a href="{{ '/services/wealth-management/' | relative_url }}" class="flex items-start gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-150" role="menuitem">
+                <div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-green-100 transition-colors">
+                  <i data-feather="dollar-sign" class="w-4 h-4 text-green-600"></i>
+                </div>
+                <div>
+                  <span class="block font-semibold">Wealth Management</span>
+                  <span class="block text-xs text-gray-500 mt-0.5">Portfolio & Long-term Growth</span>
+                </div>
+              </a>
+
+              <a href="{{ '/services/' | relative_url }}" class="block px-4 py-2 mt-1 text-sm text-blue-600 font-medium hover:bg-blue-50 transition-colors duration-150 border-t border-gray-100" role="menuitem">
+                View all services &rarr;
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <a href="{{ '/services/financial-planning/' | relative_url }}"
            class="inline-flex items-center px-2 pt-1 text-sm font-medium
            {% if page.url == '/financial-planning/' %} text-gray-900 border-b-2 border-blue-500
            {% else %} text-gray-500 hover:text-gray-900 {% endif %}">
@@ -92,12 +148,38 @@
         About Us
       </a>
 
-      <a href="{{ '/services/' | relative_url }}"
-         class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium
-         {% if page.url == '/services/' %} bg-blue-50 border-blue-500 text-blue-700
-         {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
-         Our services
-      </a>
+      <details class="group">
+        <summary class="flex justify-between items-center pl-3 pr-4 py-2 border-l-4 text-base font-medium cursor-pointer list-none [&::-webkit-details-marker]:hidden transition-colors
+               {% if page.url == '/services/' %} bg-blue-50 border-blue-500 text-blue-700
+               {% else %} border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 {% endif %}">
+          Our services
+          <svg class="h-5 w-5 text-gray-400 transform transition-transform duration-200 group-open:rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </summary>
+        
+        <div class="pl-6 pr-4 pb-2 space-y-1 bg-gray-50/50">
+          <a href="{{ '/services/equity/' | relative_url }}" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-blue-100 transition-colors">
+            Equity 
+            <span class="block text-xs text-gray-400 font-normal">Direct Stocks...</span>
+          </a>
+          <a href="{{ '/services/mutual-funds/' | relative_url }}" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-blue-100 transition-colors">
+            Mutual Funds 
+            <span class="block text-xs text-gray-400 font-normal">Equity, Debt...</span>
+          </a>
+          <a href="{{ '/services/fixed-income/' | relative_url }}" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-blue-100 transition-colors">
+            Fixed Income 
+            <span class="block text-xs text-gray-400 font-normal">Bonds, FDs...</span>
+          </a>
+          <a href="{{ '/services/wealth-management/' | relative_url }}" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-blue-700 hover:bg-blue-100 transition-colors">
+            Wealth Management
+            <span class="block text-xs text-gray-400 font-normal">Portfolio & Long-term Growth...</span>
+          </a>
+          <a href="{{ '/services/' | relative_url }}" class="block px-3 py-2 mt-1 rounded-md text-sm font-medium text-blue-600 hover:bg-blue-100 transition-colors">
+            View all services &rarr;
+          </a>
+        </div>
+      </details>
 
       <a href="{{ '/financial-planning/' | relative_url }}"
          class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium

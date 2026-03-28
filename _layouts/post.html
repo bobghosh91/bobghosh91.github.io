@@ -182,7 +182,9 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
   }
 
-  themeToggle.addEventListener('click', toggleTheme);
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
 
   // Sync with OS preference when no saved choice exists
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
