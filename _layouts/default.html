@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ page.title }} | {{ site.title }}</title>
   {% seo %}
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
@@ -20,6 +19,44 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "{{ site.title }}",
+      "image": "{{ site.url }}{{ site.image }}",
+      "@id": "{{ site.url }}",
+      "url": "{{ site.url }}",
+      "telephone": "+919476310780",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "87XP+27F, near yuvasangha club, Dhekeya, Malancha",
+        "addressLocality": "Kharagpur",
+        "addressRegion": "West Bengal",
+        "postalCode": "721304",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.34309
+        "longitude": 87.3012875
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
 </head>
 <body >
 

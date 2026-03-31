@@ -1,0 +1,373 @@
+---
+title: Direct Equity Investments (Coming Soon)
+permalink: /services/equity-investment/
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Earthen Capital</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+        :root {
+            --bg-base: #030407;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(255, 255, 255, 0.5);
+            --text-tech: rgba(255, 255, 255, 0.3);
+            --shader-core: #FFFFFF;
+            --shader-fringe: #4A88FF;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Back Button Styling */
+        .back-btn {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            z-index: 50;
+            color: var(--text-secondary);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+        .back-btn:hover {
+            color: var(--text-primary);
+        }
+
+        #webgl-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            animation: fadeUp 1.2s var(--ease-out-expo) both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0);    }
+        }
+
+        .headline {
+            font-size: clamp(52px, 8vw, 96px);
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            animation: fadeUp 1.2s 0.2s var(--ease-out-expo) both;
+        }
+
+        .sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            letter-spacing: 0.25em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            animation: fadeUp 1.2s 0.35s var(--ease-out-expo) both;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="{{ '/' | relative_url }}" class="back-btn">&larr; Return to Home</a>
+
+    <div id="webgl-container"></div>
+
+    <div class="hero">
+        <h1 class="headline">COMING SOON</h1>
+        <p class="sub">// Initializing_</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+        const container = document.getElementById('webgl-container');
+        const scene    = new THREE.Scene();
+        const camera   = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+        camera.position.z = 1;
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        const geometry = new THREE.PlaneGeometry(2, 2);
+
+        const vertexShader = `
+            varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                gl_Position = vec4(position, 1.0);
+            }
+        `;
+
+        const fragmentShader = `
+            uniform float u_time;
+            uniform vec2  u_resolution;
+            uniform vec2  u_mouse;
+            uniform vec3  u_colorCore;
+            uniform vec3  u_colorFringe;
+            varying vec2  vUv;
+
+            vec2 hash(vec2 p) {
+                p = vec2(dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3)));
+                return -1.0 + 2.0*fract(sin(p)*43758.5453123);
+            }
+            float noise(in vec2 p) {
+                const float K1 = 0.366025404;
+                const float K2 = 0.211324865;
+                vec2 i = floor(p + (p.x+p.y)*K1);
+                vec2 a = p - i + (i.x+i.y)*K2;
+                vec2 o = (a.x>a.y) ? vec2(1.0,0.0) : vec2(0.0,1.0);
+                vec2 b = a - o + K2;
+                vec2 c = a - 1.0 + 2.0*K2;
+                vec3 h = max(0.5 - vec3(dot(a,a), dot(b,b), dot(c,c)), 0.0);
+                vec3 n = h*h*h*h*vec3(dot(a,hash(i+0.0)), dot(b,hash(i+o)), dot(c,hash(i+1.0)));
+                return dot(n, vec3(70.0));
+            }
+
+            float sdArc(vec2 p, vec2 center, float radius, float width, float warp) {
+                p.y += sin(p.x * 3.0 + u_time * 0.5) * warp;
+                p.x += noise(p * 2.0 + u_time * 0.2) * (warp * 0.5);
+                float d = length(p - center) - radius;
+                return abs(d) - width;
+            }
+
+            void main() {
+                vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+                vec2 st = uv;
+                st.x *= u_resolution.x / u_resolution.y;
+
+                vec2 mouseOffset = (u_mouse - 0.5) * 0.1;
+                st += mouseOffset;
+
+                vec2 center = vec2(0.2, 0.5);
+
+                float d1 = sdArc(st, center, 0.8,  0.01, 0.1);
+                float d2 = sdArc(st, center, 0.82, 0.04, 0.15);
+
+                float coreGlow   = exp(-d1 * 40.0);
+                float fringeGlow = exp(-d2 * 15.0);
+                float wash       = smoothstep(1.0, -0.2, st.x) * 0.3;
+
+                vec3 finalColor = vec3(0.0);
+                finalColor += u_colorCore   * coreGlow;
+                finalColor += u_colorFringe * fringeGlow;
+                finalColor += u_colorFringe * wash * (sin(u_time) * 0.1 + 0.9);
+
+                float alpha = clamp(coreGlow + fringeGlow + wash, 0.0, 1.0);
+                finalColor  = vec3(1.0) - exp(-finalColor * 2.0);
+
+                gl_FragColor = vec4(finalColor, alpha);
+            }
+        `;
+
+        const material = new THREE.ShaderMaterial({
+            vertexShader,
+            fragmentShader,
+            uniforms: {
+                u_time:       { value: 0.0 },
+                u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                u_mouse:      { value: new THREE.Vector2(0.5, 0.5) },
+                u_colorCore:  { value: new THREE.Color('#FFFFFF') },
+                u_colorFringe:{ value: new THREE.Color('#4A88FF') }
+            },
+            transparent: true,
+            blending: THREE.NormalBlending
+        });
+
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        let targetMouse = new THREE.Vector2(0.5, 0.5);
+        document.addEventListener('mousemove', (e) => {
+            targetMouse.x =        e.clientX / window.innerWidth;
+            targetMouse.y = 1.0 - (e.clientY / window.innerHeight);
+        });
+
+        const clock = new THREE.Clock();
+        function animate() {
+            requestAnimationFrame(animate);
+            material.uniforms.u_time.value = clock.getElapsedTime();
+            material.uniforms.u_mouse.value.lerp(targetMouse, 0.05);
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            material.uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+---
+layout: default
+title: Direct Equity Investments
+permalink: /services/equity-investment/
+---
+
+
+<section class="relative bg-blue-50/50 pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-3xl" data-aos="fade-up">
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6">
+        <i data-feather="trending-up" class="w-4 h-4 mr-2"></i>
+        Wealth Creation
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6" style="font-family: 'Cormorant Garamond', serif;">
+        Capitalize on the Indian growth story.
+      </h1>
+      <p class="text-lg text-gray-600 leading-relaxed mb-8" style="font-family: 'DM Sans', sans-serif;">
+        Direct equity investment is about owning a piece of fundamentally strong businesses. We help you navigate the markets with conviction, focusing on long-term compounding and risk-adjusted returns.
+      </p>
+      <a href="/#contact" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+        Discuss Your Portfolio
+      </a>
+    </div>
+  </div>
+  
+  <div class="absolute top-0 right-0 -translate-y-12 translate-x-1/3 opacity-10 pointer-events-none hidden md:block">
+    <svg width="404" height="384" fill="none" viewBox="0 0 404 384"><defs><pattern id="equity-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" fill="currentColor"></rect></pattern></defs><rect width="404" height="384" fill="url(#equity-pattern)"></rect></svg>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4" style="font-family: 'Cormorant Garamond', serif;">Our Approach to Equities</h2>
+      <p class="text-gray-600">We ignore the daily noise to focus on what truly drives market value over a decade.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+          <i data-feather="activity" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Inflation-Beating Returns</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Equities remain the most effective asset class for outpacing inflation, ensuring your purchasing power grows rather than erodes over time.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+          <i data-feather="search" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Fundamental Rigor</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">We invest in businesses, not just tickers. Our focus is on durable competitive advantages, clean balance sheets, and capable management teams.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6 text-blue-600">
+          <i data-feather="shield" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">Margin of Safety</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">Volatility is the price of admission, but permanent loss of capital is preventable. We emphasize buying quality at the right valuation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center" style="font-family: 'Cormorant Garamond', serif;" data-aos="fade-up">Equity Advisory Services</h2>
+    
+    <div class="space-y-6 max-w-4xl mx-auto">
+      
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up">
+        <div class="flex-shrink-0 w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 mt-1">
+          <i data-feather="target" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Direct Equity Advisory</h4>
+          <p class="text-gray-600 text-sm mb-4">Tailored stock recommendations backed by deep-dive research. We build a core portfolio of blue-chip and high-conviction mid-cap stocks designed for multi-year holding periods.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Bottom-up stock selection</li>
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Active entry and exit guidance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex-shrink-0 w-12 h-12 bg-emerald-50 rounded-full flex items-center justify-center text-emerald-600 mt-1">
+          <i data-feather="layers" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Portfolio Restructuring</h4>
+          <p class="text-gray-600 text-sm mb-4">Have an existing stock portfolio that has grown unwieldy or underperformed? We provide a comprehensive audit to weed out wealth-destroyers and reallocate capital to high-quality compounders.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Risk and sector exposure analysis</li>
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Tax-efficient cleanup strategies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-6 items-start" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mt-1">
+          <i data-feather="zap" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-gray-900 mb-2">Thematic & Sectoral Opportunities</h4>
+          <p class="text-gray-600 text-sm mb-4">As a satellite to your core holdings, we identify structural tailwinds in specific sectors—such as manufacturing, technology, or infrastructure—to capture accelerated growth cycles.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Macro-economic alignment</li>
+            <li class="flex items-center"><i data-feather="check" class="w-3 h-3 text-blue-500 mr-2"></i>Tactical asset allocation</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-blue-600">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold text-white mb-6" style="font-family: 'Cormorant Garamond', serif;">Ready to build your equity portfolio?</h2>
+    <p class="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">Stop leaving your wealth's growth to chance. Partner with us for research-backed, disciplined equity investing.</p>
+    <a href="/#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-semibold rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors duration-200 shadow-lg">
+      Start the Conversation
+      <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+    </a>
+  </div>
+</section>
+
+-->
