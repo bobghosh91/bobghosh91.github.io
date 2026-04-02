@@ -70,7 +70,11 @@ copyright:
 #
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
-#
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
 # exclude:
 #   - .sass-cache/
 #   - .jekyll-cache/

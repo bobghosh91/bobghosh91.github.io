@@ -12,13 +12,12 @@
   <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
   <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script src="https://unpkg.com/feather-icons"></script>
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
     {
@@ -39,7 +38,7 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 22.34309
+        "latitude": 22.34309,
         "longitude": 87.3012875
       },
       "openingHoursSpecification": {
@@ -58,7 +57,7 @@
     }
     </script>
 </head>
-<body >
+<body>
 
   <!-- Navbar -->
   {% include navbar.html %}
@@ -94,40 +93,11 @@
       }
 
       // Initialize animations and icons
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-      const queryForm = document.getElementById("queryForm");
-      if (queryForm) 
-      {
-        queryForm.addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          const email = this.email.value.trim();
-          const phone = this.phone.value.trim();
-
-          if (!email && !phone) {
-            alert("Please provide either an Email or a Phone Number.");
-            return;
-          }
-
-          // Hide modal
-          document.getElementById("queryModal").classList.add("hidden");
-
-          // Show toast
-          const toast = document.getElementById("toast");
-          toast.classList.remove("hidden");
-
-          // Auto-hide toast after 3 seconds
-          setTimeout(() => {
-            toast.classList.add("hidden");
-            this.reset();
-          }, 3000);
-        });
-      }
+      AOS.init({
+          duration: 800,
+          easing: 'ease-in-out',
+          once: true
+      });
     });
   </script>
 </body>
