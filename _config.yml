@@ -45,7 +45,7 @@ defaults:
     values:
       layout: "post"
       author: "Bob Ghosh"
-      author_image: "https://static.photos/monochrome/200x200/8.webp"
+      author_image: "/assets/authors/bob-ghosh.jpg"
       read_time: "5 min read" 
       featured: false
       featured_order: 

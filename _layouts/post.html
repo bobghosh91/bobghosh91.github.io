@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<!-- Dark mode styles and toggle for blog posts only -->
 <style>
   .blog-post-container {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -21,7 +20,7 @@ layout: default
   }
 
   .blog-post-container.dark-mode h1 {
-    color: #f1f5f9;              /* slightly off-white for headings */
+    color: #f1f5f9;
   }
 
   .blog-post-container.dark-mode .author-name {
@@ -34,7 +33,7 @@ layout: default
 
   .blog-post-container.dark-mode .prose {
     color: #e2e8f0;
-    line-height: 1.85;           /* slightly looser for comfortable reading */
+    line-height: 1.85;
   }
 
   .blog-post-container.dark-mode .prose h1,
@@ -51,7 +50,7 @@ layout: default
   }
 
   .blog-post-container.dark-mode .prose a {
-    color: #7dd3fc;              /* sky-300: softer than blue-400, easier on dark bg */
+    color: #7dd3fc;              /* sky-300 */
   }
 
   .blog-post-container.dark-mode .prose a:hover {
@@ -67,8 +66,8 @@ layout: default
   }
 
   .blog-post-container.dark-mode .prose pre {
-    background-color: #27272a;  /* zinc-800 — slightly lighter than page bg */
-    border: 1px solid #3f3f46;  /* zinc-700 subtle border to distinguish from bg */
+    background-color: #27272a;
+    border: 1px solid #3f3f46;  /* zinc-700 */
     border-radius: 8px;
     padding: 1.25rem;
   }
@@ -103,16 +102,16 @@ layout: default
   }
 
   .blog-post-container.dark-mode .theme-toggle {
-    background: #27272a;        /* zinc-800 */
-    border-color: #3f3f46;      /* zinc-700 */
-    color: #e4e4e7;             /* zinc-200 */
+    background: #27272a;
+    border-color: #3f3f46;
+    color: #e4e4e7;
   }
 
   .blog-post-container.dark-mode .theme-toggle:hover {
-    background: #3f3f46;        /* zinc-700 */
+    background: #3f3f46;
   }
 
-  /* ── Icon styles ── */
+  /* ── Theme toggle icon styles ── */
   .theme-icon {
     display: inline-block;
     width: 14px;
@@ -128,11 +127,18 @@ layout: default
   .blog-post-container.dark-mode .moon-icon { display: none; }
 </style>
 
-<div class="blog-post-container dark-mode" id="blogContainer">
+<!-- 
+  NOTE: dark-mode class is NOT hardcoded here.
+  It is applied by JavaScript below after checking localStorage.
+  This ensures Googlebot renders the page in light mode (good for SEO),
+  while returning users still get their preferred theme.
+-->
+<div class="blog-post-container" id="blogContainer">
   <article class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
-    <!-- Theme toggle button -->
-    <!-- <button class="theme-toggle" id="themeToggle">
+    <!-- Theme Toggle Button (uncomment to enable) -->
+    <!--
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
       <svg class="theme-icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
       </svg>
@@ -141,25 +147,41 @@ layout: default
       </svg>
       <span class="sun-icon">Light mode</span>
       <span class="moon-icon">Dark mode</span>
-    </button> -->
+    </button>
+    -->
 
+    <!-- Post Hero Image -->
     {% if page.image %}
-    <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-64 object-cover rounded-lg mb-6">
+    <img
+      src="{{ page.image }}"
+      alt="{{ page.title }}"
+      class="w-full h-64 object-cover rounded-lg mb-6"
+      loading="lazy">
     {% endif %}
 
+    <!-- Post Title (single H1 for this page — do NOT add another H1 inside the post content) -->
     <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
 
+    <!-- Author & Meta -->
     <div class="flex items-center mb-6">
-      <img class="h-12 w-12 rounded-full" src="{{ page.author_image }}" alt="{{ page.author }}">
+      <img
+        class="h-12 w-12 rounded-full object-cover"
+        src="{{ page.author_image | default: '/assets/authors/default.jpg' }}"
+        alt="{{ page.author }}"
+        loading="lazy">
       <div class="ml-3">
         <p class="text-sm font-medium text-gray-900 author-name">{{ page.author }}</p>
-        <p class="text-sm text-gray-500 meta-text">{{ page.date | date: "%B %d, %Y" }} · {{ page.read_time }}</p>
+        <p class="text-sm text-gray-500 meta-text">
+          {{ page.date | date: "%B %d, %Y" }} · {{ page.read_time | default: "5 min read" }}
+        </p>
       </div>
     </div>
 
+    <!-- Post Content -->
     <div class="prose max-w-none">
       {{ content }}
     </div>
+
   </article>
 </div>
 
@@ -169,13 +191,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const themeToggle   = document.getElementById('themeToggle');
   const storageKey    = 'blog-theme-preference';
 
-  // Respect saved preference; default is dark
+  // ── Apply saved theme on load ──
+  // Default behaviour: dark mode, unless user has explicitly chosen light.
+  // dark-mode is NOT in the HTML so Googlebot always sees light mode.
   const savedTheme = localStorage.getItem(storageKey);
   if (savedTheme === 'light') {
+    // User explicitly chose light — keep it light
     blogContainer.classList.remove('dark-mode');
+  } else {
+    // No preference saved, or preference is dark — apply dark
+    blogContainer.classList.add('dark-mode');
   }
 
-  // Toggle
+  // ── Toggle handler ──
   function toggleTheme() {
     blogContainer.classList.toggle('dark-mode');
     const isDark = blogContainer.classList.contains('dark-mode');
@@ -186,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
     themeToggle.addEventListener('click', toggleTheme);
   }
 
-  // Sync with OS preference when no saved choice exists
+  // ── Sync with OS preference (only when user has no saved choice) ──
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
     if (!localStorage.getItem(storageKey)) {
       blogContainer.classList.toggle('dark-mode', e.matches);
