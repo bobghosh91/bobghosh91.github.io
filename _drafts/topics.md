@@ -1,0 +1,5 @@
+"Debt Snowball vs Debt Avalanche: Which Works Better for Indians?"
+"What is the Diderot Effect and How It's Draining Your Wallet"
+"Rule of 72 Explained: How to Double Your Money in India"
+"CIBIL Score 750+: A Step-by-Step Guide for Indians"
+"How to Set Up Your First SIP in India (Complete Beginner Guide)"

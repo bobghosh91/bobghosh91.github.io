@@ -72,6 +72,7 @@ copyright:
 # their entries' file path in the `include:` list.
 
 exclude:
+  - assets/css/input.css
   - node_modules/
   - package.json
   - package-lock.json
