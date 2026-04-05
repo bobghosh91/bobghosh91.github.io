@@ -149,37 +149,61 @@ layout: default
       <span class="moon-icon">Dark mode</span>
     </button>
     -->
-
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" class="mb-6">
+      <ol class="flex items-center gap-2 text-sm text-gray-400">
+        <li>
+          <a href="/" class="hover:text-gray-600 transition-colors">Home</a>
+        </li>
+        <li class="text-gray-300">/</li>
+        <li>
+          <a href="/blog/" class="hover:text-gray-600 transition-colors">Investor Education</a>
+        </li>
+        <li class="text-gray-300">/</li>
+        <li class="text-gray-600 truncate max-w-xs">{{ page.title }}</li>
+      </ol>
+    </nav>
     <!-- Post Hero Image -->
     {% if page.image %}
-    <img
-      src="{{ page.image }}"
-      alt="{{ page.title }}"
-      class="w-full h-64 object-cover rounded-lg mb-6"
-      loading="lazy">
+      <img
+        src="{{ page.image }}"
+        alt="{{ page.description | default: page.title }}"
+        class="w-full h-64 object-cover rounded-lg mb-6"
+        loading="eager"
+        fetchpriority="high">
     {% endif %}
 
     <!-- Post Title (single H1 for this page — do NOT add another H1 inside the post content) -->
     <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
 
     <!-- Author & Meta -->
-    <div class="flex items-center mb-6">
-      <img
-        class="h-12 w-12 rounded-full object-cover"
-        src="{{ page.author_image | default: '/assets/authors/default.jpg' }}"
-        alt="{{ page.author }}"
-        loading="lazy">
-      <div class="ml-3">
-        <p class="text-sm font-medium text-gray-900 author-name">{{ page.author }}</p>
-        <p class="text-sm text-gray-500 meta-text">
-          {{ page.date | date: "%B %d, %Y" }} · {{ page.read_time | default: "5 min read" }}
-        </p>
+    {% if page.author %}
+      {% assign author = site.data.authors[page.author] %}
+      <div class="flex items-center mb-6">
+        <img
+          class="h-12 w-12 rounded-full object-cover"
+          src="{% if author.image %}{{ site.baseurl }}{{ author.image }}{% else %}{{ site.baseurl }}/assets/authors/default.jpg{% endif %}"
+          alt="{% if author %}{{ author.name }}{% else %}{{ page.author }}{% endif %}"
+          loading="lazy">
+        <div class="ml-3">
+          <p class="text-sm font-medium text-gray-900 author-name">
+            {% if author %}
+              <a href="{{ author.url }}" class="hover:underline">{{ author.name }}</a>
+            {% else %}
+              {{ page.author }}
+            {% endif %}
+          </p>
+          <p class="text-sm text-gray-500 meta-text">
+            {{ page.date | date: "%B %d, %Y" }} · {{ page.read_time | default: "5 min read" }}
+          </p>
+        </div>
       </div>
-    </div>
+    {% endif %}
 
     <!-- Post Content -->
     <div class="prose max-w-none">
       {{ content }}
+      {% include disclaimer.html %}
     </div>
 
   </article>

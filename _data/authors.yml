@@ -1,0 +1,21 @@
+bob:
+  name: "Bob Ghosh"
+  title: "Financial Planner & Founder"
+  url: "https://earthencapital.in/about/bob-ghosh/"
+  image: "/assets/authors/bob-ghosh.jpg"
+  bio: "12+ years in Equities and Mutual Funds. An Engineer in Communications, NISM Certified Mutual Funds Advisor, and AMFI Registered Distributor (ARN-345670)."
+  email: "bob@earthencapital.in"
+  sameAs:
+    - "https://www.linkedin.com/in/bobghosh91"
+    - "https://x.com/ghosh0B"
+    - "https://www.amfiindia.com/research-information/arn-search"
+
+bishal:
+  name: "Bishal Ghosh"
+  title: "Co-Founder & COO"
+  url: "https://earthencapital.in/about/bishal-ghosh/"
+  image: "/assets/authors/bishal-ghosh.jpg"
+  bio: "Applying 8 years of financial markets mastery in equity and derivatives with a tech-driven analytical edge."
+  email: "bishal@earthencapital.in"
+  sameAs:
+    - "https://www.linkedin.com/in/bishalghosh"

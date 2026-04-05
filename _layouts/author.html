@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+{% assign author = site.data.authors[page.author_key] %}
+
+<div class="max-w-3xl mx-auto px-4 py-12">
+
+  <!-- Author Hero -->
+  <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
+    <img
+      src="{{ author.image }}"
+      alt="{{ author.name }}"
+      class="w-28 h-28 rounded-full object-cover shadow-md"
+      loading="eager">
+    <div>
+      <h1 class="text-3xl font-bold text-gray-900">{{ author.name }}</h1>
+      <p class="text-blue-600 font-medium mt-1">{{ author.title }}</p>
+      <p class="text-gray-500 text-sm mt-1">Earthen Capital</p>
+      <div class="flex flex-wrap gap-3 mt-3">
+        {% for link in author.sameAs %}
+          <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center text-sm text-blue-600 hover:underline">
+            {% if link contains 'linkedin' %}
+              LinkedIn
+            {% elsif link contains 'amfi' %}
+              AMFI Registry
+            {% elsif link contains 'x.com' %}
+              X (Twitter)
+            {% else %}
+              Profile
+            {% endif %}
+          </a>
+        {% endfor %}
+        {% if author.email %}
+          <a href="mailto:{{ author.email }}"
+             class="text-sm text-blue-600 hover:underline">
+            {{ author.email }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Bio -->
+  <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10">
+    <h2 class="text-lg font-semibold text-gray-800 mb-2">About {{ author.name }}</h2>
+    <p class="text-gray-600 leading-relaxed">{{ author.bio }}</p>
+  </div>
+
+  <!-- Articles -->
+  <div>
+    <h2 class="text-xl font-semibold text-gray-800 mb-6">
+      Articles by {{ author.name }}
+    </h2>
+    {% assign author_posts = site.posts | where: "author", page.author_key %}
+    {% if author_posts.size > 0 %}
+      <ul class="space-y-5">
+        {% for post in author_posts %}
+          <li class="border-b border-gray-100 pb-5">
+            <a href="{{ post.url }}"
+               class="text-blue-700 font-medium text-lg hover:underline">
+              {{ post.title }}
+            </a>
+            <p class="text-sm text-gray-400 mt-1">
+              {{ post.date | date: "%B %d, %Y" }} · {{ post.read_time | default: "5 min read" }}
+            </p>
+            {% if post.description %}
+              <p class="text-gray-500 text-sm mt-1">{{ post.description }}</p>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="text-gray-400 text-sm">No articles yet.</p>
+    {% endif %}
+  </div>
+
+</div>

@@ -2,6 +2,7 @@
 title: "How To Bounce Back From Financial Ruin and Rebuild Your Wealth"
 date: 2025-11-12
 categories: [Financial planning]
+author: bob
 image: "https://static.photos/nature/640x360/27"
 description: "Practical guide for recovering from financial disasters and strategically rebuilding wealth through proven methods."
 read_time: "10 min read"

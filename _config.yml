@@ -28,11 +28,29 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://earthencapital.in" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO & Social
-author: Bob Ghosh
+author: bob
+author_job_title: "Founder & Mutual Fund Distributor"
 twitter_username: earthencapital
 instagram_username: earthen.capital 
 facebook_username: earthencapital
-youtube_username: "@EarthenCapital"
+youtube_username: "EarthenCapital"
+
+# Add this Business block right below the SEO & Social block!
+business:
+  type: "FinancialService"
+  phone: "+919476310780"
+  logo: "/assets/og-logo.png" 
+  address: "87XP+27F, near yuvasangha club, Dhekeya, Malancha"
+  city: "Kharagpur"
+  region: "West Bengal"
+  zip: "721304"
+  country: "IN"
+  latitude: 22.34309
+  longitude: 87.3012875
+  social_links:
+    - "https://instagram.com/earthen.capital"
+    - "https://facebook.com/earthencapital"
+    - "https://youtube.com/@EarthenCapital"
 
 # This tells the SEO plugin which image to use for social previews
 image: /assets/og-logo.png

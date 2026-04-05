@@ -15,9 +15,8 @@ permalink: /blog/
     }
 </style>
 
-<body class="bg-gray-50">
+<div class="bg-gray-50">
 
-  <!-- Hero Section -->
   <header class="py-16" style="background: linear-gradient(90deg, #06beb6 0%, #172a45 100%);">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-4xl sm:text-5xl font-extrabold text-white" data-aos="fade-up">
@@ -27,14 +26,16 @@ permalink: /blog/
         Insights, strategies, and guides to help you invest smarter with mutual funds.
       </p>
     </div>
-</header>
+  </header>
 
-  <!-- Blog Grid -->
   <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-6">
     <h1 class="text-3xl font-bold text-gray-900 mb-5 text-center">Our Blog</h1>
 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {% for post in site.posts %}
+      
+      {% assign author = site.data.authors[post.author] %}
+      
       <article class="flex flex-col rounded-lg shadow-lg overflow-hidden feature-card" data-aos="fade-up" data-aos-delay="300">
         <a href="{{ post.url | relative_url }}">
           <img class="h-48 w-full object-cover" src="{{ post.image }}" alt="{{ post.title }}">
@@ -51,21 +52,24 @@ permalink: /blog/
               {{ post.description }}
             </p>
           </div>
+          
           <div class="mt-6 flex items-center">
-            <img class="h-10 w-10 rounded-full" src="{{ post.author_image }}" alt="{{ post.author }}">
+            <img class="h-10 w-10 rounded-full object-cover" 
+                 src="{% if author.image %}{{ site.baseurl }}{{ author.image }}{% else %}{{ site.baseurl }}/assets/authors/default.jpg{% endif %}" 
+                 alt="{% if author %}{{ author.name }}{% else %}{{ post.author }}{% endif %}">
             <div class="ml-3">
-              <p class="text-sm font-medium text-gray-900">{{ post.author }}</p>
-              <p class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }} · {{ post.read_time }}</p>
+              <p class="text-sm font-medium text-gray-900">
+                {% if author %}{{ author.name }}{% else %}{{ post.author }}{% endif %}
+              </p>
+              <p class="text-sm text-gray-500">{{ post.date | date: "%B %d, %Y" }} · {{ post.read_time | default: "5 min read" }}</p>
             </div>
           </div>
-        </div>
+          </div>
       </article>
       {% endfor %}
     </div>
   </div>
 
-  <!-- CTA Section -->
   {% include cta.html %}
 
-
-</body>
+</div>

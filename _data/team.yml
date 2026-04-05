@@ -1,12 +1,13 @@
 - name: Bob Ghosh
-  title: Founder & CEO
+  title: Financial Planner & Founder
   image: /assets/images/team/bob-ghosh1.png
-  bio: 10+ years in Equities and mutual Funds. An Engineer in Communications & NISM Certified Mutual Funds advisor.
+  bio: 12+ years in Equities and mutual Funds. An Engineer in Communications & NISM Certified Mutual Funds advisor, and AMFI Registered Distributor (ARN-345670)
   linkedin: https://www.linkedin.com/in/bobghosh91
+  email: "bob@earthencapital.in"
   
 - name: Bishal Ghosh
   title: Co-Founder & COO
-  image: /assets/images/team/bishal-ghosh1.png
+  image: /assets/images/team/bishal-ghosh.png
   bio: Applying 8 years of financial markets mastery in equity and derivatives with a tech-driven analytical edge.
-  linkedin: #
-  email: #
+  linkedin: https://www.linkedin.com/in/bishalghosh
+  email: "bishal@earthencapital.in"

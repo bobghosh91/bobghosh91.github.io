@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: About Earthen Capital
 permalink: /about/
 ---
 
@@ -17,10 +17,7 @@ permalink: /about/
         }
 </style>
 
-<body class="bg-gray-50">
-    <!-- Navigation -->
-
-    <!-- Hero Section -->
+<div class="bg-gray-50">
     <div class="about-hero">
         <div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl" data-aos="fade-up">
@@ -32,7 +29,6 @@ permalink: /about/
         </div>
     </div>
 
-    <!-- Our Story -->
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
@@ -78,7 +74,6 @@ permalink: /about/
         </div>
     </div>
 
-    <!-- Values -->
     <div class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -153,7 +148,30 @@ permalink: /about/
             </div>
         </div>
     </div>
-    <!-- Team Section -->
+
+    <div class="py-12 bg-blue-50 border-y border-blue-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Registered & Regulated</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Earthen Capital is committed to the highest standards of financial compliance and transparency. Our advisory team holds active registrations with India's premier financial regulatory bodies.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-white border border-gray-200 shadow-sm text-gray-800">
+                            <span class="text-green-500 mr-2">✓</span> AMFI Registered (ARN-345670)
+                        </span>
+                        </div>
+                </div>
+                <div class="md:w-1/3 text-center md:text-right">
+                    <a href="https://www.amfiindia.com/locate-distributor" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline">
+                        Verify our AMFI Registration &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
@@ -173,6 +191,13 @@ permalink: /about/
                         <h3 class="text-lg font-medium text-gray-900">{{ member.name }}</h3>
                         <p class="mt-1 text-sm text-blue-600">{{ member.title }}</p>
                         <p class="mt-2 text-gray-500">{{ member.bio }}</p>
+                        {% assign author_key = member.name | downcase | split: ' ' | first %}
+                            {% assign author = site.data.authors[author_key] %}
+                            {% if author.url %}
+                            <a href="{{ author.url }}" class="text-sm text-blue-600 hover:underline mt-2 mb-3 block">
+                            View profile &amp; articles &rarr;
+                            </a>
+                            {% endif %}
                         <div class="mt-4 flex space-x-4">
                             {% if member.linkedin %}
                             <a href="{{ member.linkedin }}" target="_blank" class="text-gray-400 hover:text-blue-600">
@@ -180,7 +205,7 @@ permalink: /about/
                             </a>
                             {% endif %}
                             {% if member.email %}
-                            <a href="{{ member.email }}" class="text-gray-400 hover:text-blue-600">
+                            <a href="mailto:{{ member.email }}" class="text-gray-400 hover:text-blue-600">
                                 <i data-feather="mail" class="h-5 w-5"></i>
                             </a>
                             {% endif %}
@@ -192,10 +217,8 @@ permalink: /about/
         </div>
     </div>
 
-    <!-- Partners Section -->
     {% include partners-grid.html %}
 
-    <!-- Offices Section -->
     <section class="py-12 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -223,42 +246,18 @@ permalink: /about/
                 </div>
                 {% endfor %}
             </div>
+            <div class="mt-12 bg-white p-6 rounded-xl border border-gray-200 text-center max-w-3xl mx-auto">
+                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">Grievance Redressal</h4>
+                <p class="text-sm text-gray-600 mb-3">
+                    Client trust is our priority. If you have any complaints or grievances regarding our services, please reach out to our compliance team directly.
+                </p>
+                <a href="mailto:compliance@earthencapital.in" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                    <i data-feather="mail" class="h-4 w-4 mr-1"></i> compliance@earthencapital.in
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- Accreditation -->
-    <!-- <div class="bg-blue-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl" data-aos="fade-up">
-                    Our Accreditations
-                </h2>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500" data-aos="fade-up" data-aos-delay="100">
-                    Recognized for excellence in mutual fund distribution
-                </p>
-            </div>
+    {% include cta.html %}
 
-            <div class="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-5">
-                <div class="col-span-1 flex justify-center" data-aos="fade-up" data-aos-delay="200">
-                    <img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/CFA_Institute_logo.svg/1200px-CFA_Institute_logo.svg.png" alt="CFA Institute">
-                </div>
-                <div class="col-span-1 flex justify-center" data-aos="fade-up" data-aos-delay="300">
-                    <img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/CFP_Board_logo.svg/1200px-CFP_Board_logo.svg.png" alt="CFP Board">
-                </div>
-                <div class="col-span-1 flex justify-center" data-aos="fade-up" data-aos-delay="400">
-                    <img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Financial_Industry_Regulatory_Authority_logo.svg/1200px-Financial_Industry_Regulatory_Authority_logo.svg.png" alt="FINRA">
-                </div>
-                <div class="col-span-1 flex justify-center" data-aos="fade-up" data-aos-delay="500">
-                    <img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/SEC_logo.png/1200px-SEC_logo.png" alt="SEC">
-                </div>
-                <div class="col-span-2 md:col-span-1 flex justify-center" data-aos="fade-up" data-aos-delay="600">
-                    <img class="h-16" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/AMF_%28Autorit%C3%A9_des_march%C3%A9s_financiers%29_logo.svg/1200px-AMF_%28Autorit%C3%A9_des_march%C3%A9s_financiers%29_logo.svg.png" alt="AMF">
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Footer -->
-     {% include cta.html %}
-
-</body>
+</div>

@@ -2,6 +2,7 @@
 title: "Building a Retirement Portfolio with Mutual Funds: A Real Talk Guide"
 date: 2025-03-17
 categories: [Retirement Planning]
+author: bob
 image: "http://static.photos/finance/640x360/3"
 description: "How to structure your mutual fund investments for a comfortable and secure retirement."
 read_time: "6 min read"
