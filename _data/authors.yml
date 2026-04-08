@@ -1,19 +1,27 @@
 bob:
   name: "Bob Ghosh"
   title: "Financial Planner & Founder"
-  url: "https://earthencapital.in/about/bob-ghosh/"
+  url: "/about/bob-ghosh/"
   image: "/assets/authors/bob-ghosh.jpg"
   bio: "12+ years in Equities and Mutual Funds. An Engineer in Communications, NISM Certified Mutual Funds Advisor, and AMFI Registered Distributor (ARN-345670)."
   email: "bob@earthencapital.in"
   sameAs:
     - "https://www.linkedin.com/in/bobghosh91"
     - "https://x.com/ghosh0B"
+    - "https://www.youtube.com/@earthencapital"
     - "https://www.amfiindia.com/research-information/arn-search"
+  credentials:
+    - "NISM Certified Mutual Funds Advisor (NISM-202500139465)"
+    - "AMFI Registered Distributor (ARN-345670)"
+    - "12+ years in Equities and Mutual Funds"
+
+# bio: "Growing up in Kharagpur, Bob watched hardworking people around him never quite get ahead financially — not because they weren't disciplined, but because nobody had shown them what to do beyond a savings account or FD. As an engineer, he was drawn to systems and outcomes. When he discovered equity mutual funds, something clicked — a simple, transparent tool that most people in smaller cities had never heard of, or had been mis-sold something complicated they didn't understand. That gap is why Earthen Capital exists. Bob started it with one belief: that a salaried professional in Kharagpur deserves the same quality of financial guidance as someone in Mumbai. No product pushing. No commission-driven recommendations. Just honest, goal-based planning. One of his earliest wins was helping a friend stop parking all his savings in fixed deposits and instead build a mutual fund portfolio aligned to his child's education timeline — a first SIP that finally made him feel in control of his financial future. Today Bob works primarily with salaried professionals who have steady incomes and real goals, and just need a trusted guide to help them get there."
+
 
 bishal:
   name: "Bishal Ghosh"
   title: "Co-Founder & COO"
-  url: "https://earthencapital.in/about/bishal-ghosh/"
+  url: "/about/bishal-ghosh/"
   image: "/assets/authors/bishal-ghosh.jpg"
   bio: "Applying 8 years of financial markets mastery in equity and derivatives with a tech-driven analytical edge."
   email: "bishal@earthencapital.in"

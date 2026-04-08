@@ -38,7 +38,7 @@ permalink: /blog/
       
       <article class="flex flex-col rounded-lg shadow-lg overflow-hidden feature-card" data-aos="fade-up" data-aos-delay="300">
         <a href="{{ post.url | relative_url }}">
-          <img class="h-48 w-full object-cover" src="{{ post.image }}" alt="{{ post.title }}">
+          <img class="h-48 w-full object-cover" src="{{ post.image.path }}" alt="{{ post.title }}">
         </a>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">

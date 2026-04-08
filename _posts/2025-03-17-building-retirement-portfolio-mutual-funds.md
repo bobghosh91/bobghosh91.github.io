@@ -3,11 +3,14 @@ title: "Step-by-Step: Build a Retirement Corpus in India with Mutual Funds"
 date: 2025-03-17
 categories: [Retirement Planning]
 author: bob
-image: "/assets/images/posts/building-retirement-portfolio.webp"
+image:
+  path: /assets/images/posts/building-retirement-portfolio.webp
+  alt: "Building retirement portfolio with mutual funds"
 description: "Learn how to build a retirement corpus in India with mutual funds. A practical 5-step guide covering SIPs, asset allocation, and compounding — for every age."
 read_time: "7 min read"
 featured: true
 featured_order: 2
+layout: post
 ---
 
 

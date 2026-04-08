@@ -20,13 +20,15 @@ layout: default
       <div class="flex flex-wrap gap-3 mt-3">
         {% for link in author.sameAs %}
           <a href="{{ link }}" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center text-sm text-blue-600 hover:underline">
+            class="inline-flex items-center text-sm text-blue-600 hover:underline">
             {% if link contains 'linkedin' %}
               LinkedIn
             {% elsif link contains 'amfi' %}
               AMFI Registry
             {% elsif link contains 'x.com' %}
               X (Twitter)
+            {% elsif link contains 'youtube' %}
+              YouTube
             {% else %}
               Profile
             {% endif %}
@@ -39,14 +41,32 @@ layout: default
           </a>
         {% endif %}
       </div>
+      {% if page.last_updated %}
+      <p class="text-xs text-gray-400 mt-3">Last updated: {{ page.last_updated | date: "%B %Y" }}</p>
+      {% endif %}
     </div>
   </div>
 
   <!-- Bio -->
-  <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-10">
-    <h2 class="text-lg font-semibold text-gray-800 mb-2">About {{ author.name }}</h2>
+  <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mb-6">
+    <h2 class="text-lg font-semibold text-gray-800 mb-3">About {{ author.name }}</h2>
     <p class="text-gray-600 leading-relaxed">{{ author.bio }}</p>
   </div>
+
+  <!-- Credentials -->
+  {% if author.credentials %}
+  <div class="border border-gray-200 rounded-xl p-6 mb-10">
+    <h2 class="text-lg font-semibold text-gray-800 mb-3">Qualifications & Credentials</h2>
+    <ul class="space-y-2">
+      {% for credential in author.credentials %}
+      <li class="flex items-center gap-2 text-sm text-gray-600">
+        <span class="text-green-500 font-bold">✓</span>
+        {{ credential }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 
   <!-- Articles -->
   <div>

@@ -4,76 +4,68 @@
 # which you are expected to set up once and rarely edit after that. If you find
 # yourself editing this file very often, consider using Jekyll's data files
 # feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
+# Site settings
 title: Earthen Capital
 email: earthencapital@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Expert financial planning and investment advisory services based in West Bengal, India. 
   Specializing in Stock Market, Mutual Funds, Fixed Income, and tailored Wealth Management 
   solutions to help you secure a stable financial future.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://earthencapital.in" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://earthencapital.in"
 
 # SEO & Social
 author: bob
 author_job_title: "Founder & Mutual Fund Distributor"
 twitter_username: earthencapital
-instagram_username: earthen.capital 
+instagram_username: earthen.capital
 facebook_username: earthencapital
 youtube_username: "EarthenCapital"
 
-# Add this Business block right below the SEO & Social block!
+# Business block
 business:
   type: "FinancialService"
   phone: "+919476310780"
-  logo: "/assets/og-logo.png" 
+  logo: "/assets/og-logo.png"
   address: "87XP+27F, near yuvasangha club, Dhekeya, Malancha"
   city: "Kharagpur"
   region: "West Bengal"
   zip: "721304"
   country: "IN"
-  latitude: 22.34309
-  longitude: 87.3012875
+  latitude: 22.3475722
+  longitude: 87.2856648
+  hasMap: "https://www.google.com/maps/place/Earthen+Capital/@22.3475722,87.2830899,17z/data=!3m1!4b1!4m6!3m5!1s0x3a1d43892c5a1f33:0x35104b5c65a8c07c!8m2!3d22.3475722!4d87.2856648!16s%2Fg%2F11mrmncrfj"
+  arn: "ARN-345670"
   social_links:
     - "https://instagram.com/earthen.capital"
     - "https://facebook.com/earthencapital"
     - "https://youtube.com/@EarthenCapital"
+    - "https://www.amfiindia.com/research-information/arn-search"
+    - "https://www.google.com/maps/place/Earthen+Capital/@22.3475722,87.2830899,17z/data=!3m1!4b1!4m6!3m5!1s0x3a1d43892c5a1f33:0x35104b5c65a8c07c!8m2!3d22.3475722!4d87.2856648!16s%2Fg%2F11mrmncrfj"
 
-# This tells the SEO plugin which image to use for social previews
+# Social image for previews
 image: /assets/og-logo.png
 
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
+      path: ""
+      type: "posts"
     values:
       layout: "post"
-      author: "Bob Ghosh"
+      author: "bob"
       author_image: "/assets/authors/bob-ghosh.jpg"
-      read_time: "5 min read" 
+      read_time: "5 min read"
       featured: false
-      featured_order: 
+      featured_order:
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  
+
 include:
   - _pages
 
@@ -81,13 +73,6 @@ permalink: /posts/:title
 
 copyright:
   start_year: 2025
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
 
 exclude:
   - assets/css/input.css

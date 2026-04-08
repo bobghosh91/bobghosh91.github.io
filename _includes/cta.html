@@ -1,76 +1,101 @@
-
-<!-- CTA only for wealth management page. for other pages see else section -->
 {% if page.title contains "Wealth Management" %}
-    <section class="py-12 bg-slate-900">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'Cormorant Garamond', serif;">Experience the difference of dedicated stewardship.</h2>
-            <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
-                Wealth management isn't a one-size-fits-all solution. Each family has unique financial situations, priorities, and timelines. We make an effort to understand yours and create a plan that meets your specific needs. Contact us to start the conversation.
-            </p>
-            <a href="/#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-semibold rounded-md text-slate-900 bg-white hover:bg-gray-100 transition-colors duration-200 shadow-lg">
-                Schedule an Introductory Meeting
-                <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
-            </a>
-        </div>
-    </section>
+<section class="py-12 bg-slate-900">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" style="font-family: 'Cormorant Garamond', serif;">
+      Experience the difference of dedicated stewardship.
+    </h2>
+    <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto">
+      Every family's financial picture is unique. We take the time to understand yours — your goals, your timeline, your priorities — and build a plan that's truly yours.
+    </p>
+    <a href="/#contact" class="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-semibold rounded-md text-slate-900 bg-white hover:bg-gray-100 transition-colors duration-200 shadow-lg">
+      Schedule an introductory meeting
+      <i data-feather="arrow-right" class="w-4 h-4 ml-2" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
 
 {% else %}
-    <div class="bg-[#008080]">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:py-8 sm:px-6 lg:px-8 text-center">
+<div class="bg-[#008080]">
+  <div class="max-w-7xl mx-auto py-6 px-4 sm:py-8 sm:px-6 lg:px-8 text-center">
 
-            {% if page.title == "Process" or page.title == "Blog" %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to start your investment journey?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
-                Our team is ready to guide you through every step of the process.
-                </p>
-            {% elsif page.title contains "Financial Calculators" %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to start your investment journey?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
-                    Our financial calculators are designed to help you make informed decisions about your money.
-                </p>
-            {% elsif page.title contains "Financial Planning" %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to start your investment journey?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-2xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
-                    Get personalised financial plan today.
-                </p>
-            {% elsif page.title contains "Privacy Policy" %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to start your investment journey?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
-                    If you have any questions or concerns regarding this Privacy Policy, please contact us at:
-                </p>
-            {% elsif page.title contains "Fixed Income" %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to anchor your portfolio?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100">
-                    Let us help you design a fixed-income strategy that aligns perfectly with your risk tolerance and liquidity needs.
-                </p>
-            {% else %}
-                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
-                    Ready to start your investment journey?
-                </h2>
-                <p class="mt-6 max-w-3xl mx-auto text-xl text-blue-100" data-aos="fade-up" data-aos-delay="100">
-                    Our team is ready to guide you through every step of the process.
-                </p>
-            {% endif %}
-            <div class="mt-10" data-aos="fade-up" data-aos-delay="200">
-                <a href="{{ '/#contact' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50">
-                    Get Started
-                    <i data-feather="arrow-right" class="ml-2"></i>
-                </a>
-                <p class="mt-3 text-white text-sm flex items-center justify-center gap-1">
-                    Completely 
-                    <img src="{{ '/assets/images/free.png' | relative_url }}" alt="Free" class="h-4 inline-block">
-                </p>
-            </div>
-        </div>
+    {% if page.title == "Blog" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Insights are just the beginning.
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        Our advisors are ready to turn what you've read into a personalised plan built around your goals.
+      </p>
+
+    {% elsif page.title == "Process" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Ready to see the process in action?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        Understanding our approach is step one. Let's take step two together — a no-pressure conversation about your situation.
+      </p>
+
+    {% elsif page.title contains "Financial Calculators" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Like what the numbers are saying?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        Our advisors can help you act on these projections with a plan tailored to your actual financial situation.
+      </p>
+
+    {% elsif page.title contains "Financial Planning" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Your plan starts with a conversation.
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        A personalised financial plan isn't built from a template — it's built from understanding you. Let's get started.
+      </p>
+
+    {% elsif page.title contains "Fixed Income" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Ready to anchor your portfolio?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        We'll help you design a fixed-income strategy that matches your risk tolerance, income needs, and investment horizon.
+      </p>
+
+    {% elsif page.title contains "Privacy Policy" %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Questions about your data?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        We're committed to keeping your information safe. If you have any concerns about this policy, our team is happy to help.
+      </p>
+
+    {% else %}
+      <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl" data-aos="fade-up">
+        Ready to start your investment journey?
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-xl text-teal-100" data-aos="fade-up" data-aos-delay="100">
+        Our team is ready to guide you through every step of the process.
+      </p>
+    {% endif %}
+
+    {% unless page.title contains "Privacy Policy" %}
+    <div class="mt-10" data-aos="fade-up" data-aos-delay="200">
+      <a href="{{ '/#contact' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-teal-700 bg-white hover:bg-teal-50">
+        Get started
+        <i data-feather="arrow-right" class="ml-2" aria-hidden="true"></i>
+      </a>
+      <p class="mt-3 text-white text-sm flex items-center justify-center gap-1">
+        Completely 
+        <img src="{{ '/assets/images/free.png' | relative_url }}" alt="Free" class="h-4 inline-block">      </p>
     </div>
+    {% endunless %}
+
+    {% if page.title contains "Privacy Policy" %}
+    <div class="mt-10" data-aos="fade-up" data-aos-delay="200">
+      <a href="{{ '/#contact' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-teal-700 bg-white hover:bg-teal-50">
+        Contact us
+        <i data-feather="arrow-right" class="ml-2" aria-hidden="true"></i>
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</div>
 {% endif %}

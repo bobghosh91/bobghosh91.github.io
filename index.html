@@ -187,6 +187,40 @@ permalink: /
         </div>
     </div>
 
+    <!-- Solutions Section -->
+    <section id="solutions" class="flex flex-col items-center justify-center bg-blue-50">
+        <div class="px-6 py-16 md:px-12 lg:px-16 w-full">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+            
+                    <div class="space-y-8 lg:col-span-7" data-aos="fade-right">
+                        <h2 class="font-extrabold text-[34px] md:text-[56px] lg:text-[56px] leading-[1.1]">
+                            Solutions for every stage of your life
+                        </h2>
+                        <div class="hidden lg:block">
+                            <a class="inline-flex items-center gap-2 border border-transparent px-7 py-3 rounded text-[15px] font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-all" href="/#contact">
+                                Get Started
+                                <i data-feather="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="w-full flex flex-col justify-between lg:col-span-5" data-aos="fade-left">
+                        <div class="relative h-[320px] w-full flex items-center" id="sol-outer">
+                            <div class="relative w-full h-full overflow-hidden" id="sol-inner"></div>
+                        </div>
+                        
+                        <div class="lg:hidden mt-6">
+                            <a class="inline-flex items-center gap-2 border border-transparent px-7 py-3 rounded text-[15px] font-medium text-white bg-blue-600 hover:bg-blue-700 transition-all" href="/#contact">
+                                Get in touch
+                                <i data-feather="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Blog Preview -->
     <div class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -218,7 +252,7 @@ permalink: /
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="{{ forloop.index | plus:1 }}00">
         <div class="flex-shrink-0">
           <a href="{{ post.url | relative_url }}">
-            <img class="h-48 w-full object-cover" src="{{ post.image | default: '/assets/images/posts/default-640x360.jpg' | relative_url }}" alt="{{ post.title }}">
+            <img class="h-48 w-full object-cover" src="{{ post.image.path | default: '/assets/images/posts/default-640x360.jpg' | relative_url }}" alt="{{ post.title }}">
           </a>
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -672,5 +706,96 @@ permalink: /
             }
           });
         })();
+    </script>
+    <script>
+        const solItems = [
+            "Caring for your parents",
+            "Saving for college",
+            "Starting a business",
+            "Buying your first home",
+            "Navigating a career change",
+            "Retiring early",
+            "Taking a break"
+        ];
+    
+        const inner = document.getElementById('sol-inner');
+        const ITEM_H = 42;
+        const GAP = 10;
+        const STEP = ITEM_H + GAP;
+        const OUTER_H = 320;
+        const centerY = OUTER_H / 2 - ITEM_H / 2;
+        const INTERVAL = 1800;
+    
+        const repeated = [...solItems, ...solItems, ...solItems];
+        repeated.forEach(text => {
+            const el = document.createElement('button');
+            el.textContent = text;
+            // Text color set to dark blue for light theme
+            el.style.cssText = 'width:100%;text-align:left;color:#2d6a4f;position:absolute;background:none;border:none;cursor:pointer;font-family:inherit;line-height:1.3;font-size:clamp(18px,2vw,24px);transition:opacity 0.3s,transform 0.3s,font-weight 0.3s;transform-origin:left center;';
+            inner.appendChild(el);
+        });
+    
+        const allEls = inner.querySelectorAll('button');
+        let offset = solItems.length * STEP - centerY;
+        let animating = false;
+    
+        function getOpacity(dist) {
+            return [1, 0.55, 0.35, 0.15, 0.06][Math.min(Math.abs(dist), 4)];
+        }
+    
+        function render() {
+            allEls.forEach((el, i) => {
+                const y = i * STEP - offset;
+                const dist = Math.round((y - centerY) / STEP);
+                el.style.top = y + 'px';
+                el.style.opacity = getOpacity(dist);
+                el.style.transform = dist === 0 ? 'scale(1.05)' : 'scale(1)';
+                el.style.fontWeight = dist === 0 ? '600' : '400';
+            });
+        }
+    
+        function step() {
+            if (animating) return;
+            animating = true;
+            const startOff = offset;
+            const target = offset + STEP;
+            const start = performance.now();
+            
+            function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+            
+            (function animate(now) {
+                const t = Math.min((now - start) / 500, 1);
+                offset = startOff + (target - startOff) * ease(t);
+                render();
+                
+                if (t < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    offset = target;
+                    // THE FIX: The reset now happens only after the animation completely stops
+                    if (offset >= solItems.length * 2 * STEP - centerY) {
+                        offset -= solItems.length * STEP;
+                    }
+                    render();
+                    animating = false;
+                }
+            })(performance.now());
+        }
+    
+        render();
+        setInterval(step, INTERVAL);
+    
+        allEls.forEach((el, i) => {
+            el.addEventListener('click', () => {
+                const y = i * STEP - offset;
+                const dist = Math.round((y - centerY) / STEP);
+                if (dist !== 0) {
+                    animating = false;
+                    for (let s = 0; s < Math.abs(dist); s++) {
+                        setTimeout(() => step(), s * 520);
+                    }
+                }
+            });
+        });
     </script>
 </div>

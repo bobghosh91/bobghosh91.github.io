@@ -3,9 +3,12 @@ title: "Navigating Market Volatility"
 date: 2025-05-09
 categories: [Market Insights]
 author: "bishal"
-image: "https://static.photos/people/640x360/2"
+image:
+  path: /assets/images/posts/market-volatility.webp
+  alt: "Navigating Market Volatility"
 description: "Strategies to help your portfolio weather market ups and downs while staying focused on long-term goals."
 read_time: "7 min read"
+layout: post
 ---
 
 <article class="max-w-4xl mx-auto px-6 py-12">

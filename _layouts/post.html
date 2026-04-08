@@ -15,8 +15,8 @@ layout: default
 
   /* ── Dark mode ── */
   .blog-post-container.dark-mode {
-    background-color: #18181b;   /* zinc-900: dark but not black */
-    color: #e2e8f0;              /* slate-200: cool off-white, easier than pure white */
+    background-color: #18181b;
+    color: #e2e8f0;
   }
 
   .blog-post-container.dark-mode h1 {
@@ -28,7 +28,7 @@ layout: default
   }
 
   .blog-post-container.dark-mode .meta-text {
-    color: #71717a;              /* zinc-500 */
+    color: #71717a;
   }
 
   .blog-post-container.dark-mode .prose {
@@ -50,16 +50,16 @@ layout: default
   }
 
   .blog-post-container.dark-mode .prose a {
-    color: #7dd3fc;              /* sky-300 */
+    color: #7dd3fc;
   }
 
   .blog-post-container.dark-mode .prose a:hover {
-    color: #bae6fd;              /* sky-200 */
+    color: #bae6fd;
   }
 
   .blog-post-container.dark-mode .prose code {
-    background-color: #27272a;  /* zinc-800 */
-    color: #d4d4d8;             /* zinc-300 */
+    background-color: #27272a;
+    color: #d4d4d8;
     padding: 2px 5px;
     border-radius: 4px;
     font-size: 0.875em;
@@ -67,88 +67,223 @@ layout: default
 
   .blog-post-container.dark-mode .prose pre {
     background-color: #27272a;
-    border: 1px solid #3f3f46;  /* zinc-700 */
+    border: 1px solid #3f3f46;
     border-radius: 8px;
     padding: 1.25rem;
   }
 
   .blog-post-container.dark-mode .prose blockquote {
-    color: #a1a1aa;             /* zinc-400 */
-    border-left-color: #52525b; /* zinc-600 */
+    color: #a1a1aa;
+    border-left-color: #52525b;
   }
 
   .blog-post-container.dark-mode .prose hr {
-    border-color: #3f3f46;      /* zinc-700 */
-  }
-
-  /* ── Toggle button ── */
-  .theme-toggle {
-    background: #f3f4f6;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    padding: 6px 10px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 16px;
-  }
-
-  .theme-toggle:hover {
-    background: #e5e7eb;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  }
-
-  .blog-post-container.dark-mode .theme-toggle {
-    background: #27272a;
     border-color: #3f3f46;
-    color: #e4e4e7;
   }
 
-  .blog-post-container.dark-mode .theme-toggle:hover {
+  /* ── FAQ styles ── */
+  .faq-section {
+    margin-top: 3rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+  }
+
+  .blog-post-container.dark-mode .faq-section {
+    border-top-color: #3f3f46;
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-post-container.dark-mode .faq-section h2 {
+    color: #f1f5f9;
+  }
+
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+
+  .blog-post-container.dark-mode .faq-item {
+    border-color: #3f3f46;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: #f9fafb;
+    border: none;
+    padding: 1rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: background 0.2s ease;
+  }
+
+  .faq-question:hover {
+    background: #f3f4f6;
+  }
+
+  .blog-post-container.dark-mode .faq-question {
+    background: #27272a;
+    color: #f1f5f9;
+  }
+
+  .blog-post-container.dark-mode .faq-question:hover {
     background: #3f3f46;
   }
 
-  /* ── Theme toggle icon styles ── */
-  .theme-icon {
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    margin-right: 4px;
-    vertical-align: middle;
+  .faq-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #6b7280;
+    transition: transform 0.2s ease;
   }
 
-  .sun-icon  { display: none; }
-  .moon-icon { display: inline-block; }
+  .blog-post-container.dark-mode .faq-icon {
+    color: #9ca3af;
+  }
 
-  .blog-post-container.dark-mode .sun-icon  { display: inline-block; }
-  .blog-post-container.dark-mode .moon-icon { display: none; }
+  .faq-item.open .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: #374151;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .blog-post-container.dark-mode .faq-answer {
+    background: #18181b;
+    color: #d1d5db;
+    border-top-color: #3f3f46;
+  }
+
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+
+  /* ── How-To styles ── */
+  .howto-section {
+    margin-top: 3rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 2rem;
+  }
+
+  .blog-post-container.dark-mode .howto-section {
+    border-top-color: #3f3f46;
+  }
+
+  .howto-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-post-container.dark-mode .howto-section h2 {
+    color: #f1f5f9;
+  }
+
+  .howto-description {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .blog-post-container.dark-mode .howto-description {
+    color: #9ca3af;
+  }
+
+  .howto-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .howto-step {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .howto-step-number {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #1d4ed8;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.1rem;
+  }
+
+  .howto-step-content {
+    flex: 1;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .howto-step:last-child .howto-step-content {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .blog-post-container.dark-mode .howto-step-content {
+    border-bottom-color: #27272a;
+  }
+
+  .howto-step-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .blog-post-container.dark-mode .howto-step-name {
+    color: #f1f5f9;
+  }
+
+  .howto-step-text {
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.65;
+  }
+
+  .blog-post-container.dark-mode .howto-step-text {
+    color: #9ca3af;
+  }
 </style>
 
-<!-- 
-  NOTE: dark-mode class is NOT hardcoded here.
-  It is applied by JavaScript below after checking localStorage.
-  This ensures Googlebot renders the page in light mode (good for SEO),
-  while returning users still get their preferred theme.
--->
 <div class="blog-post-container" id="blogContainer">
   <article class="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
 
-    <!-- Theme Toggle Button (uncomment to enable) -->
-    <!--
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <svg class="theme-icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
-        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
-      </svg>
-      <svg class="theme-icon moon-icon" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-      </svg>
-      <span class="sun-icon">Light mode</span>
-      <span class="moon-icon">Dark mode</span>
-    </button>
-    -->
     <!-- Breadcrumb -->
     <nav aria-label="Breadcrumb" class="mb-6">
       <ol class="flex items-center gap-2 text-sm text-gray-400">
@@ -163,17 +298,18 @@ layout: default
         <li class="text-gray-600 truncate max-w-xs">{{ page.title }}</li>
       </ol>
     </nav>
+
     <!-- Post Hero Image -->
     {% if page.image %}
       <img
-        src="{{ page.image }}"
-        alt="{{ page.description | default: page.title }}"
+        src="{{ page.image.path | default: page.image }}"
+        alt="{{ page.image.alt | default: page.title }}"
         class="w-full h-64 object-cover rounded-lg mb-6"
         loading="eager"
         fetchpriority="high">
     {% endif %}
 
-    <!-- Post Title (single H1 for this page — do NOT add another H1 inside the post content) -->
+    <!-- Post Title -->
     <h1 class="text-3xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
 
     <!-- Author & Meta -->
@@ -206,36 +342,57 @@ layout: default
       {% include disclaimer.html %}
     </div>
 
+    <!-- ── How-To Section ── -->
+    {% if page.howto %}
+    <div class="howto-section">
+      <h2>{{ page.howto.name }}</h2>
+      <p class="howto-description">{{ page.howto.description }}</p>
+      <div class="howto-steps">
+        {% for step in page.howto.steps %}
+        <div class="howto-step">
+          <div class="howto-step-number">{{ forloop.index }}</div>
+          <div class="howto-step-content">
+            <div class="howto-step-name">{{ step.name }}</div>
+            <div class="howto-step-text">{{ step.text }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- ── FAQ Section ── -->
+    {% if page.faqs %}
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {% for faq in page.faqs %}
+      <div class="faq-item" id="faq-{{ forloop.index }}">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-{{ forloop.index }}">
+          <span>{{ faq.q }}</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq-answer-{{ forloop.index }}" role="region">
+          {{ faq.a }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
   </article>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const blogContainer = document.getElementById('blogContainer');
-  const themeToggle   = document.getElementById('themeToggle');
   const storageKey    = 'blog-theme-preference';
 
   // ── Apply saved theme on load ──
-  // Default behaviour: dark mode, unless user has explicitly chosen light.
-  // dark-mode is NOT in the HTML so Googlebot always sees light mode.
   const savedTheme = localStorage.getItem(storageKey);
   if (savedTheme === 'light') {
-    // User explicitly chose light — keep it light
     blogContainer.classList.remove('dark-mode');
   } else {
-    // No preference saved, or preference is dark — apply dark
     blogContainer.classList.add('dark-mode');
-  }
-
-  // ── Toggle handler ──
-  function toggleTheme() {
-    blogContainer.classList.toggle('dark-mode');
-    const isDark = blogContainer.classList.contains('dark-mode');
-    localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme);
   }
 
   // ── Sync with OS preference (only when user has no saved choice) ──
@@ -243,6 +400,26 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!localStorage.getItem(storageKey)) {
       blogContainer.classList.toggle('dark-mode', e.matches);
     }
+  });
+
+  // ── FAQ accordion ──
+  document.querySelectorAll('.faq-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const item = this.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      // Close all open items first
+      document.querySelectorAll('.faq-item.open').forEach(function (openItem) {
+        openItem.classList.remove('open');
+        openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // If it wasn't open, open it
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
   });
 });
 </script>

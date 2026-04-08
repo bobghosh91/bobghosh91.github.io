@@ -4,9 +4,9 @@
     "@graph": [
   
       {
-        "@type": "{{ site.business.type }}",
+        "@type": "{{ site.business.type | default: 'FinancialService' }}",
         "@id": "{{ site.url }}/#organization",
-        "name": "{{ site.title }}",
+        "name": {{ site.title | jsonify }},
         "url": "{{ site.url }}",
         "telephone": "{{ site.business.phone }}",
         "logo": "{{ site.url }}{{ site.business.logo }}",
@@ -24,12 +24,46 @@
           "latitude": {{ site.business.latitude }},
           "longitude": {{ site.business.longitude }}
         },
+        "hasMap": "{{ site.business.hasMap }}",
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "AMFI ARN",
+          "value": "{{ site.business.arn }}"
+        },
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
           "opens": "09:00",
           "closes": "18:00"
         },
+        "employee": [
+          {
+            "@type": "Person",
+            "@id": "{{ site.url }}/about/bob-ghosh/",
+            "name": "Bob Ghosh",
+            "jobTitle": "Financial Planner & Founder",
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "NISM Certified Mutual Funds Advisor",
+                "credentialCategory": "certification",
+                "identifier": "NISM-202500139465"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "AMFI Registered Mutual Fund Distributor",
+                "credentialCategory": "license",
+                "identifier": "ARN-345670"
+              }
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "{{ site.url }}/about/bishal-ghosh/",
+            "name": "Bishal Ghosh",
+            "jobTitle": "Co-Founder & COO"
+          }
+        ],
         "sameAs": {{ site.business.social_links | jsonify }}
       }
   
@@ -38,48 +72,56 @@
         ,{
           "@type": "Person",
           "@id": "{{ site.url }}{{ page.url }}",
-          "name": "{{ author.name }}",
-          "jobTitle": "{{ author.title }}",
+          "name": {{ author.name | jsonify }},
+          "jobTitle": {{ author.title | jsonify }},
           "url": "{{ site.url }}{{ page.url }}",
           "image": "{{ site.url }}{{ author.image }}",
           "email": "{{ author.email }}",
           "worksFor": {
             "@id": "{{ site.url }}/#organization"
           },
-          "sameAs": [
-            {% for link in author.sameAs %}
-              "{{ link }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
+          "sameAs": {{ author.sameAs | jsonify }}
+          {% if page.author_key == 'bob' %}
+          ,"hasCredential": [
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "NISM Certified Mutual Funds Advisor",
+              "credentialCategory": "certification",
+              "identifier": "NISM-202500139465"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              "name": "AMFI Registered Mutual Fund Distributor",
+              "credentialCategory": "license",
+              "identifier": "ARN-345670"
+            }
           ]
+          {% endif %}
         }
   
       {% elsif page.layout == 'post' %}
         {% assign post_author = site.data.authors[page.author] %}
         ,{
           "@type": "Person",
-          "@id": "{{ post_author.url }}",
-          "name": "{{ post_author.name }}",
-          "jobTitle": "{{ post_author.title }}",
-          "url": "{{ post_author.url }}",
-          "image": "{{ post_author.image }}",
+          "@id": "{{ site.url }}{{ post_author.url }}",
+          "name": {{ post_author.name | jsonify }},
+          "jobTitle": {{ post_author.title | jsonify }},
+          "url": "{{ site.url }}{{ post_author.url }}",
+          "image": "{{ site.url }}{{ post_author.image }}",
           "worksFor": {
             "@id": "{{ site.url }}/#organization"
           },
-          "sameAs": [
-            {% for link in post_author.sameAs %}
-              "{{ link }}"{% unless forloop.last %},{% endunless %}
-            {% endfor %}
-          ]
+          "sameAs": {{ post_author.sameAs | jsonify }}
         }
         ,{
           "@type": "BlogPosting",
-          "headline": "{{ page.title | escape }}",
-          "description": "{{ page.description | default: page.excerpt | strip_html | truncate: 160 | escape }}",
+          "headline": {{ page.title | jsonify }},
+          "description": {{ page.description | default: page.excerpt | strip_html | truncate: 160 | jsonify }},
           "datePublished": "{{ page.date | date_to_xmlschema }}",
           "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-          "image": "{{ site.url }}{{ page.image }}",
+          "image": "{{ site.url }}{{ page.image.path | default: page.image }}",
           "author": {
-            "@id": "{{ post_author.url }}"
+            "@id": "{{ site.url }}{{ post_author.url }}"
           },
           "publisher": {
             "@id": "{{ site.url }}/#organization"
@@ -88,8 +130,8 @@
             "@type": "WebPage",
             "@id": "{{ site.url }}{{ page.url }}"
           }
-        },
-        {
+        }
+        ,{
           "@type": "BreadcrumbList",
           "itemListElement": [
             {
@@ -107,7 +149,7 @@
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "{{ page.title | escape }}",
+              "name": {{ page.title | jsonify }},
               "item": "{{ site.url }}{{ page.url }}"
             }
           ]
@@ -117,8 +159,8 @@
         ,{
           "@type": "Person",
           "@id": "{{ site.url }}/#author",
-          "name": "{{ site.author }}",
-          "jobTitle": "{{ site.author_job_title }}",
+          "name": {{ site.author | jsonify }},
+          "jobTitle": {{ site.author_job_title | jsonify }},
           "worksFor": {
             "@id": "{{ site.url }}/#organization"
           }
@@ -128,3 +170,52 @@
     ]
   }
   </script>
+  
+  {% if page.layout == 'post' and page.faqs %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "mainEntity": [
+      {% for faq in page.faqs %}
+      {
+        "@type": "Question",
+        "name": {{ faq.q | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ faq.a | jsonify }}
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+  
+  {% if page.layout == 'post' and page.howto %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "name": {{ page.howto.name | jsonify }},
+    "description": {{ page.howto.description | jsonify }},
+    "step": [
+      {% for step in page.howto.steps %}
+      {
+        "@type": "HowToStep",
+        "name": {{ step.name | jsonify }},
+        "text": {{ step.text | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}

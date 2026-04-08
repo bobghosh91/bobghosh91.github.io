@@ -194,22 +194,32 @@ permalink: /about/
                         {% assign author_key = member.name | downcase | split: ' ' | first %}
                             {% assign author = site.data.authors[author_key] %}
                             {% if author.url %}
-                            <a href="{{ author.url }}" class="text-sm text-blue-600 hover:underline mt-2 mb-3 block">
+                            <a href="{{site.url}}{{ author.url }}" class="text-sm text-blue-600 hover:underline mt-2 mb-3 block">
                             View profile &amp; articles &rarr;
                             </a>
                             {% endif %}
-                        <div class="mt-4 flex space-x-4">
-                            {% if member.linkedin %}
-                            <a href="{{ member.linkedin }}" target="_blank" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="linkedin" class="h-5 w-5"></i>
-                            </a>
-                            {% endif %}
-                            {% if member.email %}
-                            <a href="mailto:{{ member.email }}" class="text-gray-400 hover:text-blue-600">
-                                <i data-feather="mail" class="h-5 w-5"></i>
-                            </a>
-                            {% endif %}
-                        </div>
+                            <div class="mt-4 flex space-x-4">
+                                {% if member.linkedin %}
+                                <a href="{{ member.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-600">
+                                    <i data-feather="linkedin" class="h-5 w-5"></i>
+                                </a>
+                                {% endif %}
+                                {% if member.twitter %}
+                                <a href="{{ member.twitter }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-sky-500">
+                                    <i data-feather="twitter" class="h-5 w-5"></i>
+                                </a>
+                                {% endif %}
+                                {% if member.youtube %}
+                                <a href="{{ member.youtube }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-red-600">
+                                    <i data-feather="youtube" class="h-5 w-5"></i>
+                                </a>
+                                {% endif %}
+                                {% if member.email %}
+                                <a href="mailto:{{ member.email }}" class="text-gray-400 hover:text-blue-600">
+                                    <i data-feather="mail" class="h-5 w-5"></i>
+                                </a>
+                                {% endif %}
+                            </div>
                     </div>
                 </div>
                 {% endfor %}
