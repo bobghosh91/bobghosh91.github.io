@@ -1,5 +1,5 @@
 ---
-title: "The Mutual Fund 7531 Rule: A Proven SIP Strategy for Wealth"
+title: "The Mutual Fund 7-5-3-1 Rule: A Proven SIP Strategy for Wealth"
 date: 2025-08-18
 last_modified_at: 2026-04-14
 categories: [Long-Term Investing]
