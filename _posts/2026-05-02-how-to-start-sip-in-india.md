@@ -9,6 +9,8 @@ image:
 description: "Learn how to start SIP in India step by step — from KYC documents to picking the right fund. A no-jargon guide for first-time investors."
 read_time: "10 min read"
 layout: post
+featured: true
+featured_order: 1
 
 faqs:
   - q: "How do I start a SIP in India for the first time?"
