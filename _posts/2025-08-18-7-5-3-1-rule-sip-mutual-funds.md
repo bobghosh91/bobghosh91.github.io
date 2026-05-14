@@ -10,6 +10,9 @@ image:
 description: "Master the mutual fund 7531 rule to grow your wealth. Learn how this SIP strategy compares to others and how to use a mutual fund calculator to plan."
 read_time: "5 min read"
 layout: post
+redirect_from:
+  - /posts/rule-of-7531-sip-in-mf
+  - /posts/rule-of-7531-sip-in-mf.html
 faqs:
   - q: "Can the 7-5-3-1 rule be applied to ETFs?"
     a: "Yes, while designed for mutual funds, the 7-5-3-1 framework can be applied to broad-market equity ETFs by following the same duration, diversification, and step-up principles."
