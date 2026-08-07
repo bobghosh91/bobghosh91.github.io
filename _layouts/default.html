@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% seo %}
+
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
   <link rel="manifest" href="{{ '/assets/favicon/site.webmanifest' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
-  <link rel="icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+
+  <!-- DNS/Connection hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload LCP image — change filename to your actual hero image -->
+  <link rel="preload" as="image" href="{{ '/assets/images/fund-shelf.svg' | relative_url }}">
+
+  <!-- Critical CSS loads normally; everything else async -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <script src="https://unpkg.com/feather-icons"></script>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts — async load to prevent render blocking -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@300;400;500;600;700&display=swap">
+  </noscript>
+
+  <!-- AOS CSS — async load, not needed for first paint -->
+  <link rel="preload" as="style"
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  </noscript>
 
   {% include schema.html %}
 </head>
@@ -35,18 +54,31 @@
   <!-- Footer -->
   {% include footer.html %}
 
-  <!-- Floating buttons-->
+  <!--
+    All scripts moved to end of <body> and given defer.
+    They no longer block the page from rendering.
+  -->
 
-  <!-- JS for Mobile Menu Toggle -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
+  <!-- Chart.js — defer so it doesn't block render -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+  <!-- Feather Icons — defer, only needed after DOM is ready -->
+  <script src="https://unpkg.com/feather-icons" defer></script>
+
+  <!-- AOS — defer, animations aren't needed for first paint -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <!-- App logic — defer keeps this non-blocking too -->
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Mobile menu toggle
       const menuButton = document.getElementById("mobile-menu-button");
       const menu = document.getElementById("mobile-menu");
 
       if (menuButton && menu) {
         menuButton.addEventListener("click", () => {
           menu.classList.toggle("hidden");
-          const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
+          const expanded = menuButton.getAttribute("aria-expanded") === "true";
           menuButton.setAttribute("aria-expanded", !expanded);
         });
       }
@@ -56,13 +88,16 @@
         feather.replace();
       }
 
-      // Initialize animations and icons
-      AOS.init({
+      // Initialise AOS animations
+      if (typeof AOS !== "undefined") {
+        AOS.init({
           duration: 800,
-          easing: 'ease-in-out',
-          once: true
-      });
+          easing: "ease-in-out",
+          once: true,
+        });
+      }
     });
   </script>
+
 </body>
 </html>

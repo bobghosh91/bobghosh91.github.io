@@ -1,6 +1,7 @@
 ---
 title: "Step-by-Step: Build a Retirement Corpus in India with Mutual Funds"
 date: 2025-03-17
+last_modified_at: 2026-05-24
 categories: [Retirement Planning]
 author: bob
 image:
@@ -11,6 +12,29 @@ read_time: "7 min read"
 featured: true
 featured_order: 2
 layout: post
+faqs:
+  - q: "How much money do I need to start building a retirement corpus with mutual funds in India?"
+    a: "You can start with as little as ₹500 per month through a SIP (Systematic Investment Plan). The key is to begin early and increase your contribution as your income grows, rather than waiting until you can invest a large amount."
+  - q: "What is the best asset allocation for retirement planning in India?"
+    a: "A common starting point is the '100 minus your age' rule — so a 30-year-old would put 70% in equity funds and 30% in debt funds. However, your personal risk tolerance matters more than any formula. Younger investors with a higher risk appetite can lean more heavily into equities, while those nearing retirement should gradually shift toward debt for stability."
+  - q: "Can I still build a good retirement corpus if I start investing at 40 or 50?"
+    a: "Yes, but you need to be more intentional. Increase your monthly SIP amount significantly to compensate for the shorter timeline, consider staying in equities longer than the standard formula suggests since you still have 15–20 years of runway, and eliminate any high-interest debt first, as credit card or personal loan interest will outpace investment returns."
+  - q: "How often should I review my retirement mutual fund portfolio?"
+    a: "Once a year is sufficient for most investors. The goal isn't to make frequent changes but to rebalance — restoring your original equity-to-debt ratio if market movements have shifted it. For example, if a strong market year has pushed your equity allocation from 70% to 80%, you trim equity and top up debt to get back to your intended split."
+howto:
+  name: "How to Build a Retirement Corpus in India with Mutual Funds"
+  description: "A practical 5-step process for Indian investors to build a retirement corpus using mutual fund SIPs — covering goal-setting, asset allocation, fund selection, and annual rebalancing."
+  steps:
+    - name: "Determine Your Timeline and Risk Tolerance"
+      text: "Start by answering two questions honestly — how many years do you have until retirement, and how would you react if your portfolio dropped 20% in a month? A longer timeline and a calmer temperament allow you to take on more equity exposure. Be realistic about your risk tolerance, as this shapes every decision that follows."
+    - name: "Set Your Asset Allocation"
+      text: "Decide what percentage of your investments goes into equity versus debt funds. A rough guide based on age: 75–80% equity for those aged 25–35, 60–70% for 35–45, 40–50% for 45–55, and 20–30% for those aged 55 and above. This single decision has more impact on your long-term outcome than any individual fund you pick."
+    - name: "Select Your Mutual Funds"
+      text: "Keep it simple. Choose 1–2 equity funds (a Flexi-Cap or Large-Cap fund as a core, optionally a Mid-Cap for higher growth), and 1 debt fund such as a short-duration bond or Banking & PSU debt fund. Alternatively, 1–2 hybrid funds work well if you prefer a simpler approach. When comparing funds, prioritise consistency over 5–10 years, a low expense ratio, and alignment with your investment objective — not just last year's returns."
+    - name: "Start Your SIPs Immediately"
+      text: "Set up automated SIPs for your chosen funds and let them run. Start with whatever amount you can afford today — even ₹1,000 a month — and increase it as your income grows. Automation removes emotion from the equation and ensures consistency through market ups and downs via rupee cost averaging."
+    - name: "Review and Rebalance Once a Year"
+      text: "Set an annual reminder to check your portfolio's equity-to-debt ratio. If strong market performance has pushed equities above your target allocation, trim the excess and redirect it into debt to restore your original split. This disciplined rebalancing naturally enforces a 'sell high, buy low' habit and keeps your risk level in check over the long term."
 ---
 
 
