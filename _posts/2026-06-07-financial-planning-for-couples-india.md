@@ -41,8 +41,6 @@ howto:
 
 <article class="max-w-3xl mx-auto px-4 py-6">
 
-  <h1 class="text-3xl font-bold mt-2 mb-4 text-gray-50">Financial Planning for Couples in India: A Complete Guide</h1>
-
   <section class="mb-8">
     <p class="text-lg leading-relaxed text-gray-300">
       Two salaries, two spending habits, and often, two completely different ideas about money. One of you might be the type who tracks every rupee in a spreadsheet, while the other believes in "we'll figure it out." Sound familiar? Money disagreements are one of the most common sources of friction in Indian households today, not because couples don't earn enough, but because they rarely sit down and actually plan together. That's where <strong class="text-sky-300 font-semibold">financial planning for couples in India</strong> comes in. The good news: it isn't about merging every rupee or agreeing on everything. It's about building a shared roadmap while still respecting individual financial identities. Let's break down exactly how to do that.
